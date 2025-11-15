@@ -1,0 +1,82 @@
+<!-- NAVIGATION -->
+<header
+  id="navigation"
+  class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] container py-4 px-7 bg-white dark:bg-zinc-950 rounded-xl z-50
+    transition-[width,max-width,transform] duration-300 group-[&.scroll]/body:w-full group-[&.scroll]/body:max-w-full group-[&.scroll]/body:~-translate-y-4/8
+    group-[&.scroll]/body:rounded-none group-[&.scroll]/body:shadow-lg"
+>
+  <div class="container m-auto flex justify-between items-center">
+    <!-- NAVIGATION LOGO -->
+    <div class=" flex-1 flex">
+      <div class="absolute top-0">
+        <a aria-label="Kliknutím přejdete na domovskou stránku" href="/">
+          <img  
+            class="~h-20/44 w-auto"
+            decoding="async"
+            loading="eager"
+            src="/assets/images/Skola_Radost_logo.png"
+            alt="Základní soukromá škola Letohrad Radost - logo"
+            width="153"
+            height="48"
+          >
+        </a>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div
+      class="hidden max-xl:group-[.mobile-menu]/body:block xl:flex xl:gap-6 max-xl:absolute max-xl:top-[calc(100%+0.5rem)] max-xl:left-1/2 max-xl:-translate-x-1/2
+        max-xl:w-full max-xl:group-[.mobile-menu]/body:w-full max-xl:group-[.mobile-menu]/body:max-w-[calc(100vw-2rem)] max-xl:p-4 max-xl:bg-white dark:max-xl:bg-zinc-950 max-xl:rounded-xl max-xl:shadow-lg">
+      <nav class="flex justify-center whitespace-nowrap">
+        <ul class="flex max-xl:flex-col gap-2 xl:gap-6 max-xl:w-full">
+          {% set navPages = collections.all | eleventyNavigation %}
+
+          {# Loop through all pages with a eleventyNavigation in the frontmatter #}
+          {% for entry in navPages %}
+            <li
+              class="group/li relative flex max-xl:flex-col xl:items-center max-xl:w-full{% if hasChild %} dropdown{% endif %}"
+              {%- if hasChild -%}tabindex="0"{%- endif -%}
+            >
+                {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
+                <a
+                href="{{ entry.url }}"
+                class="py-2 max-xl:pl-4 xl:py-4 text-base font-normal max-xl:w-full max-xl:border-l-4 max-xl:rounded-r-md
+                  {% if entry.url == page.url %} text-primary dark:text-primary max-xl:border-l-primary max-xl:bg-primary/10
+                  {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white
+                  max-xl:hover:bg-zinc-100 dark:max-xl:hover:bg-zinc-900 max-xl:border-l-zinc-300 dark:max-xl:border-l-zinc-600 max-xl:focus:text-black{%- endif -%}"
+                  {%- if entry.url == page.url -%}aria-current="page"{%- endif -%}
+                >
+                  {{ entry.key }}
+                </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <!-- FACEBOOK ICON -->
+       <a href="#" class="cursor-pointer group flex items-center h-fit my-auto" target="_blank">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <path class="fill-black group-hover:fill-primary transition-colors" d="M25 12.5C25 5.6 19.4 0 12.5 0C5.6 0 0 5.6 0 12.5C0 18.55 4.3 23.5875 10 24.75V16.25H7.5V12.5H10V9.375C10 6.9625 11.9625 5 14.375 5H17.5V8.75H15C14.3125 8.75 13.75 9.3125 13.75 10V12.5H17.5V16.25H13.75V24.9375C20.0625 24.3125 25 18.9875 25 12.5Z" fill="black"/>
+        </svg>
+       </a>
+    </div>
+
+    <!-- MOBILE MENU BUTTON -->
+    <div class="flex-1 flex justify-end items-center gap-4 xl:gap-6 xl:hidden">
+      <button
+          id="mobile-menu-toggle"
+          class="toggle group flex xl:hidden justify-center items-center gap-1 h-10 w-10 bg-transparent rounded-lg select-none
+            transition-transform duration-500 [&.active]:rotate-90"
+          type="button"
+          aria-expanded="false"
+          aria-label="Tlačítko mobilního menu"
+        >
+        <span class="block relative h-[1.125rem] w-6">
+          <span class="absolute top-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-500 group-[.active]:rotate-45 group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
+          <span class="absolute top-1/2 -translate-y-1/2 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-[opacity] duration-500 group-[.active]:opacity-0"></span>
+          <span class="absolute bottom-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-500 group-[.active]:rotate-[315deg] group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>

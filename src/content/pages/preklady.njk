@@ -1,0 +1,81 @@
+---
+title: 'Překlady'
+description: 'Profesionální překlady a tlumočení ze španělštiny i do španělštiny. Spolehlivě, rychle a přesně.'
+permalink: 'preklady/'
+eleventyNavigation:
+  key: Překlady
+  parent: Služby
+  order: 400
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  <!-- SERVICES -->
+  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
+    <div class="container m-auto flex max-xl:flex-col justify-center items-center xl:items-start ~gap-12/24">
+      <!-- HEADING + TEXT -->
+      <div class="flex flex-col gap-4 max-w-2xl">
+        <!-- TOPPER + HEADING -->
+        <div class="flex flex-col gap-1">
+          <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Překlady a tlumočení</span>
+          <h1 class="dark:text-white ~text-2xl/3xl font-bold">
+              Profesionální překlady a&nbsp;tlumočení pro&nbsp;vaše potřeby
+            </h1>
+        </div>
+        <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Potřebujete spolehlivého partnera pro překlady a tlumočení ze španělštiny do češtiny a naopak? Ať už řešíte obchodní jednání, firemní školení,
+            odborné prezentace nebo překlady důležitých dokumentů, mohu vám pomoci zajistit precizní a srozumitelný přenos informací.
+          </p>
+        <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Osobně i online vám pomohu s tlumočením během důležitých schůzek, konferencí nebo telefonických jednání. Postarám se o to, abyste se bez
+            problémů dorozuměli se svými obchodními partnery, klienty nebo kolegy.
+          </p>
+
+        <div class="flex flex-col gap-2">
+          <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+            Každý překlad je zpracován s důrazem na správnou terminologii, srozumitelnost a přirozenost textu. Překládám širokou škálu dokumentů,
+          </p>
+          <ul class="flex flex-col gap-1 list-disc">
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Obchodní korespondence a smluv
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Marketingových materiálů a webových stránek
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Technických a odborných textů
+            </li>
+            <li class="ml-5 font-proxima-nova text-zinc-800 dark:text-zinc-200">
+              Článků, blogů a jiných publikací
+            </li>
+          </ul>
+        </div>
+
+        <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
+          Nabízím překladatelské i tlumočnické služby z a do španělského jazyka rodilým mluvčím, včetně překladů obecných či obchodních textů.
+          Tlumočení provádím konsekutivně, simultánně i obousměrně, podle vašich potřeb a konkrétní situace.
+        </p>
+      </div>
+
+      <!-- IMAGE -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1136, height: 746, position: 'top' }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | webp({ quality: 70 }) %}" type="image/webp">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/service/translation.jpg" | resize({ width: 1536, height: 1008, position: 'top' }) | jpeg({ quality: 70 }) %}"
+            alt="Žena s učebnicí španělštiny"
+            decoding="async"
+            loading="eager"
+            width="768"
+            height="504"
+            draggable="false"/>
+      </picture>
+    </div>
+  </section>
+
+  {% include "components/cta.njk" %}
+{% endblock body %}

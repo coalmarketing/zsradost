@@ -1,0 +1,78 @@
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            {% if title %}"headline": "{{ title }}",{% endif %}
+            {% if image %}
+                "image": ["{{ image }}"],
+            {% endif %}
+            {% if date %}"datePublished": "{{ date | postDate }}",{% endif %}
+            {% if client.name %}
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "{{ client.name }}"
+                },
+            {% endif %}
+            {% if author %}
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "{{ author }}"
+                    }
+                ],
+            {% endif %}
+            {% if description %}"articleBody": "{{ description | safe }}",{% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if tags %}"articleSection": "{{ tags }}"{% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+    {% include "components/landing.njk" %}
+
+    <article class="~px-4/8 py-32 bg-white dark:bg-zinc-950">
+        <div class="container m-auto flex flex-col items-center gap-16">
+            <!-- IMAGE -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}" type="image/webp">
+                <img
+                    class="w-full max-w-4xl rounded-xl object-cover"
+                    src="{% getUrl image | resize({ width: 1792 }) | jpeg({ quality: 70 }) %}"
+                    alt="{{ imageAlt }}"
+                    decoding="async"
+                    loading="lazy"
+                    width="896"
+                    height="588"
+                    draggable="false"/>
+            </picture>
+
+            <!-- BLOG POST -->
+            <section class="prose prose-zinc dark:prose-invert w-full max-w-[75ch] font-proxima-nova">
+                <div class="flex flex-col gap-2">
+                    <!-- BLOG TITLE -->
+                    <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>
+                    <!-- BLOG METADATA -->
+                    <div class="flex items-center">
+                        <span class="text-sm text-slate-700 dark:text-slate-300 font-medium">{{ author }}</span>
+                        <!-- DIVIDER-->
+                        <svg class="text-slate-700 dark:text-slate-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                        </svg>
+                        <span class="text-sm text-slate-700 dark:text-slate-300 font-medium">{{ date | postDate }}</span>
+                    </div>
+                </div>
+
+                <!-- BLOG TEXT -->
+                {{ content | safe }}
+            </section>
+
+        </div>
+    </article>
+
+    {% include "components/cta.njk" %}
+{% endblock %}
