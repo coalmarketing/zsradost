@@ -58,9 +58,7 @@ body {
 }
 
 .linear-gradient {
-  /* background: linear-gradient(254.32deg, rgba(181, 43, 255, 0.8) 4.39%, rgba(17, 142, 255, 0.8) 52.49%, rgba(33, 131, 128, 0.8) 76.55%, rgba(13, 168, 74, 0.8) 100.6%); */
   background: linear-gradient(254.32deg, rgba(181, 43, 255, 0.8) 4.39%, rgba(17, 142, 255, 0.8) 52.49%, rgba(33, 131, 128, 0.8) 76.55%, rgba(13, 168, 74, 0.8) 100.6%);
-
 }
 
 /* ====================================== */
@@ -100,11 +98,32 @@ body {
   --cc-btn-primary-hover-color: #FFF;
 }
 
-.cc--darkmode #cc-main {
-  /** Change the darkmode modal background **/
-  --cc-bg: #09090b;
+/* ====================== */
+/* ====================== */
+/* ====================== */
+
+
+/* Prevent navigation buttons/pagination from overlapping slides. Make pagination and nav buttons sit below the slider and centered. */
+/* .inspiration-swiper { display: flex !important; } */
+.inspiration-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #B52BFF !important;
 }
 
-/* ====================== */
-/* ====================== */
-/* ====================== */
+.parents-students-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #218380 !important;
+}
+
+.green-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #0DA84A !important;
+}
+
+.inspiration-swiper-container .swiper-button-prev,
+.documents-swiper-container .swiper-button-prev {
+  left: -47px;
+}
+
+.inspiration-swiper-container .swiper-button-next, 
+.documents-swiper-container .swiper-button-next {
+  right: -47px;
+}
+

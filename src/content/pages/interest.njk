@@ -1,0 +1,322 @@
+---
+title: 'Pro zájemce'
+description: 'Jsme malou, ale plnohodnotnou soukromou základní školou, která vychází z principů sebeřízeného vzdělávání. Usilujeme o vytvoření svobodné školy, kde děti budou motivovány přirozenou touhou po poznání, nikoli pouze odměnami za splnění úkolů. '
+permalink: 'pro-zajemce/'
+eleventyNavigation:
+  key: Pro zájemce
+  order: 200
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  <!-- Swiper CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <!-- SCHOOL -->
+  <section class="py-16 ~px-4/8">
+    <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
+      <div class="order-2 lg:order-1 flex flex-col justify-center">
+        <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Co děláme?</div>
+        <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Naše škola</h2>
+
+        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
+          <p>Jsme malou, ale plnohodnotnou soukromou základní školou, která vychází z principů sebeřízeného vzdělávání. Usilujeme o vytvoření svobodné školy, kde děti budou motivovány přirozenou touhou po poznání, nikoli pouze odměnami za splnění úkolů.</p>
+          <p>Pokud si přejete, aby i vaše dítě mělo možnost učit se s radostí a z vlastního zájmu, jste u nás na správném místě.</p>
+        </div>
+        
+        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-blue overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+          <div class="relative z-10 flex items-center">
+            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-blue">
+              Poznej náš tým
+            </span>
+
+              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-blue"
+                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                  viewBox="0 -960 960 960" fill="currentColor">
+                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+              </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- IMAGE -->
+      <picture class="order-1 lg:order-2">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka školy Radost"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+    </div>
+  </section>
+
+  <!-- SWIPER - DOCUMENTS FOR DOWNLOAD -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl items-center gap-10 xl:gap-16">
+      <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Soubory</div>
+      <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Dokumenty ke stažení</h2>
+
+      <!-- Swiper container -->
+      <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
+        <div class="w-full swiper documents-swiper">
+          <div class="swiper-wrapper w-full h-full">
+            <!-- Slide 1 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <h3 class="text-xl font-bold text-blue mb-2">Pracovní list - Téma 1</h3>
+                <p class="text-zinc-800 mb-4 grow">Krátký popis dokumentu nebo inspirace. Použijte tento dokument pro procvičování.</p>
+                <div class="mt-4">
+                  <a href="/assets/documents/pracovni-list-tema-1.pdf" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                    Stáhnout PDF
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <h3 class="text-xl font-bold text-blue mb-2">Návod pro rodiče</h3>
+                <p class="text-zinc-800 mb-4 grow">Praktické tipy a postupy pro práci s dětmi doma.</p>
+                <div class="mt-4">
+                  <a href="/assets/documents/navod-pro-rodice.pdf" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                    Stáhnout PDF
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <h3 class="text-xl font-bold text-blue mb-2">Šablona projektu</h3>
+                <p class="text-zinc-800 mb-4 grow">Šablona pro menší školní projekt — stačí stáhnout a upravit podle obsahu třídy.</p>
+                <div class="mt-4">
+                  <a href="/assets/documents/sablona-projektu.docx" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                    Stáhnout
+                  </a>
+                </div>
+              </article>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <h3 class="text-xl font-bold text-blue mb-2">Šablona projektu</h3>
+                <p class="text-zinc-800 mb-4 grow">Šablona pro menší školní projekt — stačí stáhnout a upravit podle obsahu třídy.</p>
+                <div class="mt-4">
+                  <a href="/assets/documents/sablona-projektu.docx" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                    Stáhnout
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination !relative mt-4"></div>
+        </div>
+
+        <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 z-10"></div>
+        <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 z-10"></div>
+      </div>
+
+      <!-- MORE BTN -->
+      <div class="w-full flex justify-center mt-8">
+      <a href="/blog" class="group relative w-fit hidden lg:inline-flex items-center px-8 py-2 rounded-full font-bold text-blue bg-white overflow-hidden transition-colors duration-300">
+        <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-blue transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+        <div class="relative z-10 flex items-center">
+          <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-white">
+            Více dokumentů
+          </span>
+        </div>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFTER SCHOOL CLUB -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
+      <div class="order-2 lg:order-1 flex flex-col justify-center">
+        <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Odpolední péče</div>
+        <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Školní družina</h2>
+
+        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
+          <p>Záměrem školy je být pro rodiče partnerem nejen ve vzdělávání dětí, ale i pro běžný život.</p>
+          <p>Zajišťujeme školní družinu, kde se o děti postaráme i mimo vyučování, abyste se v klidu mohli věnovat své práci. Děti se tak mohou déle stmelovat v kolektivu a rozvíjet své praktické dovednosti.</p>
+          <p>Poplatek za školní družinu pro rok 2024/2025 činí 500 Kč za měsíc.</p>
+        </div>
+
+        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-blue overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+          <div class="relative z-10 flex items-center">
+            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-blue">
+              Přihláška do družiny
+            </span>
+
+              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-blue"
+                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                  viewBox="0 -960 960 960" fill="currentColor">
+                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+              </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- IMAGE -->
+      <picture class="order-1 lg:order-2">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka školy Radost"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+    </div>
+  </section>
+
+  <!-- CATERING -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center  gap-10 xl:gap-16">
+      <!-- IMAGE -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka školy Radost"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+
+      <div class="flex flex-col justify-center">
+        <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Školní obědy</div>
+        <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Stravování</h2>
+
+        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
+          <p>Obědy pro Základní školu RADOST připravuje Střední škola gastronomická a technická Žamberk.</p>
+          <p>Cena stravného pro školní rok 2024/2025 činí 70 Kč.</p>
+          <p>Přihlašování a odhlašování obědů: WhatsApp skupina</p>
+        </div>
+
+        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-blue overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+          <div class="relative z-10 flex items-center">
+            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-blue">
+              Přihláška ke stravování
+            </span>
+
+              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-blue"
+                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                  viewBox="0 -960 960 960" fill="currentColor">
+                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+              </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUITION -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
+      <div class="order-2 lg:order-1 flex flex-col justify-center">
+        <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Školné 2024/25</div>
+        <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Školné</h2>
+
+        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
+          <p>Poplatek za školní rok 2024/2025 činí 5 000 Kč za měsíc.</p>
+          <p>(Sourozenecká sleva možná.)</p>
+        </div>
+
+        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-blue overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+          <div class="relative z-10 flex items-center">
+            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-blue">
+              Žádost o přijetí do ZŠ Radost
+            </span>
+
+              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-blue"
+                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                  viewBox="0 -960 960 960" fill="currentColor">
+                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+              </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- IMAGE -->
+      <picture class="order-1 lg:order-2">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <img
+            class="w-full max-w-3xl rounded-xl object-cover"
+            src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka školy Radost"
+            decoding="async"
+            loading="lazy"
+            width="1536"
+            height="504"
+            draggable="false"/>
+      </picture>
+    </div>
+  </section>  
+
+  {% include "components/cta.njk" %}
+  {% include "components/partners.njk" %}
+
+  <!-- Swiper JS (CDN) + init script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    (function(){
+      if(typeof Swiper === 'undefined') return;
+
+      new Swiper('.documents-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          640: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    })();
+  </script>
+{% endblock body %}

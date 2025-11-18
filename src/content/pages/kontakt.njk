@@ -1,9 +1,9 @@
 ---
-title: 'Kontakt'
+title: 'Kontakty'
 description: 'Máte dotaz? Chcete se přihlásit na kurz? Napište nám nebo zavolejte a rádi vám pomůžeme! Jsme tu pro vás.'
 permalink: 'kontakt/'
 eleventyNavigation:
-  key: Kontakt
+  key: Kontakty
   order: 600
 ---
 
@@ -12,218 +12,307 @@ eleventyNavigation:
 {% block body %}
   {% include "components/landing.njk" %}
 
-  <!-- CONTACT -->
-  <section class="py-24 ~px-4/8 bg-zinc-100 dark:bg-zinc-900">
-    <div class="container m-auto flex max-lg:flex-col items-center ~gap-12/24">
-      <!-- TEXT + CONTACT FORM -->
-      <div class="flex flex-col gap-6 w-full max-w-md">
-        <!-- TOPPER + HEADING -->
-        <div class="flex flex-col gap-1">
-          <span class="font-proxima-nova text-primary dark:text-secondary font-bold leading-none">Napište mi</span>
-          <h1 class="dark:text-white ~text-2xl/3xl font-bold">
-            Kontaktujte mě
-          </h1>
+  <!-- Swiper CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <!-- MAP -->
+  <section class="py-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl items-center">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Jsme na mapě!</div>
+      <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">ZÁKLADNÍ ŠKOLA RADOST</h2>
+
+      <div class="mb-8 grid grid-cols-2">
+        <div class="space-y-3 text-xl">
+          <div class="px-6 py-1 text-base bg-primary mb-2 rounded-full w-fit text-white font-bold">Kontakty</div>
+
+          <a
+            href="tel:{{ client.phoneForTel }}"
+            class="w-fit flex items-center gap-2 hover:text-green transition-colors hover:underline"
+          >
+            <svg class="w-5 h-5 group-hover:stroke-green transition-colors" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg>
+
+            <span>{{ client.phoneFormatted }}</span>
+          </a>
+
+          <a
+            href="mailto:{{ client.email }}"
+            class="w-fit flex items-center gap-2 hover:text-green transition-colors hover:underline"
+          >
+            <svg class="w-5 h-5 group-hover:stroke-green transition-colors" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M424 80H88a56.06 56.06 0 0 0-56 56v240a56.06 56.06 0 0 0 56 56h336a56.06 56.06 0 0 0 56-56V136a56.06 56.06 0 0 0-56-56zm-14.18 92.63-144 112a16 16 0 0 1-19.64 0l-144-112a16 16 0 1 1 19.64-25.26L256 251.73l134.18-104.36a16 16 0 0 1 19.64 25.26z"></path></svg>
+
+            <span>{{ client.email }}</span>
+          </a>
+
+          <a
+            href="https://mapy.com/s/femamadanu"
+            target="_blank"
+            class="w-fit flex items-center gap-2 hover:text-green transition-colors hover:underline"
+          >
+            <svg class="w-5 h-5 group-hover:stroke-green transition-colors" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path></svg>
+            <span>U Stadionu 923, Letohrad 561 51</span>
+          </a>
+
+          <a
+            href="https://www.facebook.com/skolaradost"
+            target="_blank"
+            class="w-fit flex items-center group gap-2 hover:text-green transition-colors hover:underline"
+          >
+            <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none">
+              <path class="fill-black group-hover:fill-green transition-colors" d="M25 12.5C25 5.6 19.4 0 12.5 0C5.6 0 0 5.6 0 12.5C0 18.55 4.3 23.5875 10 24.75V16.25H7.5V12.5H10V9.375C10 6.9625 11.9625 5 14.375 5H17.5V8.75H15C14.3125 8.75 13.75 9.3125 13.75 10V12.5H17.5V16.25H13.75V24.9375C20.0625 24.3125 25 18.9875 25 12.5Z" fill="black"/>
+            </svg>
+            <span>@skolaradost</span>
+          </a>
         </div>
 
-        <!-- CONTACT FORM -->
-        <form class="flex flex-col gap-6 p-8 bg-white dark:bg-zinc-950 rounded-xl" method="POST" name="Kontaktní formulář" action="/kontakt/success" netlify>
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-col gap-2">
-              <label class="font-proxima-nova dark:text-white font-bold" for="name">Jméno a příjmení</label>
-              <input
-                class="bg-zinc-100 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white rounded-lg
-                  focus:border-primary focus:ring-2 focus:ring-primary/50 placeholder:text-zinc-500 dark:placeholder:text-zinc-300"
-                  id="name"
-                  type="text"
-                  name="name"
-                  autocomplete="name"
-                  placeholder="Petr Novák"
-                  required>
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label class="font-proxima-nova dark:text-white font-bold" for="email">Email</label>
-              <input
-                class="bg-zinc-100 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white rounded-lg
-                  focus:border-primary focus:ring-2 focus:ring-primary/50 placeholder:text-zinc-500 dark:placeholder:text-zinc-300"
-                  id="email"
-                  type="email"
-                  name="email"
-                  autocomplete="email"
-                  placeholder="petr.novak@seznam.cz"
-                  required>
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label class="font-proxima-nova dark:text-white font-bold" for="phone">Telefon</label>
-              <input
-                class="bg-zinc-100 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white rounded-lg
-                  focus:border-primary focus:ring-2 focus:ring-primary/50 placeholder:text-zinc-500 dark:placeholder:text-zinc-300"
-                  id="phone"
-                  type="tel"
-                  name="phone"
-                  autocomplete="tel"
-                  placeholder="{{ client.phoneFormatted }}"
-                  required>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label class="font-proxima-nova dark:text-white font-bold" for="message">Vaše zpráva</label>
-              <textarea 
-                class="min-h-[4lh] max-h-[30lh] bg-zinc-50 dark:bg-zinc-500 border-zinc-200 dark:border-zinc-400 font-proxima-nova text-black dark:text-white
-                  rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/50 dark:placeholder:text-zinc-300"
-                id="message"
-                name="message"
-                rows="5"
-                required></textarea>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-4">
-            <!-- SEND BUTTON -->
-            <button class="relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden whitespace-nowrap
-              before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
-              before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100" type="submit">
-                Odeslat
-            </button>
-
-            <!-- PRIVACY POLICY -->
-            <p class="font-proxima-nova text-sm text-zinc-800 dark:text-zinc-200 text-center">Odesláním souhlasíte se
-              <a class="underline hover:text-black dark:hover:text-white" href="/gdpr">zpracováním osobních údajů</a>
-            </p>
-          </div>
-        </form>
+        <div class="space-y-3 text-xl">
+          <div class="px-6 py-1 text-base bg-primary mb-2 rounded-full w-fit text-white font-bold">Fakturační údaje</div>
+          
+          <p>Základní škola Radost, z.s.</p>
+          <p>Šedivská 838, Letohrad 561 51</p>
+          <p>IČO: 21658978</p>
+          <p>Datová schránka: na3at5v</p>
+        </div>
       </div>
 
-      <!-- CONTACT INFO -->
-      <div class="flex gap-8 p-8 bg-white dark:bg-zinc-950 rounded-xl">
-        <ul class="flex-shrink-0 flex flex-col gap-4">
-          <!-- NAME -->
-          <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
-            <!-- ICON -->
-            <img
-            src="/assets/svgs/contact/SPSL_icon-sun.svg"
-            alt="Ikona minikurzu"
-            decoding="async"
-            loading="lazy"
-            width="64"
-            height="64"
-            draggable="false"/>
-
-            <div class="flex flex-col gap-0.5">
-              <h3 class="dark:text-white font-bold">Mgr. Ludmila Vyčítalová</h3>
-              <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
-              Vaše lektorka španělštiny
-            </p>
-            </div>
-          </li>
-
-          <!-- TELEFON -->
-          <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
-            <!-- ICON -->
-            <img
-            src="/assets/svgs/contact/SPSL_icon-telephone.svg"
-            alt="Ikona minikurzu"
-            decoding="async"
-            loading="lazy"
-            width="64"
-            height="64"
-            draggable="false"/>
-
-            <div class="flex flex-col gap-0.5">
-              <h3 class="dark:text-white font-bold">Telefon</h3>
-              <a href="tel:{{ client.phoneForTel }}" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:underline hover:text-black dark:hover:text-white">
-                {{ client.phoneFormatted }}
-              </a>
-            </div>
-          </li>
-
-          <!-- EMAIL -->
-          <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
-            <!-- ICON -->
-            <img
-            src="/assets/svgs/contact/SPSL_icon-mail.svg"
-            alt="Ikona minikurzu"
-            decoding="async"
-            loading="lazy"
-            width="64"
-            height="64"
-            draggable="false"/>
-
-            <div class="flex flex-col gap-0.5">
-              <h3 class="dark:text-white font-bold">Email</h3>
-              <a href="mailto:{{ client.email }}" class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:underline hover:text-black dark:hover:text-white">
-                {{ client.email }}
-              </a>
-            </div>
-          </li>
-
-          <!-- LOKACE -->
-          <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
-            <!-- ICON -->
-            <img
-            src="/assets/svgs/contact/SPSL_icon-location.svg"
-            alt="Ikona minikurzu"
-            decoding="async"
-            loading="lazy"
-            width="64"
-            height="64"
-            draggable="false"/>
-
-            <div class="flex flex-col gap-0.5 *:whitespace-nowrap">
-              <h3 class="dark:text-white font-bold">Lokace</h3>
-              <p class="font-proxima-nova text-zinc-800 dark:text-zinc-200">
-                Okres Ústí nad Orlicí, Pardubický kraj
-              </p>
-            </div>
-          </li>
-
-          <!-- FACEBOOK -->
-          <li class="flex items-center gap-4 p-4 pr-8 bg-zinc-100 dark:bg-zinc-900 rounded-xl">
-            <!-- ICON -->
-            <img
-              src="/assets/svgs/contact/SPSL_icon-facebook.svg"
-              alt="Ikona facebooku"
-              decoding="async"
-              loading="lazy"
-              width="64"
-              height="64"
-              draggable="false"/>
-
-            <div class="flex flex-col gap-0.5 *:whitespace-nowrap">
-              <h3 class="dark:text-white font-bold">Facebook</h3>
-              <a
-                href="{{client.social.facebook}}"
-                target="_blank"
-                class="font-proxima-nova text-zinc-800 dark:text-zinc-200 hover:underline hover:text-black dark:hover:text-white"
-              >
-                Španělské slunce
-              </a>
-            </div>
-          </li>
-        </ul>
-
-        <picture class="hidden 2xl:block">
-          <!--Mobile Image-->
-          <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg'  | avif %}" type="image/avif">
-          <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg'  | webp %}" type="image/webp">
-          <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg'  | jpeg %}" type="image/jpeg">
-          <!--Desktop Image-->
-          <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | avif %}" type="image/avif">
-          <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | webp %}" type="image/webp">
-          <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | jpeg %}" type="image/jpeg">
-          <img
-            class="h-full object-cover rounded-3xl"
-            src="{% getUrl '/assets/images/contact/contact-info.jpg' | resize({ width: 1268, height: 1088 }) | jpeg %}"
-            alt="Obrázek španělské budovy"
-            width="634"
-            height="544"
-            loading="eager"
-            decoding="async"
-            aria-hidden="true"
-            draggable="false">
-        </picture>
+      <div class="h-96">
+        <iframe style="border:none; width:100%; height: 100%; border-radius: 16px;" src="https://mapy.com/s/pufedabupe" width="400" height="280" frameborder="0"></iframe>
       </div>
     </div>
   </section>
 
+  <!-- SWIPER - DOCUMENTS FOR DOWNLOAD -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl items-center gap-10 xl:gap-16">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Kdo tvoří tým?</div>
+      <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">RADOSTný tým</h2>
+
+      <!-- Swiper container -->
+      <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
+        <div class="w-full swiper documents-swiper green-swiper">
+          <div class="swiper-wrapper w-full h-full">
+            <!-- Slide 1 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <div class="relative rounded-xl overflow-hidden group">
+                  <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <img
+                      class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+                      src="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
+                      alt="Mgr. Lucie Pospíšilová - Ředitelka ZŠ Radost"
+                      decoding="async"
+                      loading="lazy"
+                      draggable="false"
+                    />
+                  </picture>
+
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <h4 class="text-xl font-bold mb-2">Mgr. Lucie Pospíšilová</h4>
+                    <p class="text-sm mb-2">Ředitelka ZŠ Radost. Pedagog s mnohaletou praxí, vede školu moderním a přátelským směrem.</p>
+                    <a href="/blog" class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-4 py-2 rounded-full font-bold text-green bg-white overflow-hidden transition-colors duration-300">
+                      <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+                      <div class="relative z-10 flex items-center">
+                        <span class="transition-colors duration-300 group-hover:text-white">
+                          Více o mně
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">Mgr. Lucie Pospíšilová</h3>
+                <p class="text-lg text-zinc-800 text-center grow">Ředitelka ZŠ Radost</p>
+              </article>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <div class="relative rounded-xl overflow-hidden group">
+                  <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/petra-vackova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/petra-vackova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <img
+                      class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+                      src="{% getUrl "/assets/images/team/petra-vackova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
+                      alt="Petra Vacková, DiS. - spoluzakladatelka ZŠ Radost"
+                      decoding="async"
+                      loading="lazy"
+                      draggable="false"
+                    />
+                  </picture>
+
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <h4 class="text-xl font-bold mb-2">Petra Vacková, DiS.</h4>
+                    <p class="text-sm">Spoluzakladatelka ZŠ Radost. Podílí se na vedení školy a zaměřuje se na podporu dětí v jejich osobním i vzdělávacím rozvoji.</p>
+                  </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">Petra Vacková, DiS.</h3>
+                <p class="text-lg text-zinc-800 text-center grow">spoluzakladatelka ZŠ Radost</p>
+              </article>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide !h-auto">
+              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                <div class="relative rounded-xl overflow-hidden group">
+                  <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/marketa-cejchanova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/marketa-cejchanova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <img
+                      class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+                      src="{% getUrl "/assets/images/team/marketa-cejchanova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
+                      alt="Mgr. Markéta Čejchanová - pedagog"
+                      decoding="async"
+                      loading="lazy"
+                      draggable="false"
+                    />
+                  </picture>
+
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <h4 class="text-xl font-bold mb-2">Mgr. Markéta Čejchanová</h4>
+                    <p class="text-sm">Spoluzakladatelka ZŠ Radost. Podílí se na vedení školy a zaměřuje se na podporu dětí v jejich osobním i vzdělávacím rozvoji.</p>
+                  </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">Mgr. Markéta Čejchanová</h3>
+                <p class="text-lg text-zinc-800 text-center grow">pedagog</p>
+              </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination !relative mt-4"></div>
+        </div>
+
+        <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 z-10 !text-green"></div>
+        <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 z-10 !text-green"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-2 gap-10 xl:gap-16">
+      <div>
+        <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Máte otázky?</div>
+        <h2 class="mb-6 text-green ~text-5xl/6xl font-bold">Kontaktujte nás</h2>
+        <p class="mb-6 text-lg">V případě jakýchkoliv dotazů či požadavků nás můžete kontaktovat prostřednictvím tohoto formuláře. Rádi vám poskytneme veškeré potřebné informace a odpovíme v co nejkratším možném termínu.</p>
+
+        <div class="flex gap-2">
+          <picture>
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <img
+              class="w-16 h-16 rounded-full object-cover bg-center"
+              src="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
+              alt="Mgr. Lucie Pospíšilová - Ředitelka ZŠ Radost"
+              decoding="async"
+              loading="lazy"
+              draggable="false"
+            />
+          </picture>
+          <div>
+            <p class="text-lg font-bold">Mgr. Lucie Pospíšilová</p>
+            <p class="text-base">Ředitelka ZŠ Radost</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-1">
+          <label for="name" class="font-bold text-lg text-green">Jméno</label>
+          <input  
+            id="name"
+            type="text"
+            name="name"
+            autocomplete="name"
+            placeholder="Petr Novák"
+            required class="min-h-12 rounded-full border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green">
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <label for="email" class="font-bold text-lg text-green">Email</label>
+          <input  
+            id="email"
+            type="text"
+            name="email"
+            autocomplete="email"
+            placeholder="petr.novak@seznam.cz"
+            required class="min-h-12 rounded-full border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green">
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <label for="subject" class="font-bold text-lg text-green">Předmět</label>
+          <input  
+            id="subject"
+            type="text"
+            name="subject"
+            autocomplete="subject"
+            placeholder="Předmět zprávy"
+            required class="min-h-12 rounded-full border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green">
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <label for="message" class="font-bold text-lg text-green">Zpráva</label>
+          <textarea  
+            id="message"
+            type="text"
+            name="text"
+            autocomplete="text"
+            placeholder="Napište svou zprávu"
+            required 
+            class="min-h-40 rounded-3xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
+          ></textarea>
+        </div>
+
+        <a href="/blog" class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-8 py-2 rounded-full font-bold text-green bg-white overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+          <div class="relative z-10 flex items-center">
+            <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-white">
+              Poslat zprávu 
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {% include "components/cta.njk" %}
+  {% include "components/partners.njk" %}
+
+  <!-- Swiper JS (CDN) + init script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    (function(){
+      if(typeof Swiper === 'undefined') return;
+
+      new Swiper('.documents-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          640: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    })();
+  </script>
 {% endblock body %}

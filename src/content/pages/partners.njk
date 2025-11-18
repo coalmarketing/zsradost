@@ -1,0 +1,92 @@
+---
+title: 'Naši partneři'
+description: 'Jsme malou, ale plnohodnotnou soukromou základní školou, která vychází z principů sebeřízeného vzdělávání. Usilujeme o vytvoření svobodné školy, kde děti budou motivovány přirozenou touhou po poznání, nikoli pouze odměnami za splnění úkolů. '
+permalink: 'nasi-partneri/'
+eleventyNavigation:
+  key: Naši partneři
+  order: 800
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+
+  <section class="py-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Společně pro děti</div>
+      <h2 class="mb-4 text-green ~text-5xl/6xl font-bold">Děkujeme</h2>
+      <p class="text-lg md:text-xl">Velice si vážíme Vašeho rozhodnutí podpořit naši činnost v oblasti vzdělávání dětí, které jsou naší budoucností... Děkujeme!</p>
+    </div>
+  </section>
+
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-2 gap-12">
+      <div>
+        <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Izolace kolem světa</div>
+        <a href="https://www.testa.cz/" target="_blank"><h2 class="mb-4 text-green ~text-5xl/6xl font-bold">TESTA s.r.o.</h2></a>
+        <p class="text-lg md:text-xl">Za dobu působení firmy TESTA na trhu jsme při realizaci zakázek střešních systémů použili tolik izolačního decimetrového pásku, kterým bychom zaizolovali kolem dokola zeměkouli.</p>
+      </div>
+
+      <!-- IMAGE -->
+      <picture class="md:mx-auto w-fit self-center">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
+        <img
+          class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
+          src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
+          alt="Fotka lektorky Ludmily Vyčítalové"
+          decoding="async"
+          loading="lazy"
+          width="404"
+          height="82"
+          draggable="false"
+        />
+      </picture>
+    </div>
+  </section>
+
+  <section class="py-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Spolupracujeme!</div>
+      <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">Další partneři</h2>
+
+      <div class="flex flex-wrap gap-6 justify-center">
+        {% if collections.partners and collections.partners | length > 0 %}
+          {% for partner in collections.partners | sort(attribute='data.order') %}
+            {% set img = partner.data.image or '' %}
+            <div class="basis-1/4 bg-white h-72 w-72 flex items-center justify-center p-4">
+              {% if img %}
+                <a href="{{ partner.data.url or '#' }}" target="_blank" class="w-full h-full flex items-center justify-center">
+                  <img src="{% getUrl img | webp({ quality: 70 }) %}" alt="{{ partner.data.imageAlt or partner.data.title }}" class="max-h-full max-w-full object-contain" loading="lazy" />
+                </a>
+              {% else %}
+                <div class="text-center">{{ partner.data.title }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="w-full flex flex-wrap justify-center">
+            <div class="bg-white rounded-2xl p-8 md:p-12 flex flex-col items-center gap-4 max-w-md text-center shadow-lg">
+              <h3 class="text-2xl md:text-3xl font-bold text-green">Přidejte se k nám!</h3>
+              <p class="text-lg text-zinc-700">Staňte se naším partnerem a ukažte svou značku na naší platformě.</p>
+
+              <a href="/kontakt" class="group relative w-fit inline-flex items-center px-8 py-1 rounded-full font-bold text-white bg-primary overflow-hidden transition-colors duration-300">
+                <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+                <div class="relative z-10 flex items-center">
+                  <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-primary">
+                    Přidat se
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+
+  {% include "components/cta.njk" %}
+  {% include "components/partners.njk" %}
+{% endblock body %}

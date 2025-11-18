@@ -1,28 +1,38 @@
 <!-- CTA -->
-<section class="relative py-24 ~px-4/8 bg-zinc-900 dark:bg-black z-10">
-	<div class="container m-auto flex flex-col items-center gap-8">
-		<div class="flex flex-col gap-2 text-center max-w-2xl">
-			<span class="font-proxima-nova text-lg text-center text-secondary font-bold leading-none">Začněme spolu</span>
-			<h2 class="text-center ~text-3xl/4xl text-white font-bold">Nastartujte svou cestu ke&nbsp;španělštině ještě dnes!</h2>
+<section class="pb-16 ~px-4/8">
+	<div class="container bg-primary/15 m-auto ~p-6/10 rounded-3xl flex flex-col xl:flex-row items-end gap-12 ">
+		<div class="w-full">
+			<div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Novinky ze školy!</div>
+			<h2 class="mb-4 text-primary ~text-5xl/6xl font-bold">
+				Chcete vědět, co je nového?
+			</h2>
+			<p class="text-lg md:text-xl">Přihlaste se k odběru našich novinek a získejte pravidelné informace o dění ve škole, zajímavých projektech, nadcházejících akcích a inspirativních aktivitách. Buďte vždy v obraze a nenechte si ujít žádnou novinku, která obohatí vaše znalosti a zkušenosti.</p>
 		</div>
+		<div class="w-full">
+			<img  
+				class="h-16 sm:~h-20/44 w-auto mb-5"
+				decoding="async"
+				loading="eager"
+				src="/assets/images/Skola_Radost_logo.png"
+				alt="Základní soukromá škola Letohrad Radost - logo"
+				width="153"
+				height="48"
+			>
 
-		<!-- CTA BUTTON -->
-		<a class="block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden
-          before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
-          before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
-          href="/kontakt">
-          Kontaktujte nás
-        </a>
+			<div class="mb-1 w-full flex flex-col sm:flex-row gap-4">
+				<input type="text" class="min-h-12 flex-1 rounded-full border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Zadejte svůj e-mail">
+
+				<a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 rounded-full font-bold text-white bg-primary overflow-hidden transition-colors duration-300">
+					<span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+					<div class="relative z-10 flex items-center">
+						<span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-primary">
+							Odebírat
+						</span>
+					</div>
+				</a>
+			</div>
+			<a href="#">Odesláním souhlasíte se <span class="underline">zpracováním osobních údajů</span></a>
+		</div>
 	</div>
-
-	<!-- BACKGROUND -->
-	<img
-		class="absolute top-0 left-0 h-full w-full object-cover opacity-20 -z-10"
-		src="/assets/svgs/cta/mosaic_background.svg"
-		alt="Pozadí sekce CTA"
-		decoding="async"
-		loading="lazy"
-		width="1920"
-		height="370"
-		draggable="false"/>
 </section>

@@ -21,7 +21,7 @@ module.exports = {
         secondary: "#FFC30C",
         tertiary: "#2159AA",
         purple: "#B52BFF",
-        blur: "#118EFF",
+        blue: "#118EFF",
         green: "#0DA84A",
       }
     },
