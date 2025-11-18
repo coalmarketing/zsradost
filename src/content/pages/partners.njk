@@ -21,7 +21,7 @@ eleventyNavigation:
   </section>
 
   <section class="pb-16 ~px-4/8">
-    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-2 gap-12">
+    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl grid lg:grid-cols-2 gap-8 lg:gap-12">
       <div>
         <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Izolace kolem světa</div>
         <a href="https://www.testa.cz/" target="_blank"><h2 class="mb-4 text-green ~text-5xl/6xl font-bold">TESTA s.r.o.</h2></a>
@@ -51,13 +51,13 @@ eleventyNavigation:
       <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Spolupracujeme!</div>
       <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">Další partneři</h2>
 
-      <div class="flex flex-wrap gap-6 justify-center">
+      <div class="flex flex-wrap gap-4 sm:gap-6 justify-center">
         {% if collections.partners and collections.partners | length > 0 %}
           {% for partner in collections.partners | sort(attribute='data.order') %}
             {% set img = partner.data.image or '' %}
-            <div class="basis-1/4 bg-white h-72 w-72 flex items-center justify-center p-4">
+            <div class="rounded-3xl sm:basis-1/4 bg-white w-full lg:h-72 lg:w-72 flex items-center justify-center p-4">
               {% if img %}
-                <a href="{{ partner.data.url or '#' }}" target="_blank" class="w-full h-full flex items-center justify-center">
+                <a href="{{ partner.data.url or '#' }}" target="_blank" class="w-full h-auto flex items-center justify-center">
                   <img src="{% getUrl img | webp({ quality: 70 }) %}" alt="{{ partner.data.imageAlt or partner.data.title }}" class="max-h-full max-w-full object-contain" loading="lazy" />
                 </a>
               {% else %}

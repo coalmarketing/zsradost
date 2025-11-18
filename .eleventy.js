@@ -135,6 +135,15 @@ module.exports = function (eleventyConfig) {
     });
 
     // ═════════════════════════════════════════════════════════════════════════
+    // COLLECTIONS
+    // Define a collection for partners so templates can access `collections.partners`
+    // Files placed in `src/content/partners/` with front matter will be included.
+    // ═════════════════════════════════════════════════════════════════════════
+    eleventyConfig.addCollection("partners", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/partners/*.{md,njk}");
+    });
+
+    // ═════════════════════════════════════════════════════════════════════════
     // SHORTCODES
     // Generate dynamic content with JavaScript
     // Learn more: https://www.11ty.dev/docs/shortcodes/

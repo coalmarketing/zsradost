@@ -8,49 +8,20 @@
       <h2 class="~text-3xl/5xl font-bold text-primary selection:bg-green/60 text-left md:text-center lg:text-left">Moc děkujeme, že jste v tom s námi.</h2>
     </div>
 
-    <!-- PARTNERS LIST (from CMS) -->
-    <div class="md:mx-auto w-full">
-      <div class="flex flex-wrap gap-4 items-center justify-center">
-        {% if collections.partners and collections.partners | length > 0 %}
-          {% for partner in collections.partners | sort(attribute='data.order') %}
-            {% set img = partner.data.image or '' %}
-            <a href="{{ partner.data.url or '#' }}" target="_blank" class="block p-2 max-w-[160px]">
-              {% if img %}
-                <picture>
-                  <source media="(max-width: 600px)" srcset="{% getUrl img | webp({ quality: 70 }) %}" type="image/webp">
-                  <source media="(min-width: 601px)" srcset="{% getUrl img | webp({ quality: 70 }) %}" type="image/webp">
-                  <img
-                    class="max-w-full rounded-xl object-contain mx-auto"
-                    src="{% getUrl img | jpeg({ quality: 70 }) %}"
-                    alt="{{ partner.data.imageAlt or partner.data.title }}"
-                    decoding="async"
-                    loading="lazy"
-                    draggable="false"
-                  />
-                </picture>
-              {% else %}
-                <div class="w-40 h-20 bg-white/40 flex items-center justify-center">{{ partner.data.title }}</div>
-              {% endif %}
-            </a>
-          {% endfor %}
-        {% else %}
-          <!-- fallback if no partners defined -->
-          <picture class="md:mx-auto w-fit">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
-            <img
-              class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
-              src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
-              alt="Fotka lektorky Ludmily Vyčítalové"
-              decoding="async"
-              loading="lazy"
-              width="404"
-              height="82"
-              draggable="false"
-            />
-          </picture>
-        {% endif %}
-      </div>
-    </div>
+    <!-- IMAGE -->
+    <picture class="md:mx-auto w-fit">
+      <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
+      <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
+      <img
+        class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
+        src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
+        alt="Fotka lektorky Ludmily Vyčítalové"
+        decoding="async"
+        loading="lazy"
+        width="404"
+        height="82"
+        draggable="false"
+      />
+    </picture>
   </div>
 </section>
