@@ -1,0 +1,8 @@
+{
+	"layout": "layouts/team.njk",
+	"eleventyComputed": {
+		"preloadImg": "{{ image }}",
+		"permalink": "/team/{{ url | slug }}/index.html"
+	},
+	"tags": "team"
+}

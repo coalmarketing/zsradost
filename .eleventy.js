@@ -139,6 +139,16 @@ module.exports = function (eleventyConfig) {
     // Define a collection for partners so templates can access `collections.partners`
     // Files placed in `src/content/partners/` with front matter will be included.
     // ═════════════════════════════════════════════════════════════════════════
+    eleventyConfig.addCollection("team", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("src/content/team/*.{md,njk}");
+    });
+
+
+    // ═════════════════════════════════════════════════════════════════════════
+    // COLLECTIONS
+    // Define a collection for partners so templates can access `collections.partners`
+    // Files placed in `src/content/partners/` with front matter will be included.
+    // ═════════════════════════════════════════════════════════════════════════
     eleventyConfig.addCollection("partners", function (collectionApi) {
         return collectionApi.getFilteredByGlob("src/content/partners/*.{md,njk}");
     });

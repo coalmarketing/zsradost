@@ -33,6 +33,8 @@
 
           {# Loop through all pages with a eleventyNavigation in the frontmatter #}
           {% for entry in navPages %}
+            {# Skip specific pages from the header navigation (Galerie and Blog) #}
+            {% if entry.url != '/fotogalerie/' and entry.url != '/blog/' %}
             <li
               class="group/li relative flex max-xl:flex-col xl:items-center max-xl:w-full{% if hasChild %} dropdown{% endif %}"
               {%- if hasChild -%}tabindex="0"{%- endif -%}
@@ -49,6 +51,7 @@
                   {{ entry.key }}
                 </a>
             </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </nav>

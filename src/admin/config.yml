@@ -269,5 +269,57 @@ collections:
       - { label: "Název", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "string", required: false }
       - { label: "Obrázek", name: "image", widget: "image", choose_url: false }
-      - { label: "Popis obrázku", name: "imageAlt", widget: "string", required: false }
+      - {
+          label: "Popis obrázku",
+          name: "imageAlt",
+          widget: "string",
+          required: false,
+        }
       - { label: "Pořadí", name: "order", widget: "number", required: false }
+
+  # TEAM MEMBERS
+  - label: "Tým"
+    name: "team"
+    folder: "src/content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Jméno", name: "name", widget: "string" }
+      - { label: "Pozice", name: "role", widget: "string", required: false }
+      - {
+          label: "Fotografie",
+          name: "image",
+          widget: "image",
+          choose_url: false,
+        }
+      - {
+          label: "Popis fotografie",
+          name: "imageAlt",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Krátký bio", name: "bio", widget: "text", required: false }
+      - {
+          label: "URL odkaz",
+          name: "url",
+          widget: "string",
+          hint: "Určete, kam bude stránka zapsána. Pokud použijete „Blogový příspěvek“, bude příspěvek přístupný z „blog/blogovy-prispevek“.",
+          pattern:
+            [
+              "^[A-Za-z0-9 ]+(?:-[A-Za-z0-9 ]+)*$",
+              "Pouze písmena (A-Z, a-z), číslice a pomlčky (-). Žádná lomítka ani speciální znaky.",
+            ],
+          required: true,
+        }
+      - { label: "Pořadí", name: "order", widget: "number", required: false }
+      - {
+          label: "Zobrazit",
+          name: "published",
+          widget: "boolean",
+          default: true,
+        }
+      - label: "Plný popis"
+        name: "body"
+        widget: "markdown"
+        required: false
+      - { label: "Layout (hidden)", name: "layout", widget: "hidden", default: "layouts/team.njk" }

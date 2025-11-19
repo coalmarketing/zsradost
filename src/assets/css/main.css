@@ -1575,6 +1575,10 @@ select {
   display: grid;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
 .hidden {
   display: none;
 }
@@ -1599,10 +1603,6 @@ select {
   height: 4rem;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -1617,10 +1617,6 @@ select {
 
 .h-64 {
   height: 16rem;
-}
-
-.h-72 {
-  height: 18rem;
 }
 
 .h-80 {
@@ -1639,6 +1635,10 @@ select {
   height: 3px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -1654,10 +1654,6 @@ select {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .max-h-full {
@@ -1680,20 +1676,12 @@ select {
   width: 4rem;
 }
 
-.w-40 {
-  width: 10rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-72 {
-  width: 18rem;
 }
 
 .w-\[calc\(100\%-2rem\)\] {
@@ -1737,10 +1725,6 @@ select {
   max-width: 72rem;
 }
 
-.max-w-\[160px\] {
-  max-width: 160px;
-}
-
 .max-w-\[75ch\] {
   max-width: 75ch;
 }
@@ -1775,18 +1759,6 @@ select {
 
 .grow {
   flex-grow: 1;
-}
-
-.basis-1\/4 {
-  flex-basis: 25%;
-}
-
-.basis-1\/2 {
-  flex-basis: 50%;
-}
-
-.basis-1\/3 {
-  flex-basis: 33.333333%;
 }
 
 .origin-left {
@@ -1853,6 +1825,10 @@ select {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-\[1\.5fr_1fr\] {
+  grid-template-columns: 1.5fr 1fr;
 }
 
 .flex-col {
@@ -2092,10 +2068,6 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white\/40 {
-  background-color: rgb(255 255 255 / 0.4);
-}
-
 .bg-zinc-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
@@ -2320,6 +2292,10 @@ select {
 
 .pt-24 {
   padding-top: 6rem;
+}
+
+.pt-56 {
+  padding-top: 14rem;
 }
 
 .pt-64 {
@@ -2858,6 +2834,14 @@ body {
   --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
   --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
   --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+}
+
+.marker\:text-zinc-900 *::marker {
+  color: rgb(24 24 27 );
+}
+
+.marker\:text-zinc-900::marker {
+  color: rgb(24 24 27 );
 }
 
 .selection\:bg-green\/60 *::-moz-selection {
@@ -3477,10 +3461,6 @@ body {
     max-width: 48rem;
   }
 
-  .sm\:basis-1\/3 {
-    flex-basis: 33.333333%;
-  }
-
   .sm\:basis-1\/4 {
     flex-basis: 25%;
   }
@@ -3533,10 +3513,6 @@ body {
 
   .md\:w-80 {
     width: 20rem;
-  }
-
-  .md\:basis-1\/4 {
-    flex-basis: 25%;
   }
 
   .md\:grid-cols-2 {

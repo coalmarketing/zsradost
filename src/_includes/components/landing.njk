@@ -11,14 +11,15 @@
     <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
     <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
     <img
-        class="absolute inset-0 h-full w-full object-cover z-0"
-        src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | jpeg({ quality: 70 }) %}"
-        alt="Tmavé pozadí"
-        decoding="async"
-        loading="eager"
-        width="1920"
-        height="800"
-        draggable="false"/>
+      class="absolute inset-0 h-full w-full object-cover z-0"
+      src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | jpeg({ quality: 70 }) %}"
+      alt="Tmavé pozadí"
+      decoding="async"
+      loading="eager"
+      width="1920"
+      height="800"
+      draggable="false"
+    />
   </picture>
 
   <div class="absolute inset-0 linear-gradient z-0 opacity-80"></div>

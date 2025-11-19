@@ -90,104 +90,49 @@ eleventyNavigation:
       <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
         <div class="w-full swiper documents-swiper green-swiper">
           <div class="swiper-wrapper w-full h-full">
-            <!-- Slide 1 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <div class="relative rounded-xl overflow-hidden group">
-                  <picture>
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                    <img
-                      class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
-                      alt="Mgr. Lucie Pospíšilová - Ředitelka ZŠ Radost"
-                      decoding="async"
-                      loading="lazy"
-                      draggable="false"
-                    />
-                  </picture>
+            {% for member in collections.team | reverse %}
+              {% if member.data.published is not defined or member.data.published %}
+                <div class="swiper-slide !h-auto">
+                  <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                    <div class="relative rounded-xl overflow-hidden group">
+                      <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl member.data.image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl member.data.image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
+                        <img
+                          class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+                          src="{% getUrl member.data.image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}"
+                          alt="{{ member.data.imageAlt or member.data.name }}"
+                          decoding="async"
+                          loading="lazy"
+                          draggable="false"
+                        />
+                      </picture>
 
-                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <h4 class="text-xl font-bold mb-2">Mgr. Lucie Pospíšilová</h4>
-                    <p class="text-sm mb-2">Ředitelka ZŠ Radost. Pedagog s mnohaletou praxí, vede školu moderním a přátelským směrem.</p>
-                    <a href="/blog" class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-4 py-2 rounded-full font-bold text-green bg-white overflow-hidden transition-colors duration-300">
-                      <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+                      <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <h4 class="text-xl font-bold mb-2">{{ member.data.name }}</h4>
+                        {% if member.data.bio %}
+                          <p class="text-sm mb-2">{{ member.data.bio }}</p>
+                        {% endif %}
+                        {% set slugFromUrl = member.data.url | default('') | replace(' ', '-') | lower %}
 
-                      <div class="relative z-10 flex items-center">
-                        <span class="transition-colors duration-300 group-hover:text-white">
-                          Více o mně
-                        </span>
+                        <a href="/team/{{ slugFromUrl }}" class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-4 py-2 rounded-full font-bold text-green bg-white overflow-hidden transition-colors duration-300">
+                          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+                          <div class="relative z-10 flex items-center">
+                            <span class="transition-colors duration-300 group-hover:text-white">Více o mně</span>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">{{ member.data.name }}</h3>
+                    <p class="text-lg text-zinc-800 text-center grow">{{ member.data.role }}</p>
+                  </article>
                 </div>
-
-                <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">Mgr. Lucie Pospíšilová</h3>
-                <p class="text-lg text-zinc-800 text-center grow">Ředitelka ZŠ Radost</p>
-              </article>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <div class="relative rounded-xl overflow-hidden group">
-                  <picture>
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/petra-vackova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/petra-vackova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                    <img
-                      class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="{% getUrl "/assets/images/team/petra-vackova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
-                      alt="Petra Vacková, DiS. - spoluzakladatelka ZŠ Radost"
-                      decoding="async"
-                      loading="lazy"
-                      draggable="false"
-                    />
-                  </picture>
-
-                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <h4 class="text-xl font-bold mb-2">Petra Vacková, DiS.</h4>
-                    <p class="text-sm">Spoluzakladatelka ZŠ Radost. Podílí se na vedení školy a zaměřuje se na podporu dětí v jejich osobním i vzdělávacím rozvoji.</p>
-                  </div>
-                </div>
-
-                <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">Petra Vacková, DiS.</h3>
-                <p class="text-lg text-zinc-800 text-center grow">spoluzakladatelka ZŠ Radost</p>
-              </article>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <div class="relative rounded-xl overflow-hidden group">
-                  <picture>
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/marketa-cejchanova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/marketa-cejchanova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                    <img
-                      class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
-                      src="{% getUrl "/assets/images/team/marketa-cejchanova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
-                      alt="Mgr. Markéta Čejchanová - pedagog"
-                      decoding="async"
-                      loading="lazy"
-                      draggable="false"
-                    />
-                  </picture>
-
-                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <h4 class="text-xl font-bold mb-2">Mgr. Markéta Čejchanová</h4>
-                    <p class="text-sm">Spoluzakladatelka ZŠ Radost. Podílí se na vedení školy a zaměřuje se na podporu dětí v jejich osobním i vzdělávacím rozvoji.</p>
-                  </div>
-                </div>
-
-                <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">Mgr. Markéta Čejchanová</h3>
-                <p class="text-lg text-zinc-800 text-center grow">pedagog</p>
-              </article>
-            </div>
+              {% endif %}
+            {% endfor %}
 
             <!-- Pagination -->
             <div class="swiper-pagination !relative mt-4"></div>
