@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "title": "Pracovní list - Téma 1",
+      "description": "Krátký popis dokumentu nebo inspirace. Použijte tento dokument pro procvičování.",
+      "file": "/assets/documents/pracovni-list-tema-1.pdf",
+      "buttonText": "Stáhnout PDF"
+    }
+  ]
+}

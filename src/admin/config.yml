@@ -277,6 +277,49 @@ collections:
         }
       - { label: "Pořadí", name: "order", widget: "number", required: false }
 
+  # INSPIRATION / DOWNLOADABLE FILES
+  - label: "Inspirace"
+    name: "inspirations"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Další inspirace"
+        name: "inspirations_file"
+        file: "src/_data/inspirations.json"
+        description: "Seznam inspiračních dokumentů (PDF, DOCX) zobrazený na stránce 'O nás'"
+        fields:
+          - label: "Položky"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Název", name: "title", widget: "string" }
+              - { label: "Popis", name: "description", widget: "text" }
+              - { label: "Dokument", name: "file", widget: "file", hint: "Nahrajte dokument do 'src/assets/documents'" }
+              - { label: "Text tlačítka", name: "buttonText", widget: "string", required: false }
+
+  # INTEREST / DOWNLOADABLE FILES FOR 'Pro zájemce' PAGE
+  - label: "Downloads"
+    name: "downloads_files"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Downloads for interest"
+        name: "interest_file"
+        file: "src/_data/interest.json"
+        description: "Seznam dokumentů (PDF, DOCX) zobrazený na stránce 'Pro zájemce'"
+        fields:
+          - label: "Položky"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Název", name: "title", widget: "string" }
+              - { label: "Popis", name: "description", widget: "text" }
+              - { label: "Dokument", name: "file", widget: "file", hint: "Nahrajte dokument do 'src/assets/documents'" }
+              - { label: "Text tlačítka", name: "buttonText", widget: "string", required: false }
+
+
   # TEAM MEMBERS
   - label: "Tým"
     name: "team"

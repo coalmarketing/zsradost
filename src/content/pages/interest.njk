@@ -64,68 +64,29 @@ eleventyNavigation:
   <!-- SWIPER - DOCUMENTS FOR DOWNLOAD -->
   <section class="pb-16 ~px-4/8">
     <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl items-center gap-10 xl:gap-16">
-      <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Soubory</div>
+      <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Downloads</div>
       <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Dokumenty ke stažení</h2>
 
       <!-- Swiper container -->
       <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
         <div class="w-full swiper documents-swiper">
           <div class="swiper-wrapper w-full h-full">
-            <!-- Slide 1 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <h3 class="text-xl font-bold text-blue mb-2">Pracovní list - Téma 1</h3>
-                <p class="text-zinc-800 mb-4 grow">Krátký popis dokumentu nebo inspirace. Použijte tento dokument pro procvičování.</p>
-                <div class="mt-4">
-                  <a href="/assets/documents/pracovni-list-tema-1.pdf" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-                    Stáhnout PDF
-                  </a>
+            {% if interest and interest.items %}
+              {% for item in interest.items %}
+                <div class="swiper-slide !h-auto">
+                  <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                    <h3 class="text-xl font-bold text-blue mb-2">{{ item.title }}</h3>
+                    <p class="text-zinc-800 mb-4 grow">{{ item.description }}</p>
+                    <div class="mt-4">
+                      <a href="{{ item.file }}" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                        {{ item.buttonText or 'Stáhnout' }}
+                      </a>
+                    </div>
+                  </article>
                 </div>
-              </article>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <h3 class="text-xl font-bold text-blue mb-2">Návod pro rodiče</h3>
-                <p class="text-zinc-800 mb-4 grow">Praktické tipy a postupy pro práci s dětmi doma.</p>
-                <div class="mt-4">
-                  <a href="/assets/documents/navod-pro-rodice.pdf" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-                    Stáhnout PDF
-                  </a>
-                </div>
-              </article>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <h3 class="text-xl font-bold text-blue mb-2">Šablona projektu</h3>
-                <p class="text-zinc-800 mb-4 grow">Šablona pro menší školní projekt — stačí stáhnout a upravit podle obsahu třídy.</p>
-                <div class="mt-4">
-                  <a href="/assets/documents/sablona-projektu.docx" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-                    Stáhnout
-                  </a>
-                </div>
-              </article>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="swiper-slide !h-auto">
-              <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                <h3 class="text-xl font-bold text-blue mb-2">Šablona projektu</h3>
-                <p class="text-zinc-800 mb-4 grow">Šablona pro menší školní projekt — stačí stáhnout a upravit podle obsahu třídy.</p>
-                <div class="mt-4">
-                  <a href="/assets/documents/sablona-projektu.docx" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-                    Stáhnout
-                  </a>
-                </div>
-              </article>
-            </div>
+              {% endfor %}
+            {% endif %}
           </div>
 
           <!-- Pagination -->
@@ -186,14 +147,14 @@ eleventyNavigation:
         <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
         <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka školy Radost"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
+          class="w-full max-w-3xl rounded-xl object-cover"
+          src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
+          alt="Fotka školy Radost"
+          decoding="async"
+          loading="lazy"
+          width="1536"
+          height="504"
+          draggable="false"/>
       </picture>
     </div>
   </section>
