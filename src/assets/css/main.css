@@ -1457,6 +1457,10 @@ select {
   margin-bottom: 0.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -1570,12 +1574,12 @@ select {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-\[2\/1\] {
@@ -1714,10 +1718,6 @@ select {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[calc\(100\%-94px\)\] {
-  width: calc(100% - 94px);
 }
 
 .\!min-w-10 {
@@ -2254,12 +2254,12 @@ select {
   padding-top: 6rem;
 }
 
-.pt-64 {
-  padding-top: 16rem;
-}
-
 .pt-56 {
   padding-top: 14rem;
+}
+
+.pt-64 {
+  padding-top: 16rem;
 }
 
 .text-left {
@@ -2676,6 +2676,7 @@ body {
   inset: 0;
   background-image: url('../images/background/bg-pattern.png');
   background-repeat: repeat-y;
+  background-position: center;
   background-size: auto;
   filter: blur(16px);
   z-index: -10;
@@ -3215,6 +3216,10 @@ body {
 
   .sm\:top-0 {
     top: 0px;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .sm\:mb-8 {

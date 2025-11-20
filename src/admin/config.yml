@@ -267,7 +267,7 @@ collections:
     name: "team"
     folder: "src/content/team"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.url}}"
     fields:
       - { label: "Jméno", name: "name", widget: "string" }
       - { label: "Pozice", name: "role", widget: "string", required: false }

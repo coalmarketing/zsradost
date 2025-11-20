@@ -52,6 +52,7 @@ body {
   inset: 0;
   background-image: url('../images/background/bg-pattern.png');
   background-repeat: repeat-y;
+  background-position: center;
   background-size: auto;
   filter: blur(16px);
   z-index: -10;

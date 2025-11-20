@@ -42,60 +42,25 @@
       <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">RADOSTný tým</h2>
 
       <!-- Swiper container -->
-      <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
+      <div class="documents-swiper-container relative mx-auto sm:w-[calc(100%-94px)] mb-10 sm:mb-0">
         <div class="w-full swiper documents-swiper green-swiper">
           <div class="swiper-wrapper w-full h-full">
+            {% from "components/team-card.njk" import teamCard %}
             {% for member in collections.team | reverse %}
               {% if member.data.published is not defined or member.data.published %}
                 <div class="swiper-slide !h-auto {% if name == member.data.name %}!hidden{% endif %}">
-                  <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
-                    <div class="relative rounded-xl overflow-hidden group">
-                      <picture>
-                        <source media="(max-width: 600px)" srcset="{% getUrl member.data.image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                        <source media="(min-width: 601px)" srcset="{% getUrl member.data.image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-                        <img
-                          class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
-                          src="{% getUrl member.data.image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}"
-                          alt="{{ member.data.imageAlt or member.data.name }}"
-                          decoding="async"
-                          loading="lazy"
-                          draggable="false"
-                        />
-                      </picture>
-
-                      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      
-                      {% set slugFromUrl = member.data.url | default('') | replace(' ', '-') | lower %}
-                      <a href="/team/{{ slugFromUrl }}" class="absolute inset-0 flex flex-col items-center justify-center px-4 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <h4 class="text-xl font-bold mb-2">{{ member.data.name }}</h4>
-                        {% if member.data.bio %}
-                          <p class="text-sm mb-2">{{ member.data.bio }}</p>
-                        {% endif %}
-
-                        <div class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-4 py-2 rounded-full font-bold text-green bg-white overflow-hidden transition-colors duration-300">
-                          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-                          <div class="relative z-10 flex items-center">
-                            <span class="transition-colors duration-300 group-hover:text-white">Více o mně</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <h3 class="text-2xl font-bold text-green mt-3 mb-1 text-center">{{ member.data.name }}</h3>
-                    <p class="text-lg text-zinc-800 text-center grow">{{ member.data.role }}</p>
-                  </article>
+                  {{ teamCard(member, { color: 'green', btnText: 'Více o mně' }) }}
                 </div>
               {% endif %}
             {% endfor %}
+          </div>
 
-            <!-- Pagination -->
-            <div class="swiper-pagination !relative mt-4"></div>
-        </div>
-
-        <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 z-10 !text-green"></div>
-        <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 z-10 !text-green"></div>
+          <!-- Pagination -->
+          <div class="swiper-pagination !relative mt-4"></div>
       </div>
+
+      <div class="swiper-button-prev absolute !min-w-10 !w-10 sm:!w-10 sm:min-w-10 flex sm:block items-center justify-center !min-h-10 sm:!min-h-auto !h-10 sm:!h-auto after:!text-[24px] sm:after:!text-[40px] bg-white sm:bg-transparent rounded-full !top-[calc(100%+16px)] sm:!top-1/2 -translate-y-1/2 z-10 !text-green sm:!-left-[51px]"></div>
+      <div class="swiper-button-next absolute !min-w-10 !w-10 sm:!w-10 sm:min-w-10 flex sm:block items-center justify-center !min-h-10 sm:!min-h-auto !h-10 sm:!h-auto after:!text-[24px] sm:after:!text-[40px] bg-white sm:bg-transparent rounded-full !top-[calc(100%+16px)] sm:!top-1/2 -translate-y-1/2 z-10 !text-green sm:!-right-[51px]"></div>
     </div>
   </section>
 
