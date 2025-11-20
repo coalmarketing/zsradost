@@ -1502,6 +1502,10 @@ select {
   margin-top: 2rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1525,10 +1529,6 @@ select {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -1565,6 +1565,10 @@ select {
 
 .aspect-\[2\/1\] {
   aspect-ratio: 2/1;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .\!h-auto {
@@ -1701,8 +1705,8 @@ select {
   max-width: 80%;
 }
 
-.max-w-\[85ch\] {
-  max-width: 85ch;
+.max-w-\[90ch\] {
+  max-width: 90ch;
 }
 
 .max-w-full {
@@ -3329,6 +3333,10 @@ body {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:gap-12 {

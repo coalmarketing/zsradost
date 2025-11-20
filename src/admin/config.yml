@@ -112,44 +112,6 @@ collections:
                   required: false,
                 }
 
-  # ONLINE KURZY MESSAGE
-  - label: "Online kurzy"
-    name: "online_courses"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - label: "Informace o možnosti zápisu"
-        name: "course_enrollment"
-        file: "src/_data/onlineKurzy.json"
-        description: "Dovoluje klientovi skrýt či zobrazit a případně upravit informaci o možnosti zápisu do online kurzu"
-        fields:
-          - {
-              label: "Zobrazit informaci o zápisu",
-              name: "show",
-              widget: "boolean",
-              hint: "Zvolte podle toho, jestli chcete informaci o zápisu zobrazit nebo skrýt",
-            }
-          - {
-              label: "Zápis je možný",
-              name: "enableEnrollment",
-              widget: "boolean",
-              hint: "Zvolte podle toho, jestli je zápis do online kurzu aktuálně možný nebo nikoliv",
-            }
-          - {
-              label: "Text",
-              name: "text",
-              widget: "string",
-              hint: "Text informace",
-            }
-          - {
-              label: "Poznámka",
-              name: "note",
-              widget: "string",
-              required: false,
-              hint: "Poznámka informace",
-            }
-
   # BLOG CONFIG
   - label: "Blog"
     name: "blog"
@@ -197,6 +159,14 @@ collections:
           choose_url: false,
         }
       - { label: "Popis obrázku", name: "imageAlt", widget: "string" }
+      - name: images
+        label: "Další obrázky (galerie)"
+        widget: list
+        required: false
+        hint: "Nahrajte obrázky, které se zobrazí v dolní galerii příspěvku"
+        fields:
+          - { name: url, label: Fotografie, widget: image, choose_url: false }
+          - { label: "Popis fotografie", name: "alt", widget: "string", required: false }
       - { label: "Obsah", name: "body", widget: "markdown" }
 
   # GALLERY PHOTOS
@@ -229,30 +199,6 @@ collections:
           name: "tags",
           widget: "hidden",
           default: ["gallery"],
-        }
-
-  # REFERENCES
-  - label: "Reference"
-    name: "testimonials"
-    folder: "src/content/testimonial"
-    editor:
-      preview: false
-    create: true
-    identifier_field: "customerName"
-    slug: "{{slug}}_{{year}}-{{month}}-{{day}}"
-    fields:
-      - {
-          label: "Text",
-          name: "text",
-          widget: "text",
-          hint: "Citovaný text reference",
-        }
-      - { label: "Jméno zákazníka", name: "customerName", widget: "string" }
-      - {
-          label: "Štítky",
-          name: "tags",
-          widget: "hidden",
-          default: ["testimonial"],
         }
 
   # PARTNERS

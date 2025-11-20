@@ -1,36 +1,45 @@
-{% extends "layouts/base.njk" %} {% block head %}
-<script type="application/ld+json">
+{% extends "layouts/base.njk" %}
+{% block head %}
+  <script defer src="/assets/js/fslightbox.js"></script>
+  <script type="application/ld+json">
   {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      {% if title %}"headline": "{{ title }}",{% endif %}
-      {% if image %}
-          "image": ["{{ image }}"],
-      {% endif %}
-      {% if date %}"datePublished": "{{ date | postDate }}",{% endif %}
-      {% if client.name %}
-          "publisher": {
-              "@type": "Organization",
-              "name": "{{ client.name }}"
-          },
-      {% endif %}
-      {% if author %}
-          "author": [
-              {
-                  "@type": "Person",
-                  "name": "{{ author }}"
-              }
-          ],
-      {% endif %}
-      {% if description %}"articleBody": "{{ description | safe }}",{% endif %}
-      {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
-      {% if tags %}"articleSection": "{{ tags }}"{% endif %}
+    "@context": "https://schema.org",
+    "@type": "Article",
+    {% if title %}"headline": "{{ title }}",{% endif %}
+    {% if images and images | length > 0 %}
+      "image": [{% for img in images %}"{{ img.url or img }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+    {% elif image %}
+      "image": ["{{ image }}"],
+    {% endif %}
+    {% if date %}"datePublished": "{{ date | postDate }}",{% endif %}
+    {% if client.name %}
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ client.name }}"
+      },
+    {% endif %}
+    {% if author %}
+      "author": [
+        {
+          "@type": "Person",
+          "name": "{{ author }}"
+        }
+      ],
+    {% endif %}
+    {% if description %}"articleBody": "{{ description | safe }}",{% endif %}
+    {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+    {% if tags %}"articleSection": "{{ tags }}"{% endif %}
   }
-</script>
-{% endblock %} {% block body %} {% include "components/landing.njk" %}
+  </script>
+{% endblock %}
+
+{% block body %}
+{% include "components/landing.njk" %}
 
 <article class="~px-4/8 py-32">
-  <div class="container m-auto flex flex-col items-center gap-16">
+  <div
+    class="container m-auto flex flex-col items-center bg-primary/20 gap-16 ~p-6/10 rounded-3xl"
+  > 
     <!-- IMAGE -->
     <picture>
       <source
@@ -56,33 +65,48 @@
     </picture>
 
     <!-- BLOG POST -->
-    <section class="prose prose-zinc w-full max-w-[85ch]">
-      <div class="flex flex-col gap-2">
-        <!-- BLOG TITLE -->
-        <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>
-        <!-- BLOG METADATA -->
-        <div class="flex items-center">
-          <span class="text-sm text-slate-700 font-medium">{{ author }}</span>
-          <!-- DIVIDER-->
-          <svg
-            class="text-slate-700"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
-          </svg>
-          <span class="text-sm text-slate-700 font-medium">{{
+    <section class="text-base w-full max-w-[90ch]">
+      <div class="prose prose-zinc mx-auto w-full max-w-[90ch]">
+        <div class="flex flex-col gap-2">
+          <!-- BLOG TITLE -->
+          <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>
+          <!-- BLOG METADATA -->
+          <span class="text-base text-slate-700 font-medium">{{
             date | postDate
           }}</span>
         </div>
+
+        <!-- BLOG TEXT -->
+        {{ content | safe }}
       </div>
 
-      <!-- BLOG TEXT -->
-      {{ content | safe }}
+      <!-- EXTRA IMAGES: render remaining images (if any) at end of post -->
+      {% if images and images | length > 0 %}
+        <div class="mt-12 w-full">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {% for img in images %}
+              {% set imgUrl = img.url or img %}
+              {% set imgAlt = img.alt or imageAlt or (title ~ ' - ' ~ loop.index) %}
+              <a data-fslightbox="{{ album.fileSlug }}" href="{% getUrl imgUrl | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
+                <picture>
+                  <source srcset="{% getUrl imgUrl | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}" type="image/webp">
+                  <img
+                    class="object-contain w-full aspect-square rounded-xl"
+                    src="{% getUrl imgUrl | rotate | resize({ width: 486, height: 486 }) | jpeg({ quality: 70 }) %}"
+                    alt="{% if image.alt -%} image.alt {%- else -%} Fotografie {{ album.data.title }}-{{ loop.index }} {%- endif %}"
+                    decoding="async"
+                    loading="lazy"
+                    width="243"
+                    height="243"
+                    draggable="false"/>
+                </picture>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
     </section>
+
   </div>
 </article>
 

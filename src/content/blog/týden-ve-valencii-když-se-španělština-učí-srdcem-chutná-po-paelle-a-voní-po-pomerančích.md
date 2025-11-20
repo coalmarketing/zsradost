@@ -16,6 +16,10 @@ image: /assets/images/cms/valencia_koláž.png
 imageAlt: Španělština ve Valencii - kombinace intenzivní výuky a konverzace,
   pláže, moře, památek, gastrozážitků a přátelství! Koncentrovaná dávka energie
   na zimní měsíce!
+images:
+  - url: /assets/images/cms/20240930_194143.jpg
+  - url: /assets/images/cms/20241001_175645.jpg
+  - url: /assets/images/cms/20250424_135512.jpg
 ---
 ### Od 15. do 21. září jsme se se skupinou čtrnácti studentů vydali do Valencie na intenzivní kurz španělštiny. Přiletěli jsme s nadšením a zvědavostí – a odjížděli s diplomy, zážitky a pocitem, že španělština je nám zase o kus blíž.
 

@@ -17,7 +17,7 @@
 
         <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-2">
           {% for image in images %}
-            <a class="w-full inline-block group break-inside-avoid" data-fslightbox="{{ page.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
+            <a class="w-full inline -block group break-inside-avoid" data-fslightbox="{{ page.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
               <picture>
                 <source srcset="{% getUrl image.url | rotate | resize({ width: 1200 }) | webp({ quality: 70 }) %}" type="image/webp">
                 <img class="group-hover:scale-[1.02] w-full h-auto block object-cover transition-transform duration-200 rounded-xl" src="{% getUrl image.url | rotate | resize({ width: 1200 }) | jpeg({ quality: 70 }) %}" alt="{% if image.alt -%}{{ image.alt }}{%- else -%}Fotografie {{ title }} - {{ loop.index }}{%- endif %}" loading="lazy" decoding="async" draggable="false"/>
