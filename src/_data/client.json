@@ -1,8 +1,8 @@
 {
-  "name": "Španělské Slunce",
-  "email": "ludmila@spanelskeslunce.cz",
-  "phoneForTel": "+420603542896",
-  "phoneFormatted": "+420 603 542 896",
+  "name": "Základní škola Radost",
+  "email": "info@zsradost.cz",
+  "phoneForTel": "+420720839198",
+  "phoneFormatted": "+420 720 839 198",
   "address": {
     "lineOne": "",
     "city": "",
@@ -10,9 +10,9 @@
     "mapLink": ""
   },
   "social": {
-    "facebook": "https://www.facebook.com/profile.php?id=61552941056810",
-    "instagram": "https://www.instagram.com/ludmilavycitalova_slunce/",
-    "youtube": "https://youtube.com/@spanelskeslunce?si=pUrfzz7EFkE09vi6",
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
     "tiktok": "",
     "whatsapp": ""
   },

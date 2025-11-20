@@ -1836,10 +1836,6 @@ select {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-\[1\.5fr_1fr\] {
-  grid-template-columns: 1.5fr 1fr;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -3238,6 +3234,10 @@ body {
     width: 2.5rem !important;
   }
 
+  .sm\:w-3\/4 {
+    width: 75%;
+  }
+
   .sm\:w-\[calc\(100\%-94px\)\] {
     width: calc(100% - 94px);
   }
@@ -3425,6 +3425,10 @@ body {
     width: 18rem;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:columns-3 {
     -moz-columns: 3;
          columns: 3;
@@ -3440,6 +3444,10 @@ body {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[1\.5fr_1fr\] {
+    grid-template-columns: 1.5fr 1fr;
   }
 
   .lg\:gap-12 {

@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
   <section class="pt-56 pb-16 ~px-4/8">
-    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl grid grid-cols-[1.5fr_1fr] items-center gap-10 xl:gap-16">
-      <div class="w-full">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl grid lg:grid-cols-[1.5fr_1fr] items-center gap-10 xl:gap-16">
+      <div class="w-full order-2 lg:order-2">
         <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Kdo jsem?</div>
         <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">{{ name }}</h2>
         <div class="prose prose-zinc max-w-full marker:text-zinc-900">
@@ -19,11 +19,11 @@
       </div>
 
       <!-- IMAGE -->
-      <picture>
+      <picture class="order-1 lg:order-2">
         <source media="(max-width: 600px)" srcset="{% getUrl image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
         <source media="(min-width: 601px)" srcset="{% getUrl image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
         <img
-          class="w-full h-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
+          class="w-full sm:w-3/4 lg:w-full h-auto rounded-xl object-cover transition-transform duration-500 group-hover:scale-110"
           src="{% getUrl image | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}"
           alt="{{ member.data.imageAlt or member.data.name }}"
           decoding="async"

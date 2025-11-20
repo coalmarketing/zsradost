@@ -26,91 +26,13 @@ collections:
       - label: "Nastavení webu"
         name: "website_settings"
         file: "src/_data/client.json"
-        description: "Dovoluje klientovi upravit jeho kontaktní infrormace pomocí default souboru client.json"
+        description: "Umožňuje upravovat kontaktní údaje klienta v souboru src/_data/client.json"
         fields:
-          - {
-              label: "Název podniku",
-              name: "name",
-              widget: "string",
-              hint: "Použito v kartě prohlížeče a odkazech pro sdílení",
-            }
-          - {
-              label: "Email",
-              name: "email",
-              widget: "string",
-              hint: "Hlavní email, kde vás mohou zákaznici kontaktovat",
-            }
-          - {
-              label: "Telefonní číslo bez mezer",
-              name: "phoneForTel",
-              widget: "string",
-              hint: "Použito pro klikatelné odkazy k volání. Ve formátu +420xxxxxxxxx",
-            }
-          - {
-              label: "Telefonní číslo s mezerami",
-              name: "phoneFormatted",
-              widget: "string",
-              hint: "Použito jako viditelný text na stránkách. Ve formátu +420 xxx xxx xxx",
-            }
-          - label: "Adresa"
-            name: "address"
-            widget: "object"
-            fields:
-              - {
-                  label: "Ulice a č.p.",
-                  name: lineOne,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: "Město",
-                  name: "city",
-                  widget: "string",
-                  required: false,
-                }
-              - { label: "PSČ", name: "zip", widget: "string", required: false }
-              - {
-                  label: "Google Mapy odkaz",
-                  name: "mapLink",
-                  widget: "string",
-                  hint: "Odkaz pro sdílení adresy vašeho podniku z Google Mapy",
-                  required: false,
-                }
+          - { label: "Název podniku", name: "name", widget: "string", hint: "Použito v titulku prohlížeče a při sdílení" }
+          - { label: "E-mail", name: "email", widget: "string", hint: "Hlavní e-mail, kam vás mohou zákazníci kontaktovat" }
+          - { label: "Telefon (bez mezer)", name: "phoneForTel", widget: "string", hint: "Použito pro klikatelné odkazy pro volání. Formát: +420xxxxxxxxx" }
+          - { label: "Telefon (formátovaný)", name: "phoneFormatted", widget: "string", hint: "Viditelný text na stránkách. Příklad: +420 123 456 789" }
 
-          - label: "Sociální sítě"
-            name: "social"
-            widget: "object"
-            fields:
-              - {
-                  label: "Facebook",
-                  name: "facebook",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Instagram",
-                  name: "instagram",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Youtube",
-                  name: "youtube",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "TikTok",
-                  name: "tiktok",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "WhatsApp",
-                  name: "whatsapp",
-                  widget: "string",
-                  required: false,
-                }
 
   # BLOG CONFIG
   - label: "Blog"
@@ -120,52 +42,21 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Název", name: "title", widget: "string" }
-      - {
-          label: "URL odkaz",
-          name: "url",
-          widget: "string",
-          hint: "Určete, kam bude stránka zapsána. Pokud použijete „Blogový příspěvek“, bude příspěvek přístupný z „blog/blogovy-prispevek“.",
-          pattern:
-            [
-              "^[A-Za-z0-9 ]+(?:-[A-Za-z0-9 ]+)*$",
-              "Pouze písmena (A-Z, a-z), číslice a pomlčky (-). Žádná lomítka ani speciální znaky.",
-            ],
-        }
-      - {
-          label: "Popis",
-          name: "description",
-          widget: "string",
-          hint: "Kratší popis blogového příspěvku, který se zobrazuje na náhledech příspěvků",
-        }
-      - {
-          label: "Kategorie",
-          name: "category",
-          widget: "string",
-          hint: "Kategorie, do které blogový příspěvek patří",
-        }
+      - { label: "URL odkaz", name: "url", widget: "string", hint: "Určete, jak bude vypadat URL stránky (bez lomítek). Např. 'nazev-prispevku' — výsledná cesta: /blog/nazev-prispevku.", pattern: ["^[A-Za-z0-9 ]+(?:-[A-Za-z0-9 ]+)*$","Pouze písmena (A-Z, a-z), číslice a pomlčky (-). Žádná lomítka ani speciální znaky."] }
+      - { label: "Popis", name: "description", widget: "string", hint: "Krátký popis příspěvku, který se zobrazuje v náhledech" }
+      - { label: "Kategorie", name: "category", widget: "string", hint: "Kategorie, do které příspěvek patří" }
       - { label: "Autor", name: "author", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
-      - {
-          label: "Štítky",
-          name: "tags",
-          widget: "list",
-          default: ["post"],
-          hint: "Pro pobytové kurzy přidat 'pobytoveKurzy' - poté se příspěvek zobrazí na stránce pobytových kurzů",
-        }
-      - {
-          label: "Náhledový obrázek",
-          name: "image",
-          widget: "image",
-          choose_url: false,
-        }
+      - { label: "Štítky", name: "tags", widget: "list", default: ["post"], hint: "Pro pobytové kurzy přidejte 'pobytoveKurzy' — příspěvek se poté zobrazí na stránce pobytových kurzů" }
+      - { label: "Náhledový obrázek", name: "image", widget: "image", choose_url: false }
       - { label: "Popis obrázku", name: "imageAlt", widget: "string" }
-      - name: images
+      - name: "images"
         label: "Další obrázky (galerie)"
-        widget: list
+        widget: "list"
         required: false
-        hint: "Nahrajte obrázky, které se zobrazí v dolní galerii příspěvku"
+        hint: "Nahrajte obrázky, které se zobrazí v galerii příspěvku"
         fields:
-          - { name: url, label: Fotografie, widget: image, choose_url: false }
+          - { name: "url", label: "Fotografie", widget: "image", choose_url: false }
           - { label: "Popis fotografie", name: "alt", widget: "string", required: false }
       - { label: "Obsah", name: "body", widget: "markdown" }
 
@@ -183,23 +74,13 @@ collections:
       - { label: "Krátký popis (preview)", name: "description", widget: "text", required: false }
       - { label: "Náhledový obrázek (cover)", name: "cover", widget: "image", choose_url: false, required: false }
       - { label: "Layout (hidden)", name: "layout", widget: "hidden", default: "layouts/gallery.njk" }
-      - name: images
-        label: Fotografie
-        widget: list
+      - name: "images"
+        label: "Fotografie"
+        widget: "list"
         fields:
-          - { name: url, label: Fotografie, widget: image }
-          - {
-              label: "Popis fotografie",
-              name: "alt",
-              widget: "string",
-              required: false,
-            }
-      - {
-          label: "Štítky",
-          name: "tags",
-          widget: "hidden",
-          default: ["gallery"],
-        }
+          - { name: "url", label: "Fotografie", widget: "image", choose_url: false }
+          - { label: "Popis fotografie", name: "alt", widget: "string", required: false }
+      - { label: "Štítky", name: "tags", widget: "hidden", default: ["gallery"] }
 
   # PARTNERS
   - label: "Partneři"
@@ -211,12 +92,7 @@ collections:
       - { label: "Název", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "string", required: false }
       - { label: "Obrázek", name: "image", widget: "image", choose_url: false }
-      - {
-          label: "Popis obrázku",
-          name: "imageAlt",
-          widget: "string",
-          required: false,
-        }
+      - { label: "Popis obrázku", name: "imageAlt", widget: "string", required: false }
       - { label: "Pořadí", name: "order", widget: "number", required: false }
 
   # INSPIRATION / DOWNLOADABLE FILES
@@ -247,7 +123,7 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Downloads for interest"
+      - label: "Ke stažení (Pro zájemce)"
         name: "interest_file"
         file: "src/_data/interest.json"
         description: "Seznam dokumentů (PDF, DOCX) zobrazený na stránce 'Pro zájemce'"
@@ -261,7 +137,6 @@ collections:
               - { label: "Dokument", name: "file", widget: "file", hint: "Nahrajte dokument do 'src/assets/documents'" }
               - { label: "Text tlačítka", name: "buttonText", widget: "string", required: false }
 
-
   # TEAM MEMBERS
   - label: "Tým"
     name: "team"
@@ -271,38 +146,12 @@ collections:
     fields:
       - { label: "Jméno", name: "name", widget: "string" }
       - { label: "Pozice", name: "role", widget: "string", required: false }
-      - {
-          label: "Fotografie",
-          name: "image",
-          widget: "image",
-          choose_url: false,
-        }
-      - {
-          label: "Popis fotografie",
-          name: "imageAlt",
-          widget: "string",
-          required: false,
-        }
+      - { label: "Fotografie", name: "image", widget: "image", choose_url: false }
+      - { label: "Popis fotografie", name: "imageAlt", widget: "string", required: false }
       - { label: "Krátký bio", name: "bio", widget: "text", required: false }
-      - {
-          label: "URL odkaz",
-          name: "url",
-          widget: "string",
-          hint: "Určete, kam bude stránka zapsána. Pokud použijete „Blogový příspěvek“, bude příspěvek přístupný z „blog/blogovy-prispevek“.",
-          pattern:
-            [
-              "^[A-Za-z0-9 ]+(?:-[A-Za-z0-9 ]+)*$",
-              "Pouze písmena (A-Z, a-z), číslice a pomlčky (-). Žádná lomítka ani speciální znaky.",
-            ],
-          required: true,
-        }
+      - { label: "URL odkaz", name: "url", widget: "string", hint: "Určete, jak bude vypadat URL (bez lomítek). Např. 'jmeno-cloveka'", pattern: ["^[A-Za-z0-9 ]+(?:-[A-Za-z0-9 ]+)*$","Pouze písmena (A-Z, a-z), číslice a pomlčky (-). Žádná lomítka ani speciální znaky."], required: true }
       - { label: "Pořadí", name: "order", widget: "number", required: false }
-      - {
-          label: "Zobrazit",
-          name: "published",
-          widget: "boolean",
-          default: true,
-        }
+      - { label: "Zobrazit", name: "published", widget: "boolean", default: true }
       - label: "Plný popis"
         name: "body"
         widget: "markdown"
