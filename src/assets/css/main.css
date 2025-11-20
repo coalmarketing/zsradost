@@ -2387,6 +2387,11 @@ select {
   color: rgb(24 24 27 / var(--tw-text-opacity, 1));
 }
 
+.\!text-primary {
+  --tw-text-opacity: 1 !important;
+  color: rgb(33 131 128 / var(--tw-text-opacity, 1)) !important;
+}
+
 .underline {
   text-decoration-line: underline;
 }
