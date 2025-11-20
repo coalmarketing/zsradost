@@ -13,7 +13,7 @@ module.exports = {
     screens: screens,
     extend: {
       fontFamily: {
-        "sans": ["Space Grotesk", defaultTheme.fontFamily.sans],
+        "sans": ["Arsenal", "Space Grotesk", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: "#218380",

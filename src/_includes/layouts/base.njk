@@ -51,10 +51,11 @@
     <!-- Preloads -->
     <link rel="preload" as="image" href="/assets/svgs/Spanelske_Slunce_logo_light.svg">
     <link rel="preload" as="image" href="/assets/svgs/Spanelske_Slunce_logo_dark.svg">
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ProximaNova-Regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ProximaNova-Bold.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/TTTravels-DemiBold.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/TTTravels-Bold.woff2" crossorigin>
+    <!-- Arsenal local fonts (preload ttf because only ttf files are present) -->
+    <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/Arsenal-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/Arsenal-Italic.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/Arsenal-Bold.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="/assets/fonts/Arsenal-BoldItalic.ttf" crossorigin>
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     {% if preloadImg %}
