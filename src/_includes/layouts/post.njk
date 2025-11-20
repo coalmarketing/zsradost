@@ -36,79 +36,199 @@
 {% block body %}
 {% include "components/landing.njk" %}
 
-<article class="~px-4/8 py-32">
-  <div
-    class="container m-auto flex flex-col items-center bg-primary/20 gap-16 ~p-6/10 rounded-3xl"
-  > 
-    <!-- IMAGE -->
-    <picture>
-      <source
-        media="(max-width: 600px)"
-        srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}"
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 601px)"
-        srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}"
-        type="image/webp"
-      />
-      <img
-        class="w-full max-w-4xl rounded-xl object-cover"
-        src="{% getUrl image | resize({ width: 1792 }) | jpeg({ quality: 70 }) %}"
-        alt="{{ imageAlt }}"
-        decoding="async"
-        loading="lazy"
-        width="896"
-        height="588"
-        draggable="false"
-      />
-    </picture>
+<div>
+  <article class="~px-4/8 py-16">
+    <div
+      class="container m-auto flex flex-col items-center bg-primary/20 gap-16 ~p-6/10 rounded-3xl"
+    > 
+      <!-- IMAGE -->
+      <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="{% getUrl image | resize({ width: 1792 }) | webp({ quality: 70 }) %}"
+          type="image/webp"
+        />
+        <img
+          class="w-full max-w-4xl rounded-xl object-cover"
+          src="{% getUrl image | resize({ width: 1792 }) | jpeg({ quality: 70 }) %}"
+          alt="{{ imageAlt }}"
+          decoding="async"
+          loading="lazy"
+          width="896"
+          height="588"
+          draggable="false"
+        />
+      </picture>
 
-    <!-- BLOG POST -->
-    <section class="text-base w-full max-w-[90ch]">
-      <div class="prose prose-zinc mx-auto w-full max-w-[90ch]">
-        <div class="flex flex-col gap-2">
-          <!-- BLOG TITLE -->
-          <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>
-          <!-- BLOG METADATA -->
-          <span class="text-base text-slate-700 font-medium">{{
-            date | postDate
-          }}</span>
+      <!-- BLOG POST -->
+      <section class="text-base w-full max-w-[90ch]">
+        <div class="prose prose-zinc mx-auto w-full max-w-[90ch]">
+          <div class="flex flex-col gap-2">
+            <!-- BLOG TITLE -->
+            <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>
+            <!-- BLOG METADATA -->
+            <span class="text-base text-slate-700 font-medium">{{
+              date | postDate
+            }}</span>
+          </div>
+
+          <!-- BLOG TEXT -->
+          {{ content | safe }}
         </div>
 
-        <!-- BLOG TEXT -->
-        {{ content | safe }}
+        <!-- EXTRA IMAGES: render remaining images (if any) at end of post -->
+        {% if images and images | length > 0 %}
+          <div class="mt-12 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {% for img in images %}
+                {% set imgUrl = img.url or img %}
+                {% set imgAlt = img.alt or imageAlt or (title ~ ' - ' ~ loop.index) %}
+                <a data-fslightbox="{{ album.fileSlug }}" href="{% getUrl imgUrl | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
+                  <picture>
+                    <source srcset="{% getUrl imgUrl | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}" type="image/webp">
+                    <img
+                      class="object-contain w-full aspect-square rounded-xl"
+                      src="{% getUrl imgUrl | rotate | resize({ width: 486, height: 486 }) | jpeg({ quality: 70 }) %}"
+                      alt="{% if image.alt -%} image.alt {%- else -%} Fotografie {{ album.data.title }}-{{ loop.index }} {%- endif %}"
+                      decoding="async"
+                      loading="lazy"
+                      width="243"
+                      height="243"
+                      draggable="false"/>
+                  </picture>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </section>
+    </div>
+  </article>
+
+  {% if collections.post | length > 0 %}
+  <!-- BLOG -->
+  <section class="pb-16 ~px-4/8">
+    <div class="container ~p-6/10 bg-primary/20 rounded-3xl m-auto flex flex-col gap-8 items-center">
+      <div class="w-full flex justify-between items-end">
+        <!-- HEADING -->
+        <div>
+          <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Příběhy & Aktuality</div>
+          <h2 class="text-primary ~text-5xl/6xl font-bold">
+            Náš svět příběhů a aktualit
+          </h2>
+        </div>
+
+
+        <!-- MORE BTN -->
+        <a href="/blog" class="group relative w-fit hidden lg:inline-flex items-center px-8 py-2 rounded-full font-bold text-primary bg-white overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-primary transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+          <div class="relative z-10 flex items-center">
+            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-white">
+              Více příspěvků
+            </span>
+
+              <svg class="fill-primary transition-all duration-300 group-hover:translate-x-1 group-hover:fill-white"
+                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                  viewBox="0 -960 960 960" fill="currentColor">
+                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+              </svg>
+          </div>
+        </a>
       </div>
 
-      <!-- EXTRA IMAGES: render remaining images (if any) at end of post -->
-      {% if images and images | length > 0 %}
-        <div class="mt-12 w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {% for img in images %}
-              {% set imgUrl = img.url or img %}
-              {% set imgAlt = img.alt or imageAlt or (title ~ ' - ' ~ loop.index) %}
-              <a data-fslightbox="{{ album.fileSlug }}" href="{% getUrl imgUrl | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
+      <!-- BLOG POSTS -->
+      <div class="grid grid-cols-1 xl:grid-cols-3 justify-center gap-8 w-full max-xl:max-w-4xl">
+        {# Loop over the latest posts but skip the current page and show up to 3 #}
+        {% set shown = 0 %}
+        {% for post in collections.post | reverse %}
+          {% if post.url != page.url and shown < 3 %}
+          <!-- BLOG POST -->
+          <article
+            class="flex flex-col md:flex-row xl:flex-col gap-2 xl:max-w-md p-4 bg-white border-4 border-transparent rounded-xl
+transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
+            <!-- IMAGE + METADATA -->
+            <div class="shrink-0 flex flex-col gap-2">
+              <!-- IMAGE -->
+              <a href="{{ post.url }}">
                 <picture>
-                  <source srcset="{% getUrl imgUrl | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}" type="image/webp">
+                  <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 1056, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
+                  <source media="(min-width: 601px)" srcset="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | webp({ quality: 70 }) %}" type="image/webp">
                   <img
-                    class="object-contain w-full aspect-square rounded-xl"
-                    src="{% getUrl imgUrl | rotate | resize({ width: 486, height: 486 }) | jpeg({ quality: 70 }) %}"
-                    alt="{% if image.alt -%} image.alt {%- else -%} Fotografie {{ album.data.title }}-{{ loop.index }} {%- endif %}"
-                    decoding="async"
-                    loading="lazy"
-                    width="243"
-                    height="243"
-                    draggable="false"/>
+                  class="h-64 w-full md:h-full md:w-80 xl:h-64 xl:w-full rounded-xl object-cover"
+                  src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
+                  alt="Fotka lektorky Ludmily Vyčítalové"
+                  decoding="async"
+                  loading="lazy"
+                  width="392"
+                  height="256"
+                  draggable="false"/>
                 </picture>
               </a>
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
-    </section>
 
-  </div>
-</article>
+              <!-- DATE -->
+              <div class="flex items-center gap-1.5">
+                <svg class="text-zinc-800" xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 -960 960 960" fill="currentColor">
+                  <path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/>
+                </svg>
+                <span class="mt-0.5 text-sm text-zinc-800 leading-none">
+                  {{ post.date | postDate }}
+                </span>
+              </div>
+            </div>
+
+            <!-- TEXT + AUTHOR -->
+            <div class="flex-1 flex flex-col justify-between gap-4 w-full">
+              <!-- HEADING + TEXT -->
+              <div class="flex flex-col gap-2">
+                <a
+                  title="{{ post.data.title }}"
+                  class="relative text-2xl xl:text-xl font-bold transition-colors duration-300 hover:text-primary"
+                  href="{{ post.url }}"
+                >
+                  <h3 class="line-clamp-2">
+                    {{ post.data.title }}
+                  </h3>
+                </a>
+                <p class="text-zinc-800 line-clamp-6 xl:line-clamp-4">
+                  {{ post.data.description }}
+                </p>
+              </div>
+
+              <!-- MORE BTN -->
+              <a href="{{ post.url }}" class="group flex w-fit items-center px-2 py-1.5 border-2 border-zinc-300 rounded-full transition-colors duration-300 hover:border-primary">
+                <span class="group-hover:text-primary pr-1 group-hover:pr-3 transition-all duration-300">Více informací</span>
+                <svg class="fill-zinc-300 transition-colors duration-300 group-hover:fill-primary" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 -960 960 960" fill="currentColor">
+                  <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+            {% set shown = shown + 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- MORE BTN -->
+      <a href="/blog" class="inline-flex lg:hidden group relative w-fit items-center px-8 py-2 rounded-full font-bold text-primary bg-white overflow-hidden transition-colors duration-300">
+        <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-primary transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+        <div class="relative z-10 flex items-center">
+          <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-white">
+            Více příspěvků
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+  {% endif %}
+</div>
 
 {% include "components/cta.njk" %} {% include "components/partners.njk" %} {%
 endblock %}
