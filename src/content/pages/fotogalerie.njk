@@ -16,49 +16,49 @@ eleventyNavigation:
 {% block body %}
   {% include "components/landing.njk" %}
 
-  {# Loop over the latest (reverse) blog posts #}
-  {% for album in collections.gallery | reverse %}
-    {# Check if the gallery album has any photos #}
-    {% if album.data.images | length > 0 %}
-      <section class="py-24 ~px-4/8 odd:bg-white dark:odd:bg-zinc-950 even:bg-zinc-100 dark:even:bg-zinc-900">
-        <div class="container m-auto flex flex-col gap-8">
-          <span class="text-2xl dark:text-white font-bold line-clamp-1">{{ album.data.title }}</span>
+  <section class="py-16 ~px-4/8">
+    <div class="container m-auto bg-blue/15 ~p-6/10 rounded-3xl">
+      <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Jak to u nás jde?</div>
+      <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Fotogalerie školy</h2>
 
-          <!-- GALLERY PHOTOS -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-            {% for image in album.data.images %}
-              <!-- IMAGE -->
-              <a data-fslightbox="{{ album.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
-                <picture>
-                  <source srcset="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | webp({ quality: 70 }) %}" type="image/webp">
-                  <img
-                    class="object-cover w-full aspect-square rounded-xl"
-                    src="{% getUrl image.url | rotate | resize({ width: 486, height: 486 }) | jpeg({ quality: 70 }) %}"
-                    alt="{% if image.alt -%} image.alt {%- else -%} Fotografie {{ album.data.title }}-{{ loop.index }} {%- endif %}"
-                    decoding="async"
-                    loading="lazy"
-                    width="243"
-                    height="243"
-                    draggable="false"/>
-                </picture>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for album in collections.gallery | reverse %}
+          {% if album.data.images | length > 0 %}
+            {% set coverImage = (album.data.cover or (album.data.images[0] and album.data.images[0].url) ) %}
+
+            <article class="bg-white rounded-2xl shadow-md overflow-hidden">
+              <a href="{{ album.url }}" class="block">
+                <div class="w-full h-56 overflow-hidden">
+                  {% if coverImage %}
+                    <picture>
+                      <source srcset="{% getUrl coverImage | resize({ width: 960, height: 560 }) | webp({ quality: 70 }) %}" type="image/webp">
+                      <img class="w-full h-full object-cover" src="{% getUrl coverImage | resize({ width: 960, height: 560 }) | jpeg({ quality: 70 }) %}" alt="{{ album.data.title }}" loading="lazy" decoding="async" draggable="false"/>
+                    </picture>
+                  {% else %}
+                    <div class="w-full h-full bg-zinc-100"></div>
+                  {% endif %}
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-zinc-900 mb-2">{{ album.data.title }}</h3>
+                  <p class="text-zinc-700 mb-4 line-clamp-3">{{ album.data.description or '' }}</p>
+
+                  <div class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-4 py-2 rounded-full font-bold text-white bg-primary overflow-hidden transition-colors duration-300">
+                    <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+
+                    <div class="relative z-10 flex items-center">
+                      <span class="transition-colors duration-300 group-hover:text-white">Více obrázků</span>
+                    </div>
+                  </div>
+                </div>
               </a>
-            {% endfor %}
-          </div>
-
-          {% if album.data.url %}
-            <!-- CTA BUTTON -->
-            <a class="self-center block relative px-4 py-2 bg-primary text-white font-semibold rounded-lg z-10 overflow-hidden
-              before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-tertiary before:-z-10
-              before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
-              href="{{ album.data.url }}"
-              target="_blank">
-              Zobrazit vše
-            </a>
+            </article>
           {% endif %}
-        </div>
-      </section>
-    {% endif %}
-  {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 
   {% include "components/cta.njk" %}
   {% include "components/partners.njk" %}

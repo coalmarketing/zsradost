@@ -4,6 +4,21 @@
       "title": "Pracovní list - Téma 1",
       "description": "Krátký popis dokumentu nebo inspirace. Použijte tento dokument pro procvičování.",
       "file": "/assets/images/cms/test-file-copy.pdf"
+    },
+    {
+      "title": "Pracovní list - Téma 2",
+      "description": "Pracovní list - Téma 2 test",
+      "file": "/assets/images/cms/test-file-copy.pdf"
+    },
+    {
+      "title": "Pracovní list - Téma 3",
+      "description": "Peter Gray – Svoboda učení",
+      "file": "/assets/images/cms/test-file-copy.pdf"
+    },
+    {
+      "title": "Asociace svobodných demokratických školy",
+      "description": "Asociace svobodných demokratických školy test",
+      "file": "/assets/images/cms/test-file-copy.pdf"
     }
   ]
 }

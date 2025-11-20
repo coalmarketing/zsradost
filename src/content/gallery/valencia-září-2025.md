@@ -1,6 +1,7 @@
 ---
 title: Valencia září 2025
 date: 2025-09-15
+layout: layouts/gallery.njk
 url: https://photos.app.goo.gl/m3ovVcP5VmTKLYXW9
 images:
   - url: /assets/images/cms/20250916_145655.jpg

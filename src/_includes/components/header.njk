@@ -1,7 +1,7 @@
 <!-- NAVIGATION -->
 <header
   id="navigation"
-  class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] container py-4 px-7 bg-white dark:bg-zinc-950 rounded-xl z-50
+  class="fixed ~top-4/8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] container py-4 px-7 bg-white rounded-xl z-50
     transition-[width,max-width,transform] duration-300 group-[&.scroll]/body:w-full group-[&.scroll]/body:max-w-full group-[&.scroll]/body:~-translate-y-4/8
     group-[&.scroll]/body:rounded-none group-[&.scroll]/body:shadow-lg"
 >
@@ -26,7 +26,7 @@
     <!-- NAVIGATION -->
     <div
       class="hidden max-xl:group-[.mobile-menu]/body:block xl:flex xl:gap-6 max-xl:absolute max-xl:top-[calc(100%+0.5rem)] max-xl:left-1/2 max-xl:-translate-x-1/2
-        max-xl:w-full max-xl:group-[.mobile-menu]/body:w-full max-xl:group-[.mobile-menu]/body:max-w-[calc(100vw-2rem)] max-xl:p-4 max-xl:bg-white dark:max-xl:bg-zinc-950 max-xl:rounded-xl max-xl:shadow-lg">
+        max-xl:w-full max-xl:group-[.mobile-menu]/body:w-full max-xl:group-[.mobile-menu]/body:max-w-[calc(100vw-2rem)] max-xl:p-4 max-xl:bg-white max-xl:rounded-xl max-xl:shadow-lg">
       <nav class="flex justify-center whitespace-nowrap">
         <ul class="flex max-xl:flex-col gap-2 xl:gap-6 max-xl:w-full">
           {% set navPages = collections.all | eleventyNavigation %}
@@ -43,9 +43,9 @@
                 <a
                 href="{{ entry.url }}"
                 class="py-2 max-xl:pl-4 xl:py-4 text-base font-normal max-xl:w-full max-xl:border-l-4 max-xl:rounded-r-md
-                  {% if entry.url == page.url %} text-primary dark:text-primary max-xl:border-l-primary max-xl:bg-primary/10
-                  {% else %} text-zinc-800 dark:text-zinc-200 transition-colors duration-300 hover:text-black dark:hover:text-white
-                  max-xl:hover:bg-zinc-100 dark:max-xl:hover:bg-zinc-900 max-xl:border-l-zinc-300 dark:max-xl:border-l-zinc-600 max-xl:focus:text-black{%- endif -%}"
+                  {% if entry.url == page.url %} text-primary max-xl:border-l-primary max-xl:bg-primary/10
+                  {% else %} text-zinc-800 transition-colors duration-300 hover:text-black
+                  max-xl:hover:bg-zinc-100 max-xl:border-l-zinc-300 max-xl:focus:text-black{%- endif -%}"
                   {%- if entry.url == page.url -%}aria-current="page"{%- endif -%}
                 >
                   {{ entry.key }}
@@ -75,9 +75,9 @@
           aria-label="Tlačítko mobilního menu"
         >
         <span class="block relative h-[1.125rem] w-6">
-          <span class="absolute top-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-500 group-[.active]:rotate-45 group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
-          <span class="absolute top-1/2 -translate-y-1/2 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-[opacity] duration-500 group-[.active]:opacity-0"></span>
-          <span class="absolute bottom-0 block h-[3px] w-full bg-zinc-700 dark:bg-zinc-300 rounded-full transition-transform duration-500 group-[.active]:rotate-[315deg] group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
+          <span class="absolute top-0 block h-[3px] w-full bg-zinc-700 rounded-full transition-transform duration-500 group-[.active]:rotate-45 group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
+          <span class="absolute top-1/2 -translate-y-1/2 block h-[3px] w-full bg-zinc-700 rounded-full transition-[opacity] duration-500 group-[.active]:opacity-0"></span>
+          <span class="absolute bottom-0 block h-[3px] w-full bg-zinc-700 rounded-full transition-transform duration-500 group-[.active]:rotate-[315deg] group-[.active]:top-1/2 group-[.active]:-translate-y-1/2 group-[.active]:left-1/2 group-[.active]:-translate-x-1/2"></span>
         </span>
       </button>
     </div>
