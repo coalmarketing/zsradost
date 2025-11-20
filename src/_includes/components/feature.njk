@@ -14,8 +14,13 @@
   {%- else -%}
     {%- set showBtn = true -%}
   {%- endif -%}
+  {%- if opts.id is defined -%}
+    {%- set sectionId = opts.id -%}
+  {%- else -%}
+    {%- set sectionId = '' -%}
+  {%- endif -%}
   
-  <section class="pb-16 {{ paddingTop }} ~px-4/8">
+  <section {% if sectionId %}id="{{ sectionId }}"{% endif %} class="pb-16 {{ paddingTop }} ~px-4/8">
     <div class="container {{ containerBg }} m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
       {# Text block #}
       {% if not reverse %}

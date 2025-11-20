@@ -93,7 +93,32 @@
     </main>
     {% include "components/footer.njk" %}
 
+    <script>
+      (function() {
+        if (window.location.hash) {
+          try {
+            var id = window.location.hash.substring(1);
+            window.scrollTo(0, 0);
+            document.addEventListener('DOMContentLoaded', function() {
+              var el = document.getElementById(id);
+              if (el) {
+                setTimeout(function() {
+                  var offset = window.innerHeight * 0.2;
+
+                  var top = el.getBoundingClientRect().top + window.pageYOffset;
+
+                  window.scrollTo({
+                    top: top - offset,
+                    behavior: 'smooth'
+                  });
+                }, 50);
+              }
+            });
+          } catch (e) {}
+        }
+      })();
+    </script>
+
     {% block javascript %}{% endblock %}
   </body>
-
 </html>

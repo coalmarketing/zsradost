@@ -24,7 +24,7 @@ eleventyNavigation:
   {% endcall %}
 
 
-  {% call feature({ color: 'purple', containerBg: 'bg-purple/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-about.webp', imageAlt: 'Fotka školy Radost', showBtn: false, buttonText: 'Zjisti více', reverse: true }) %}
+  {% call feature({ id: 'vize', color: 'purple', containerBg: 'bg-purple/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-about.webp', imageAlt: 'Fotka školy Radost', showBtn: false, buttonText: 'Zjisti více', reverse: true }) %}
     <p>Základní vizí naší školy je vzdělávání, které je postaveno na respektujícím přístupu, důvěře v děti a jejich individualitu, spolupráci a řešení problémů komunikací.</p>
     <p>Zaměřujeme se na osobnostní rozvoj žáků, podporujeme v nich chuť pracovat s informacemi týkajících se dnešního i budoucího světa.</p>
     <p>Žáci často spolupracují, i když jde o individuální učení, sdílejí nápady a pomáhají si navzájem, což podporuje týmovou práci.</p>
@@ -33,7 +33,7 @@ eleventyNavigation:
 
 
   <!-- MORE ABOUT SCHOOL -->
-  <section class="pb-16 ~px-4/8">
+  <section class="mb-16 ~px-4/8" id="svobodna-skola">
     <div class="container bg-purple/15 m-auto ~p-6/10 rounded-3xl items-center gap-10 xl:gap-16">
       <div class="flex flex-col justify-center">
         <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Sebevědomé vzdělávání</div>
@@ -102,50 +102,11 @@ eleventyNavigation:
 
 
   <!-- TEAM -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-purple/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
-      <!-- IMAGE -->
-      <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/team-photo.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/team-photo.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/team-photo.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka lektorky Ludmily Vyčítalové"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
+  {% call feature({ id: 'radostny-tym', color: 'purple', containerBg: 'bg-purple/15', topper: 'Kdo tvoří tým?', title: 'RADOSTný tým', image: '/assets/images/about-us/team-photo.webp', imageAlt: 'RADOSTný tým', showBtn: false, buttonText: 'Poznej náš tým', reverse: true }) %}
+    <p>Náš tým tvoří zkušené a nadšené profesionálky a profesionálové. Společně vytváříme inspirativní a bezpečné prostředí, kde se každý žák může cítit podporován a motivován k objevování nových znalostí a dovedností.</p>
+    <p>Každý člen našeho týmu přináší unikátní odborné znalosti a osobní přístup, díky kterému dokážeme efektivně reagovat na potřeby žáků i rodičů. </p>
+  {% endcall %}
 
-      <div class="flex flex-col justify-center">
-        <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Kdo tvoří tým?</div>
-        <h2 class="mb-8 text-purple ~text-5xl/6xl font-bold">RADOSTný tým</h2>
-
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Náš tým tvoří zkušené a nadšené profesionálky a profesionálové. Společně vytváříme inspirativní a bezpečné prostředí, kde se každý žák může cítit podporován a motivován k objevování nových znalostí a dovedností.</p>
-          <p>Každý člen našeho týmu přináší unikátní odborné znalosti a osobní přístup, díky kterému dokážeme efektivně reagovat na potřeby žáků i rodičů. </p>
-        </div>
-
-        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-purple overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-purple">
-              Poznej náš tým
-            </span>
-
-              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-purple"
-                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                  viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-              </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
   {% include "components/cta.njk" %}
   {% include "components/partners.njk" %}

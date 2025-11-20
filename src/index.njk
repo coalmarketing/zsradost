@@ -117,7 +117,7 @@ eleventyNavigation:
   {% endcall %}
 
 
-  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-landing.webp', imageAlt: 'Fotka lektorky Ludmily Vyčítalové', href: '/about', buttonText: 'Zjisti více', reverse: true }) %}
+  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-landing.webp', imageAlt: 'Fotka lektorky Ludmily Vyčítalové', href: '/o-nas/#vize', buttonText: 'Zjisti více', reverse: true }) %}
     <p>Svobodná demokratická škola je postavena na principu sebeřízeného vzdělávání, které podporuje vnitřní motivaci dětí k učení, na rozdíl od tradičního vzdělávání. Děti jsou přirozeně zvídavé a učí se na základě vlastní potřeby, což umožňuje individuální přístup a zodpovědnost za jejich vlastní vzdělávání. Pedagogové v tomto procesu fungují jako průvodci a kouči, podporující dobrovolné učení ve věkově smíšených kolektivech. </p>
   {% endcall %}
 
@@ -237,11 +237,13 @@ transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
     </section>
   {% endif %}
 
+
   {% call feature({ color: 'green', containerBg: 'bg-green/15', topper: 'Kdo tvoří tým?', title: 'RADOSTný tým', image: '/assets/images/about-us/team-photo.webp', imageAlt: 'Fotka lektorky Ludmily Vyčítalové', href: '/about', buttonText: 'Poznej náš tým', reverse: true }) %}
     <p>Náš tým tvoří zkušené a nadšené profesionálky a profesionálové. Společně vytváříme inspirativní a bezpečné prostředí, kde se každý žák může cítit podporován a motivován k objevování nových znalostí a dovedností.</p>
     <p>Každý člen našeho týmu přináší unikátní odborné znalosti a osobní přístup, díky kterému dokážeme efektivně reagovat na potřeby žáků i rodičů. </p>
   {% endcall %}
 
+  
   {% include "components/cta.njk" %}
   {% include "components/partners.njk" %}
 {% endblock body %}

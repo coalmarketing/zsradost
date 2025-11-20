@@ -69,7 +69,7 @@ eleventyNavigation:
 
 
   <!-- Školní družina -->
-  {% call feature({ color: 'primary', containerBg: 'bg-primary/15', topper: 'Odpolední péče', title: 'Školní družina', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Poznej náš tým', reverse: false }) %}
+  {% call feature({ id: 'druzina', color: 'primary', containerBg: 'bg-primary/15', topper: 'Odpolední péče', title: 'Školní družina', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Poznej náš tým', reverse: false }) %}
     <p>Záměrem školy je být pro rodiče partnerem nejen ve vzdělávání dětí, ale i pro běžný život.</p>
     <p>Zajišťujeme školní družinu, kde se o děti postaráme i mimo vyučování, abyste se v klidu mohli věnovat své práci. Děti se tak mohou déle stmelovat v kolektivu a rozvíjet své praktické dovednosti.</p>
     <p>Poplatek za školní družinu pro rok 2024/2025 činí 500 Kč za měsíc.</p>
@@ -85,7 +85,7 @@ eleventyNavigation:
 
 
   <!-- CATERING -->
-  <section class="pb-16 ~px-4/8">
+  <section class="pb-16 ~px-4/8" id="stravovani">
     <div class="container bg-primary/15 m-auto ~p-6/10 rounded-3xl">
       <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Školní obědy</div>
       <h2 class="mb-8 text-primary ~text-5xl/6xl font-bold">Školní stravování</h2>
@@ -125,7 +125,7 @@ eleventyNavigation:
   </section>
 
   <!-- Školné -->
-  {% call feature({ color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné 2024/25', title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Žádost o přijetí do ZŠ Radost', reverse: false }) %}
+  {% call feature({ id: 'skolne', color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné 2024/25', title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Žádost o přijetí do ZŠ Radost', reverse: false }) %}
     <p>Poplatek za školní rok 2024/2025 činí 5 000 Kč za měsíc.</p>
     <p>(Sourozenecká sleva možná.)</p>
   {% endcall %}
