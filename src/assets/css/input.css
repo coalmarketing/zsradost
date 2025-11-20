@@ -116,13 +116,3 @@ body {
 .green-swiper .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #0DA84A !important;
 }
-
-.inspiration-swiper-container .swiper-button-prev,
-.documents-swiper-container .swiper-button-prev {
-  left: -47px;
-}
-
-.inspiration-swiper-container .swiper-button-next, 
-.documents-swiper-container .swiper-button-next {
-  right: -47px;
-}

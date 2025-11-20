@@ -56,7 +56,7 @@ eleventyNavigation:
       <h2 class="mb-8 text-purple ~text-4xl/6xl font-bold">Další inspirace</h2>
 
       <!-- Swiper container -->
-      <div class="inspiration-swiper-container relative mx-auto w-[calc(100%-94px)]">
+      <div class="inspiration-swiper-container relative mx-auto sm:w-[calc(100%-94px)]">
         <div class="w-full swiper inspiration-swiper">
           <div class="swiper-wrapper w-full h-full">
             {% if inspirations and inspirations.items %}
@@ -64,7 +64,7 @@ eleventyNavigation:
                 <div class="swiper-slide !h-auto">
                   <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
                     <h3 class="text-xl font-bold text-purple mb-2">{{ item.title }}</h3>
-                    <p class="text-zinc-800 mb-4 grow">{{ item.description }}</p>
+                    <p class="text-zinc-800 grow">{{ item.description }}</p>
                     <div class="mt-4">
                       <a href="{{ item.file }}" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple hover:bg-purple/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
@@ -81,18 +81,18 @@ eleventyNavigation:
           <div class="swiper-pagination !relative mt-4"></div>
         </div>
 
-        <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 z-10 !text-purple"></div>
-        <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 z-10 !text-purple"></div>
+        <div class="swiper-button-prev absolute !min-w-10 !w-10 sm:!w-10 sm:min-w-10 flex sm:block items-center justify-center !min-h-10 sm:!min-h-auto !h-10 sm:!h-auto after:!text-[24px] sm:after:!text-[40px] bg-white sm:bg-transparent rounded-full !top-[calc(100%+16px)] sm:!top-1/2 -translate-y-1/2 z-10 !text-purple sm:!-left-[51px]"></div>
+        <div class="swiper-button-next absolute !min-w-10 !w-10 sm:!w-10 sm:min-w-10 flex sm:block items-center justify-center !min-h-10 sm:!min-h-auto !h-10 sm:!h-auto after:!text-[24px] sm:after:!text-[40px] bg-white sm:bg-transparent rounded-full !top-[calc(100%+16px)] sm:!top-1/2 -translate-y-1/2 z-10 !text-purple sm:!-right-[51px]"></div>
       </div>
 
       <!-- MORE BTN -->
       <div class="w-full flex justify-center mt-8">
-      <a href="/inspirace/" class="group relative w-fit hidden lg:inline-flex items-center px-8 py-2 rounded-full font-bold text-purple bg-white overflow-hidden transition-colors duration-300">
+      <a href="/inspirace/" class="group relative w-fit inline-flex items-center px-8 py-2 rounded-full font-bold text-purple bg-white overflow-hidden transition-colors duration-300">
         <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-purple transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
 
         <div class="relative z-10 flex items-center">
           <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-white">
-            Více dokumentů
+            Více inspirace
           </span>
         </div>
       </a>
