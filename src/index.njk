@@ -62,8 +62,9 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
+  {% from "components/feature.njk" import feature %}
   <!-- HERO -->
-  <section class="bg-white h-screen relative pt-24 ~px-4/8 overflow-hidden flex items-center justify-center">
+  <section class="mb-16 bg-white h-screen relative pt-24 ~px-4/8 overflow-hidden flex items-center justify-center">
     <div class="z-[2] container m-auto flex max-2xl:flex-col justify-center items-center ~gap-12/24">
       <!-- HEADING + CTA -->
       <div class="flex flex-col items-center justify-center 2xl:items-start gap-8 sm:gap-12">
@@ -110,97 +111,15 @@ eleventyNavigation:
   </section>
 
   
-  <!-- ABOUT SCHOOL -->
-  <section class="py-16 ~px-4/8">
-    <div class="container bg-purple/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
-      <div class="order-2 lg:order-1 flex flex-col justify-center">
-        <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Kdo jsme?</div>
-        <h2 class="mb-8 text-purple ~text-5xl/6xl font-bold">Naše škola</h2>
-
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Řadíme se mezi malé plnohodnotné soukromé základní školy postavené na principu sebeřízeného vzdělávání. </p>
-          <p>Jsme na cestě k vytvoření svobodné školy - chceme, aby děti vzdělávané v naší škole byly motivované touhou po vědění, namísto odměny za splnění přiděleného zadání. Chcete toto pro své dítě také? Pak jste tady správně.</p>
-        </div>
-
-        <a href="/o-nas" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-purple overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-purple">
-              Zjisti více
-            </span>
-
-            <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-purple"
-                xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                viewBox="0 -960 960 960" fill="currentColor">
-              <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-            </svg>
-          </div>
-        </a>
-      </div>
-
-      <!-- IMAGE -->
-      <picture class="order-1 lg:order-2">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/school-photo-landing.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/school-photo-landing.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/school-photo-landing.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka lektorky Ludmily Vyčítalové"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
-    </div>
-  </section>
+  {% call feature({ color: 'purple', containerBg: 'bg-purple/15', topper: 'Kdo jsme?', title: 'Naše škola', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka lektorky Ludmily Vyčítalové', href: '/o-nas', buttonText: 'Zjisti více', reverse: false }) %}
+    <p>Řadíme se mezi malé plnohodnotné soukromé základní školy postavené na principu sebeřízeného vzdělávání. </p>
+    <p>Jsme na cestě k vytvoření svobodné školy - chceme, aby děti vzdělávané v naší škole byly motivované touhou po vědění, namísto odměny za splnění přidělaného zadání. Chcete toto pro své dítě také? Pak jste tady správně.</p>
+  {% endcall %}
 
 
-  <!-- ABOUT VISION -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-blue/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center  gap-10 xl:gap-16">
-      <!-- IMAGE -->
-      <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-landing.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-landing.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/vision-photo-landing.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka lektorky Ludmily Vyčítalové"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
-
-      <div class="flex flex-col justify-center">
-        <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Proč jinak?</div>
-        <h2 class="mb-8 text-blue ~text-5xl/6xl font-bold">Naše vize</h2>
-
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Svobodná demokratická škola je postavena na principu sebeřízeného vzdělávání, které podporuje vnitřní motivaci dětí k učení, na rozdíl od tradičního vzdělávání. Děti jsou přirozeně zvídavé a učí se na základě vlastní potřeby, což umožňuje individuální přístup a zodpovědnost za jejich vlastní vzdělávání. Pedagogové v tomto procesu fungují jako průvodci a kouči, podporující dobrovolné učení ve věkově smíšených kolektivech. </p>
-        </div>
-
-        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-blue overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-blue">
-            Zjisti více
-            </span>
-
-              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-blue"
-                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                  viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-              </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-landing.webp', imageAlt: 'Fotka lektorky Ludmily Vyčítalové', href: '/about', buttonText: 'Zjisti více', reverse: true }) %}
+    <p>Svobodná demokratická škola je postavena na principu sebeřízeného vzdělávání, které podporuje vnitřní motivaci dětí k učení, na rozdíl od tradičního vzdělávání. Děti jsou přirozeně zvídavé a učí se na základě vlastní potřeby, což umožňuje individuální přístup a zodpovědnost za jejich vlastní vzdělávání. Pedagogové v tomto procesu fungují jako průvodci a kouči, podporující dobrovolné učení ve věkově smíšených kolektivech. </p>
+  {% endcall %}
 
 
   {% if collections.post | length > 0 %}
@@ -318,51 +237,10 @@ transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
     </section>
   {% endif %}
 
-  <!-- TEAM -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
-      <!-- IMAGE -->
-      <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/team-photo.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/team-photo.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/team-photo.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka lektorky Ludmily Vyčítalové"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
-
-      <div class="flex flex-col justify-center">
-        <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Kdo tvoří tým?</div>
-        <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">RADOSTný tým</h2>
-
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Náš tým tvoří zkušené a nadšené profesionálky a profesionálové. Společně vytváříme inspirativní a bezpečné prostředí, kde se každý žák může cítit podporován a motivován k objevování nových znalostí a dovedností.</p>
-          <p>Každý člen našeho týmu přináší unikátní odborné znalosti a osobní přístup, díky kterému dokážeme efektivně reagovat na potřeby žáků i rodičů. </p>
-        </div>
-
-        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-green overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-green">
-              Poznej náš tým
-            </span>
-
-              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-green"
-                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                  viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-              </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+  {% call feature({ color: 'green', containerBg: 'bg-green/15', topper: 'Kdo tvoří tým?', title: 'RADOSTný tým', image: '/assets/images/about-us/team-photo.webp', imageAlt: 'Fotka lektorky Ludmily Vyčítalové', href: '/about', buttonText: 'Poznej náš tým', reverse: true }) %}
+    <p>Náš tým tvoří zkušené a nadšené profesionálky a profesionálové. Společně vytváříme inspirativní a bezpečné prostředí, kde se každý žák může cítit podporován a motivován k objevování nových znalostí a dovedností.</p>
+    <p>Každý člen našeho týmu přináší unikátní odborné znalosti a osobní přístup, díky kterému dokážeme efektivně reagovat na potřeby žáků i rodičů. </p>
+  {% endcall %}
 
   {% include "components/cta.njk" %}
   {% include "components/partners.njk" %}

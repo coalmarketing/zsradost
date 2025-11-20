@@ -11,6 +11,7 @@ eleventyNavigation:
 
 {% block body %}
   {% include "components/landing.njk" %}
+  {% from "components/feature.njk" import feature %}
 
   <!-- Swiper CSS (CDN) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
@@ -67,99 +68,21 @@ eleventyNavigation:
   </section>
 
 
-  <!-- SCHOOL -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-primary/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
-      <div class="order-2 lg:order-1 flex flex-col justify-center">
-        <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Odpolední péče</div>
-        <h2 class="mb-8 text-primary ~text-5xl/6xl font-bold">Školní družina</h2>
+  <!-- Školní družina -->
+  {% call feature({ color: 'primary', containerBg: 'bg-primary/15', topper: 'Odpolední péče', title: 'Školní družina', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Poznej náš tým', reverse: false }) %}
+    <p>Záměrem školy je být pro rodiče partnerem nejen ve vzdělávání dětí, ale i pro běžný život.</p>
+    <p>Zajišťujeme školní družinu, kde se o děti postaráme i mimo vyučování, abyste se v klidu mohli věnovat své práci. Děti se tak mohou déle stmelovat v kolektivu a rozvíjet své praktické dovednosti.</p>
+    <p>Poplatek za školní družinu pro rok 2024/2025 činí 500 Kč za měsíc.</p>
+  {% endcall %}
 
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Záměrem školy je být pro rodiče partnerem nejen ve vzdělávání dětí, ale i pro běžný život.</p>
-          <p>Zajišťujeme školní družinu, kde se o děti postaráme i mimo vyučování, abyste se v klidu mohli věnovat své práci. Děti se tak mohou déle stmelovat v kolektivu a rozvíjet své praktické dovednosti.</p>
-          <p>Poplatek za školní družinu pro rok 2024/2025 činí 500 Kč za měsíc.</p>
-        </div>
-        
-        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-primary overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
 
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-primary">
-              Poznej náš tým
-            </span>
+  <!-- Školní obědy -->
+  {% call feature({ color: 'primary', containerBg: 'bg-primary/15', topper: 'Školní obědy', title: 'Stravování', image: '/assets/images/about-us/school-photo-about.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Přihláška ke stravování', reverse: true }) %}
+    <p>Obědy pro Základní školu RADOST připravuje Střední škola gastronomická a technická Žamberk.</p>
+    <p>Cena stravného pro školní rok 2024/2025 činí 70 Kč.</p>
+    <p>Přihlašování a odhlašování obědů: WhatsApp skupina</p>
+  {% endcall %}
 
-              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-primary"
-                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                  viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-              </svg>
-          </div>
-        </a>
-      </div>
-
-      <!-- IMAGE -->
-      <picture class="order-1 lg:order-2">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/school-photo-landing.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/school-photo-landing.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka školy Radost"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
-    </div>
-  </section>
-
-  <!-- AFTER SCHOOL CLUB -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-primary/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center  gap-10 xl:gap-16">
-      <!-- IMAGE -->
-      <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka školy Radost"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
-
-      <div class="flex flex-col justify-center">
-        <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Školní obědy</div>
-        <h2 class="mb-8 text-primary ~text-5xl/6xl font-bold">Stravování</h2>
-
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Obědy pro Základní školu RADOST připravuje </b>Střední škola gastronomická a technická Žamberk.</p>
-          <p>Cena stravného pro školní rok 2024/2025 činí 70 Kč.</p>
-          <p>Přihlašování a odhlašování obědů: WhatsApp skupina</p>
-        </div>
-
-        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-primary overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-primary">
-              Přihláška ke stravování
-            </span>
-
-              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-primary"
-                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                  viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-              </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- CATERING -->
   <section class="pb-16 ~px-4/8">
@@ -201,51 +124,11 @@ eleventyNavigation:
     </div>
   </section>
 
-  <!-- TUITION -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-primary/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
-      <div class="order-2 lg:order-1 flex flex-col justify-center">
-        <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Školné 2024/25</div>
-        <h2 class="mb-8 text-primary ~text-5xl/6xl font-bold">Školné</h2>
-
-        <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Poplatek za školní rok 2024/2025 činí 5 000 Kč za měsíc.</p>
-          <p>(Sourozenecká sleva možná.)</p>
-        </div>
-
-        <a href="/about" class="group relative w-fit inline-flex items-center px-8 py-2 md:px-12 md:py-4 rounded-full font-bold text-white bg-primary overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
-
-          <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-primary">
-              Žádost o přijetí do ZŠ Radost
-            </span>
-
-              <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-primary"
-                  xmlns="http://www.w3.org/2000/svg" height="24" width="24"
-                  viewBox="0 -960 960 960" fill="currentColor">
-                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
-              </svg>
-          </div>
-        </a>
-      </div>
-
-      <!-- IMAGE -->
-      <picture class="order-1 lg:order-2">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-            class="w-full max-w-3xl rounded-xl object-cover"
-            src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-            alt="Fotka školy Radost"
-            decoding="async"
-            loading="lazy"
-            width="1536"
-            height="504"
-            draggable="false"/>
-      </picture>
-    </div>
-  </section>  
+  <!-- Školné -->
+  {% call feature({ color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné 2024/25', title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Žádost o přijetí do ZŠ Radost', reverse: false }) %}
+    <p>Poplatek za školní rok 2024/2025 činí 5 000 Kč za měsíc.</p>
+    <p>(Sourozenecká sleva možná.)</p>
+  {% endcall %}
 
 
   {% include "components/cta.njk" %}

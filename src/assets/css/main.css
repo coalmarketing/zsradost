@@ -1502,6 +1502,10 @@ select {
   margin-top: 1rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1587,6 +1591,10 @@ select {
   height: 1rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .h-44 {
   height: 11rem;
 }
@@ -1630,14 +1638,6 @@ select {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-28 {
-  height: 7rem;
-}
-
-.h-40 {
-  height: 10rem;
 }
 
 .max-h-full {
@@ -2054,6 +2054,11 @@ select {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
 .bg-center {
   background-position: center;
 }
@@ -2229,6 +2234,10 @@ select {
 
 .pt-64 {
   padding-top: 16rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-left {
@@ -2886,11 +2895,6 @@ body {
   color: rgb(17 142 255 / var(--tw-text-opacity, 1));
 }
 
-.group:hover .group-hover\:text-green {
-  --tw-text-opacity: 1;
-  color: rgb(13 168 74 / var(--tw-text-opacity, 1));
-}
-
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
   color: rgb(33 131 128 / var(--tw-text-opacity, 1));
@@ -3222,20 +3226,8 @@ body {
     padding-bottom: 1rem;
   }
 
-  .sm\:\~h-16\/28 {
-    height: clamp(4rem,1.86rem + 5.36vw,7rem)/* fluid from 4rem at 40rem to 7rem at 96rem */;
-  }
-
   .sm\:\~h-20\/44 {
     height: clamp(5rem,0.71rem + 10.71vw,11rem)/* fluid from 5rem at 40rem to 11rem at 96rem */;
-  }
-
-  .sm\:\~h-24\/28 {
-    height: clamp(6rem,5.29rem + 1.79vw,7rem)/* fluid from 6rem at 40rem to 7rem at 96rem */;
-  }
-
-  .sm\:\~h-2\/28 {
-    height: clamp(0.5rem,-4.14rem + 11.61vw,7rem)/* fluid from 0.5rem at 40rem to 7rem at 96rem */;
   }
 }
 
@@ -3322,6 +3314,15 @@ body {
     order: 2;
   }
 
+  .lg\:my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3374,6 +3375,15 @@ body {
 }
 
 @media (min-width: 80rem) {
+  .xl\:my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .xl\:mt-0 {
+    margin-top: 0px;
+  }
+
   .xl\:line-clamp-4 {
     overflow: hidden;
     display: -webkit-box;

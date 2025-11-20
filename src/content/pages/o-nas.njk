@@ -11,74 +11,26 @@ eleventyNavigation:
 
 {% block body %}
   {% include "components/landing.njk" %}
+  {% from "components/feature.njk" import feature %}
 
   <!-- Swiper CSS (CDN) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
-  <!-- SCHOOL -->
-  <section class="py-16 ~px-4/8">
-    <div class="container bg-purple/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center gap-10 xl:gap-16">
-      <div class="order-2 lg:order-1 flex flex-col justify-center">
-        <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Co děláme?</div>
-        <h2 class="mb-8 text-purple ~text-5xl/6xl font-bold">Naše škola</h2>
-
-        <div class="flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Činností spolku je pořádání volnočasových aktivit pro děti předškolního věku v souladu s koncepcí Základní školy Radost. Jedná se například o sportovní, kreativní nebo vzdělávací činnosti, které slouží k rozvoji, zábavě či relaxaci.</p>
-          <p>Neméně důležitou součástí spolku je zřízení Základní školy Radost.</p>
-          <p>Ve škole se namísto tradičního přístupu žáci stávají tvůrci svého vzdělávacího procesu. Mají větší kontrolu nad tím, co, jak a kdy se učí, a to vše v rámci stanovených cílů uvedených v RVP.</p>
-          <p>Cílem je obohatit život našich dětí a podporovat vzájemné společenské vazby.</p>
-        </div>
-      </div>
-
-      <!-- IMAGE -->
-      <picture class="order-1 lg:order-2">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-          class="w-full max-w-3xl rounded-xl object-cover"
-          src="{% getUrl "/assets/images/about-us/school-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-          alt="Fotka školy Radost"
-          decoding="async"
-          loading="lazy"
-          width="1536"
-          height="504"
-          draggable="false"/>
-      </picture>
-    </div>
-  </section>
+  {% call feature({ paddingTop: 'pt-16', color: 'purple', containerBg: 'bg-purple/15', topper: 'Co děláme?', title: 'Naše škola', image: '/assets/images/about-us/school-photo-about.webp', imageAlt: 'Fotka školy Radost', showBtn: false, buttonText: 'Zjisti více', reverse: false }) %}
+    <p>Činností spolku je pořádání volnočasových aktivit pro děti předškolního věku v souladu s koncepcí Základní školy Radost. Jedná se například o sportovní, kreativní nebo vzdělávací činnosti, které slouží k rozvoji, zábavě či relaxaci.</p>
+    <p>Neméně důležitou součástí spolku je zřízení Základní školy Radost.</p>
+    <p>Ve škole se namísto tradičního přístupu žáci stávají tvůrci svého vzdělávacího procesu. Mají větší kontrolu nad tím, co, jak a kdy se učí, a to vše v rámci stanovených cílů uvedených v RVP.</p>
+    <p>Cílem je obohatit život našich dětí a podporovat vzájemné společenské vazby.</p>
+  {% endcall %}
 
 
-  <!-- VISION -->
-  <section class="pb-16 ~px-4/8">
-    <div class="container bg-purple/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-1 lg:grid-cols-2 items-center  gap-10 xl:gap-16">
-      <!-- IMAGE -->
-      <picture>
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1136, height: 746 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-          class="w-full max-w-3xl rounded-xl object-cover"
-          src="{% getUrl "/assets/images/about-us/vision-photo-about.webp" | resize({ width: 1536, height: 1008 }) | jpeg({ quality: 70 }) %}"
-          alt="Fotka školy Radost"
-          decoding="async"
-          loading="lazy"
-          width="1536"
-          height="504"
-          draggable="false"/>
-      </picture>
+  {% call feature({ color: 'purple', containerBg: 'bg-purple/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-about.webp', imageAlt: 'Fotka školy Radost', showBtn: false, buttonText: 'Zjisti více', reverse: true }) %}
+    <p>Základní vizí naší školy je vzdělávání, které je postaveno na respektujícím přístupu, důvěře v děti a jejich individualitu, spolupráci a řešení problémů komunikací.</p>
+    <p>Zaměřujeme se na osobnostní rozvoj žáků, podporujeme v nich chuť pracovat s informacemi týkajících se dnešního i budoucího světa.</p>
+    <p>Žáci často spolupracují, i když jde o individuální učení, sdílejí nápady a pomáhají si navzájem, což podporuje týmovou práci.</p>
+    <p>Učitelé se stávají průvodci a mentory, kteří podporují žáky v jejich seberozvoji a umožňují zpětnou vazbu, místo toho, aby byli pouze poskytovatelé informací. </p>
+  {% endcall %}
 
-      <div class="flex flex-col justify-center">
-        <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Proč jinak?</div>
-        <h2 class="mb-8 text-purple ~text-5xl/6xl font-bold">Naše vize</h2>
-
-        <div class="flex flex-col gap-3 text-zinc-900 text-lg md:text-xl">
-          <p>Základní vizí naší školy je vzdělávání, které je postaveno na respektujícím přístupu, důvěře v děti a jejich individualitu, spolupráci a řešení problémů komunikací.</p>
-          <p>Zaměřujeme se na osobnostní rozvoj žáků, podporujeme v nich chuť pracovat s informacemi týkajících se dnešního i budoucího světa.</p>
-          <p>Žáci často spolupracují, i když jde o individuální učení, sdílejí nápady a pomáhají si navzájem, což podporuje týmovou práci.</p>
-          <p>Učitelé se stávají průvodci a mentory, kteří podporují žáky v jejich seberozvoji a umožňují zpětnou vazbu, místo toho, aby byli pouze poskytovatelé informací. </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- MORE ABOUT SCHOOL -->
   <section class="pb-16 ~px-4/8">
@@ -95,6 +47,7 @@ eleventyNavigation:
       </div>
     </div>
   </section>
+
 
   <!-- SWIPER - INSPIRATION -->
   <section class="pb-16 ~px-4/8">
@@ -146,7 +99,6 @@ eleventyNavigation:
       </div>
     </div>
   </section>
-
 
 
   <!-- TEAM -->
