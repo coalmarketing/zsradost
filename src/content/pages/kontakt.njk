@@ -17,13 +17,13 @@ eleventyNavigation:
 
   <!-- MAP -->
   <section class="py-16 ~px-4/8">
-    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl items-center">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl items-center">
       <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Jsme na mapě!</div>
-      <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">ZÁKLADNÍ ŠKOLA RADOST</h2>
+      <h2 class="mb-8 text-green ~text-3xl/6xl font-bold">ZÁKLADNÍ ŠKOLA RADOST</h2>
 
-      <div class="mb-8 grid grid-cols-2">
-        <div class="space-y-3 text-xl">
-          <div class="px-6 py-1 text-base bg-primary mb-2 rounded-full w-fit text-white font-bold">Kontakty</div>
+      <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-3 text-base sm:text-lg lg:text-xl">
+          <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Kontakty</div>
 
           <a
             href="tel:{{ client.phoneForTel }}"
@@ -64,8 +64,8 @@ eleventyNavigation:
           </a>
         </div>
 
-        <div class="space-y-3 text-xl">
-          <div class="px-6 py-1 text-base bg-primary mb-2 rounded-full w-fit text-white font-bold">Fakturační údaje</div>
+        <div class="space-y-3 text-base sm:text-lg lg:text-xl">
+          <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Fakturační údaje</div>
           
           <p>Základní škola Radost, z.s.</p>
           <p>Šedivská 838, Letohrad 561 51</p>
@@ -82,9 +82,9 @@ eleventyNavigation:
 
   <!-- SWIPER - DOCUMENTS FOR DOWNLOAD -->
   <section class="pb-16 ~px-4/8">
-    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl items-center gap-10 xl:gap-16">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl items-center gap-10 xl:gap-16">
       <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Kdo tvoří tým?</div>
-      <h2 class="mb-8 text-green ~text-5xl/6xl font-bold">RADOSTný tým</h2>
+      <h2 class="mb-8 text-green ~text-3xl/6xl font-bold">RADOSTný tým</h2>
 
       <!-- Swiper container -->
       <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
@@ -146,11 +146,11 @@ eleventyNavigation:
 
   <!-- CONTACT FORM -->
   <section class="pb-16 ~px-4/8">
-    <div class="container bg-green/15 m-auto ~p-6/10 rounded-3xl grid grid-cols-2 gap-10 xl:gap-16">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-16">
       <div>
         <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Máte otázky?</div>
-        <h2 class="mb-6 text-green ~text-5xl/6xl font-bold">Kontaktujte nás</h2>
-        <p class="mb-6 text-lg">V případě jakýchkoliv dotazů či požadavků nás můžete kontaktovat prostřednictvím tohoto formuláře. Rádi vám poskytneme veškeré potřebné informace a odpovíme v co nejkratším možném termínu.</p>
+        <h2 class="mb-6 text-green ~text-3xl/6xl font-bold">Kontaktujte nás</h2>
+        <p class="mb-6 text-base sm:text-lg">V případě jakýchkoliv dotazů či požadavků nás můžete kontaktovat prostřednictvím tohoto formuláře. Rádi vám poskytneme veškeré potřebné informace a odpovíme v co nejkratším možném termínu.</p>
 
         <div class="flex gap-2">
           <picture>
@@ -166,7 +166,7 @@ eleventyNavigation:
             />
           </picture>
           <div>
-            <p class="text-lg font-bold">Mgr. Lucie Pospíšilová</p>
+            <p class="text-base sm:text-lg font-bold">Mgr. Lucie Pospíšilová</p>
             <p class="text-base">Ředitelka ZŠ Radost</p>
           </div>
         </div>
@@ -174,7 +174,7 @@ eleventyNavigation:
       
       <div class="flex flex-col gap-3">
         <div class="flex flex-col gap-1">
-          <label for="name" class="font-bold text-lg text-green">Jméno</label>
+          <label for="name" class="font-bold text-lg">Jméno</label>
           <input  
             id="name"
             type="text"
@@ -185,7 +185,7 @@ eleventyNavigation:
         </div>
 
         <div class="flex flex-col gap-1">
-          <label for="email" class="font-bold text-lg text-green">Email</label>
+          <label for="email" class="font-bold text-lg">Email</label>
           <input  
             id="email"
             type="text"
@@ -196,7 +196,7 @@ eleventyNavigation:
         </div>
 
         <div class="flex flex-col gap-1">
-          <label for="subject" class="font-bold text-lg text-green">Předmět</label>
+          <label for="subject" class="font-bold text-lg">Předmět</label>
           <input  
             id="subject"
             type="text"
@@ -207,7 +207,7 @@ eleventyNavigation:
         </div>
 
         <div class="flex flex-col gap-1">
-          <label for="message" class="font-bold text-lg text-green">Zpráva</label>
+          <label for="message" class="font-bold text-lg">Zpráva</label>
           <textarea  
             id="message"
             type="text"
@@ -219,11 +219,11 @@ eleventyNavigation:
           ></textarea>
         </div>
 
-        <a href="/blog" class="mt-2 group relative w-fit hidden lg:inline-flex items-center px-8 py-2 rounded-full font-bold text-green bg-white overflow-hidden transition-colors duration-300">
-          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-green transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
+        <a href="/blog" class="mt-2 group relative w-fit inline-flex items-center px-8 py-2 rounded-full font-bold text-white bg-green overflow-hidden transition-colors duration-300">
+          <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
 
           <div class="relative z-10 flex items-center">
-            <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-white">
+            <span class="text-xl md:text-2xl transition-colors duration-300 group-hover:text-green">
               Poslat zprávu 
             </span>
           </div>

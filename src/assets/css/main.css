@@ -2515,6 +2515,21 @@ select {
   line-height: clamp(3rem,1.93rem + 2.68vw,4.5rem)/* fluid from 3rem at 40rem to 4.5rem at 96rem */;
 }
 
+.\~text-4xl\/6xl {
+  font-size: clamp(2.25rem,1.18rem + 2.68vw,3.75rem)/* fluid type from 2.25rem at 40rem to 3.75rem at 96rem */;
+  line-height: clamp(2.5rem,1.61rem + 2.23vw,3.75rem)/* fluid from 2.5rem at 40rem to 3.75rem at 96rem */;
+}
+
+.\~text-3xl\/6xl {
+  font-size: clamp(1.875rem,0.536rem + 3.348vw,3.75rem)/* fluid type from 1.875rem at 40rem to 3.75rem at 96rem */;
+  line-height: clamp(2.25rem,1.18rem + 2.68vw,3.75rem)/* fluid from 2.25rem at 40rem to 3.75rem at 96rem */;
+}
+
+.\~text-xl\/6xl {
+  font-size: /* not fluid type from 1.25rem at 40rem to 3.75rem at 96rem: Fails WCAG SC 1.4.4 at i.e. 200rem */;
+  line-height: clamp(1.75rem,0.32rem + 3.57vw,3.75rem)/* fluid from 1.75rem at 40rem to 3.75rem at 96rem */;
+}
+
 .\~top-4\/8 {
   top: clamp(1rem,0.29rem + 1.79vw,2rem)/* fluid from 1rem at 40rem to 2rem at 96rem */;
 }
@@ -2525,6 +2540,10 @@ select {
 
 .\~p-6\/10 {
   padding: clamp(1.5rem,0.79rem + 1.79vw,2.5rem)/* fluid from 1.5rem at 40rem to 2.5rem at 96rem */;
+}
+
+.\~p-4\/10 {
+  padding: clamp(1rem,-0.07rem + 2.68vw,2.5rem)/* fluid from 1rem at 40rem to 2.5rem at 96rem */;
 }
 
 .\~px-4\/8 {
@@ -2915,6 +2934,11 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.group:hover .group-hover\:text-green {
+  --tw-text-opacity: 1;
+  color: rgb(13 168 74 / var(--tw-text-opacity, 1));
+}
+
 .group:hover .group-hover\:underline {
   text-decoration-line: underline;
 }
@@ -3231,6 +3255,11 @@ body {
     padding-bottom: 1rem;
   }
 
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:\~h-20\/44 {
     height: clamp(5rem,0.71rem + 10.71vw,11rem)/* fluid from 5rem at 40rem to 11rem at 96rem */;
   }
@@ -3240,6 +3269,10 @@ body {
   .md\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:h-full {
@@ -3306,6 +3339,11 @@ body {
 
   .md\:text-xl {
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -3376,6 +3414,11 @@ body {
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
