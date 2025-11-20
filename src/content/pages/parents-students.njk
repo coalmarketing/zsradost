@@ -20,7 +20,7 @@ eleventyNavigation:
   <section class="py-16 ~px-4/8">
     <div class="container bg-primary/15 m-auto ~p-4/10 rounded-3xl items-center gap-10 xl:gap-16">
       <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Downloads</div>
-      <h2 class="mb-8 text-primary ~text-3xl/6xl font-bold">Dokumenty ke stažení</h2>
+      <h2 class="mb-8 text-primary ~text-4xl/6xl font-bold">Dokumenty ke stažení</h2>
 
       <!-- Swiper container -->
       <div class="documents-swiper-container relative mx-auto w-[calc(100%-94px)]">
@@ -71,7 +71,7 @@ eleventyNavigation:
   <section class="pb-16 ~px-4/8">
     <div class="container bg-primary/15 m-auto ~p-4/10 rounded-3xl items-center gap-10 xl:gap-16">
       <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Fotogalerie</div>
-      <h2 class="mb-8 text-primary ~text-3xl/6xl font-bold">Další momenty</h2>
+      <h2 class="mb-8 text-primary ~text-4xl/6xl font-bold">Další momenty</h2>
 
       <div class="inspiration-swiper-container relative mx-auto w-[calc(100%-94px)]">
         <div class="w-full swiper parents-gallery-swiper parents-students-swiper">
@@ -149,7 +149,7 @@ eleventyNavigation:
   <section class="pb-16 ~px-4/8" id="stravovani">
     <div class="container bg-primary/15 m-auto ~p-4/10 rounded-3xl">
       <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Školní obědy</div>
-      <h2 class="mb-8 text-primary ~text-3xl/6xl font-bold">Školní stravování</h2>
+      <h2 class="mb-6 sm:mb-8 text-primary ~text-4xl/6xl font-bold">Školní stravování</h2>
 
       <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
         <p>Obědy pro Základní školu RADOST připravuje <b>Střední škola gastronomická a technická Žamberk.</b></p>
@@ -171,11 +171,11 @@ eleventyNavigation:
         <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
 
         <div class="relative z-10 flex items-center">
-          <span class="text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-primary">
+          <span class="text-lg sm:text-xl md:text-2xl pr-2 transition-colors duration-300 group-hover:text-primary">
             Přihláška ke stravování
           </span>
 
-            <svg class="fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-primary"
+            <svg class="hidden md:block fill-white transition-all duration-300 group-hover:translate-x-1 group-hover:fill-primary"
                 xmlns="http://www.w3.org/2000/svg" height="24" width="24"
                 viewBox="0 -960 960 960" fill="currentColor">
               <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
@@ -186,7 +186,7 @@ eleventyNavigation:
   </section>
 
   <!-- Školné -->
-  {% call feature({ id: 'skolne', color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné 2024/25', title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Žádost o přijetí do ZŠ Radost', reverse: false }) %}
+  {% call feature({ id: 'skolne', color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné 2024/25', title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/about', buttonText: 'Přihláška ZŠ Radost', reverse: false }) %}
     <p>Poplatek za školní rok 2024/2025 činí 5 000 Kč za měsíc.</p>
     <p>(Sourozenecká sleva možná.)</p>
   {% endcall %}
