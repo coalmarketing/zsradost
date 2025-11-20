@@ -12,10 +12,13 @@ eleventyNavigation:
 {% block body %}
   {% include "components/landing.njk" %}
 
-  <section class="py-24 ~px-4/8 bg-zinc-100">
-    <div class="container m-auto">
+  <section class="py-16 ~px-4/8">
+    <div class="container m-auto bg-primary/15 ~p-6/10 rounded-3xl">
+      <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Příběhy & Aktuality</div>
+      <h2 class="mb-8 text-primary ~text-5xl/6xl font-bold">Aktuality</h2>
+
       {% if collections.post | length == 0 %}
-        <span class="font-proxima-nova text-zinc-800">Zatím tu nic není.</span>
+        <span class="text-zinc-800">Zatím tu nic není.</span>
       {% else %}
         <!-- BLOG POSTS -->
         <div class="grid grid-cols-1 xl:grid-cols-3 justify-center gap-8 w-full max-xl:max-w-4xl">

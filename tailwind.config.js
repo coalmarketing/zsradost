@@ -14,7 +14,6 @@ module.exports = {
     extend: {
       fontFamily: {
         "sans": ["Space Grotesk", defaultTheme.fontFamily.sans],
-        "proxima-nova": ["proxima-nova", defaultTheme.fontFamily.sans]
       },
       colors: {
         primary: "#218380",

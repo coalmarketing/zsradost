@@ -1697,12 +1697,12 @@ select {
   max-width: 72rem;
 }
 
-.max-w-\[75ch\] {
-  max-width: 75ch;
-}
-
 .max-w-\[80\%\] {
   max-width: 80%;
+}
+
+.max-w-\[85ch\] {
+  max-width: 85ch;
 }
 
 .max-w-full {
@@ -2225,10 +2225,6 @@ select {
 
 .text-center {
   text-align: center;
-}
-
-.font-proxima-nova {
-  font-family: proxima-nova, ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 .text-2xl {
@@ -3212,6 +3208,10 @@ body {
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .sm\:\~h-16\/28 {
+    height: clamp(4rem,1.86rem + 5.36vw,7rem)/* fluid from 4rem at 40rem to 7rem at 96rem */;
   }
 
   .sm\:\~h-20\/44 {
