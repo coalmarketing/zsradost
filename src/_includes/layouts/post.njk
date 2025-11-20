@@ -34,7 +34,7 @@
 {% block body %}
     {% include "components/landing.njk" %}
 
-    <article class="~px-4/8 py-32 bg-white dark:bg-zinc-950">
+    <article class="~px-4/8 py-32 bg-white">
         <div class="container m-auto flex flex-col items-center gap-16">
             <!-- IMAGE -->
             <picture>
@@ -52,18 +52,18 @@
             </picture>
 
             <!-- BLOG POST -->
-            <section class="prose prose-zinc dark:prose-invert w-full max-w-[75ch] font-proxima-nova">
+            <section class="prose prose-zinc w-full max-w-[75ch] font-proxima-nova">
                 <div class="flex flex-col gap-2">
                     <!-- BLOG TITLE -->
                     <h1 class="~text-2xl/4xl mb-0">{{ title }}</h1>
                     <!-- BLOG METADATA -->
                     <div class="flex items-center">
-                        <span class="text-sm text-slate-700 dark:text-slate-300 font-medium">{{ author }}</span>
+                        <span class="text-sm text-slate-700 font-medium">{{ author }}</span>
                         <!-- DIVIDER-->
-                        <svg class="text-slate-700 dark:text-slate-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <svg class="text-slate-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
                         </svg>
-                        <span class="text-sm text-slate-700 dark:text-slate-300 font-medium">{{ date | postDate }}</span>
+                        <span class="text-sm text-slate-700 font-medium">{{ date | postDate }}</span>
                     </div>
                 </div>
 

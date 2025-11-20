@@ -213,13 +213,6 @@ collections:
       - { label: "Krátký popis (preview)", name: "description", widget: "text", required: false }
       - { label: "Náhledový obrázek (cover)", name: "cover", widget: "image", choose_url: false, required: false }
       - { label: "Layout (hidden)", name: "layout", widget: "hidden", default: "layouts/gallery.njk" }
-      - {
-          label: "Odkaz (volitelně externí)",
-          name: "url",
-          widget: "string",
-          required: false,
-          hint: "Volitelný externí odkaz (např. Google Photos). Pokud chcete použít interní stránku alba, nevyplňujte.",
-        }
       - name: images
         label: Fotografie
         widget: list

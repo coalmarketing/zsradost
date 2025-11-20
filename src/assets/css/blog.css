@@ -1,18 +1,3 @@
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  html.dark article #blog-content h1,
-  html.dark article #blog-content h2,
-  html.dark article #blog-content h3,
-  html.dark article #blog-content h4,
-  html.dark article #blog-content h5,
-  html.dark article #blog-content h6 {
-    color: #fff;
-  }
-  html.dark article #blog-content p,
-  html.dark article #blog-content li {
-    color: #cbd5e1;
-  }
-}
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   #blog-content h1 {

@@ -7,7 +7,6 @@
 
 {% block body %}
   {% include "components/landing.njk" %}
-
   
   <!-- GALLERY -->
   <article class="~px-4/8 py-24">
@@ -16,13 +15,12 @@
         <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Fotografií</div>
         <h2 class="mb-8 text-purple ~text-5xl/6xl font-bold">Další momenty</h2>
 
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-2">
+        <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-2">
           {% for image in images %}
-            <a data-fslightbox="{{ page.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
+            <a class="w-full inline-block group break-inside-avoid" data-fslightbox="{{ page.fileSlug }}" href="{% getUrl image.url | rotate | resize({ height: 1944 }) | webp({ quality: 70 }) %}">
               <picture>
-                <source srcset="{% getUrl image.url | rotate | resize({ width: 800, height: 800 }) | webp({ quality: 70 }) %}" type="image/webp">
-                <img class="object-cover w-full aspect-square rounded-xl" src="{% getUrl image.url | rotate | resize({ width: 800, height: 800 }) | jpeg({ quality: 70 }) %}" alt="{% if image.alt -%}{{ image.alt }}{%- else -%}Fotografie {{ title }} - {{ loop.index }}{%- endif %}" loading="lazy" decoding="async" draggable="false"/>
+                <source srcset="{% getUrl image.url | rotate | resize({ width: 1200 }) | webp({ quality: 70 }) %}" type="image/webp">
+                <img class="group-hover:scale-[1.02] w-full h-auto block object-cover transition-transform duration-200 rounded-xl" src="{% getUrl image.url | rotate | resize({ width: 1200 }) | jpeg({ quality: 70 }) %}" alt="{% if image.alt -%}{{ image.alt }}{%- else -%}Fotografie {{ title }} - {{ loop.index }}{%- endif %}" loading="lazy" decoding="async" draggable="false"/>
               </picture>
             </a>
           {% endfor %}
@@ -30,7 +28,6 @@
       </section>
     </div>
   </article>
-
 
 
   <!-- SWIPER -->
@@ -44,7 +41,7 @@
         <div class="w-full swiper inspiration-swiper">
           <div class="swiper-wrapper w-full h-full">
              {% for album in collections.gallery | reverse %}
-              {% if album.data.images | length > 0 %}
+              {% if album.url != page.url and album.data.images | length > 0 %}
                 {% set coverImage = (album.data.cover or (album.data.images[0] and album.data.images[0].url) ) %}
                 <div class="swiper-slide !h-auto">
                   <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-4">
@@ -73,7 +70,7 @@
                     </div>
 
                     <h3 class="text-xl font-bold text-zinc-900 mt-3 mb-2">{{ album.data.title }}</h3>
-                    <p class="text-zinc-700 mb-4 line-clamp-3">{{ album.data.description or '' }}</p>
+                    <p class="text-zinc-700 line-clamp-3">{{ album.data.description or '' }}</p>
                   </article>
                 </div>
               {% endif %}
