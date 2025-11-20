@@ -1486,6 +1486,10 @@ select {
   margin-top: 0.125rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1500,10 +1504,6 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .line-clamp-2 {
@@ -1630,6 +1630,14 @@ select {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .max-h-full {
@@ -3221,6 +3229,14 @@ body {
   .sm\:\~h-20\/44 {
     height: clamp(5rem,0.71rem + 10.71vw,11rem)/* fluid from 5rem at 40rem to 11rem at 96rem */;
   }
+
+  .sm\:\~h-24\/28 {
+    height: clamp(6rem,5.29rem + 1.79vw,7rem)/* fluid from 6rem at 40rem to 7rem at 96rem */;
+  }
+
+  .sm\:\~h-2\/28 {
+    height: clamp(0.5rem,-4.14rem + 11.61vw,7rem)/* fluid from 0.5rem at 40rem to 7rem at 96rem */;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -3235,6 +3251,10 @@ body {
 
   .md\:w-80 {
     width: 20rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -3426,6 +3446,10 @@ body {
 }
 
 @media (min-width: 96rem) {
+  .\32xl\:h-28 {
+    height: 7rem;
+  }
+
   .\32xl\:items-start {
     align-items: flex-start;
   }
