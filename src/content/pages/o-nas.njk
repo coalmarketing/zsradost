@@ -52,7 +52,7 @@ eleventyNavigation:
   <!-- SWIPER - INSPIRATION -->
   <section class="pb-16 ~px-4/8">
     <div class="container bg-purple/15 m-auto ~p-4/10 rounded-3xl items-center gap-10 xl:gap-16">
-      <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Soubory</div>
+      <div class="px-6 py-1 bg-purple mb-2 rounded-full w-fit text-white font-bold">Tipy & inspirace</div>
       <h2 class="mb-8 text-purple ~text-4xl/6xl font-bold">Další inspirace</h2>
 
       <!-- Swiper container -->
@@ -66,9 +66,8 @@ eleventyNavigation:
                     <h3 class="text-xl font-bold text-purple mb-2">{{ item.title }}</h3>
                     <p class="text-zinc-800 grow">{{ item.description }}</p>
                     <div class="mt-4">
-                      <a href="{{ item.file }}" download class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple hover:bg-purple/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M8 11l4 4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M21 21H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-                        {{ item.buttonText or 'Stáhnout' }}
+                      <a href="{{ item.url }}" target="_blank" class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple hover:bg-purple/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                        {{ item.buttonText or "Zobrazit" }}
                       </a>
                     </div>
                   </article>

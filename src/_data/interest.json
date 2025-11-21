@@ -1,10 +1,44 @@
 {
   "items": [
     {
-      "title": "Pracovní list - Téma 1",
-      "description": "Krátký popis dokumentu nebo inspirace. Použijte tento dokument pro procvičování.",
-      "file": "/assets/documents/pracovni-list-tema-1.pdf",
-      "buttonText": "Stáhnout PDF"
+      "title": "Školní vzdělávací program",
+      "file": "/assets/images/cms/skolni-vzdelavaci-program.pdf",
+      "description": "Popis vzdělávacího programu školy a jeho cíle pro rozvoj žáků."
+    },
+    {
+      "title": "ŠVP školní družiny",
+      "file": "/assets/images/cms/skolni-vzdelavaci-program-druzina.pdf",
+      "description": "Program školní družiny podporující rozvoj a zábavu dětí po vyučování."
+    },
+    {
+      "title": "Zápis do ZŠ Radost",
+      "file": "/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf",
+      "description": "Přihlášky a informace k zápisu do ZŠ Radost."
+    },
+    {
+      "title": " Žádost o přijetí do ZŠ Radost",
+      "file": "/assets/images/cms/zs-radost-zadost-o-prijeti-2025.pdf",
+      "description": "Podání žádosti a informace o přijímacím procesu do ZŠ Radost."
+    },
+    {
+      "title": " Žádost o odklad",
+      "file": "/assets/images/cms/zs-radost-zadost-o-odklad-25-26.pdf",
+      "description": "Podání žádosti o odklad školní docházky do ZŠ Radost."
+    },
+    {
+      "title": "Inspekční zpráva",
+      "file": "/assets/images/cms/inspekcni-zprava-zs-radost.pdf",
+      "description": "Hodnocení školy a kvality vzdělávání – inspekční zpráva."
+    },
+    {
+      "description": "Oficiální protokol o kontrole a doporučeních pro školu.",
+      "title": " Protokol o kontrole",
+      "file": "/assets/images/cms/protokol-o-kontrole.pdf"
+    },
+    {
+      "title": " Výroční zprávu školy za šk. rok 2024/2025",
+      "file": "/assets/images/cms/zs-radost-vyrocni-zprava-2024-2025.pdf",
+      "description": "Výroční zpráva školy 2024/2025 – přehled činností, výsledků a projektů."
     }
   ]
 }

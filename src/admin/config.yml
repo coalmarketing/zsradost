@@ -110,8 +110,7 @@ collections:
             fields:
               - { label: "Název", name: "title", widget: "string" }
               - { label: "Popis", name: "description", widget: "text" }
-              - { label: "Dokument", name: "file", widget: "file", hint: "Nahrajte dokument do 'src/assets/documents'" }
-              - { label: "Text tlačítka", name: "buttonText", widget: "string", required: false }
+              - { label: "Odkaz", name: "url", widget: "string" }
 
   # INTEREST / DOWNLOADABLE FILES FOR 'Pro zájemce' PAGE
   - label: "Ke stažení"

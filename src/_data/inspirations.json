@@ -1,24 +1,29 @@
 {
   "items": [
     {
-      "title": "Pracovní list - Téma 1",
-      "description": "Krátký popis dokumentu nebo inspirace. Použijte tento dokument pro procvičování.",
-      "file": "/assets/images/cms/test-file-copy.pdf"
+      "title": "Peter Gray – Svoboda učení",
+      "url": "http://blog.tomashajzler.com/clanek/svoboda-uceni-do-kazde-rodiny-aneb-dulezity-kontext-pro-domaci-vzdelavani-ebook-zdarma",
+      "description": "Svoboda učení do každé rodiny aneb důležitý kontext pro domácí vzdělávání (E-kniha zdarma)"
     },
     {
-      "title": "Pracovní list - Téma 2",
-      "description": "Pracovní list - Téma 2 test",
-      "file": "/assets/images/cms/test-file-copy.pdf"
+      "title": "Asociace svobodných demokratických škol",
+      "url": "https://www.asociacesds.cz/",
+      "description": "Propojujeme školy se svobodným a demokratickým vzděláváním, podporujeme sebeřízené učení a sdílíme zkušenosti členů."
     },
     {
-      "title": "Pracovní list - Téma 3",
-      "description": "Peter Gray – Svoboda učení",
-      "file": "/assets/images/cms/test-file-copy.pdf"
+      "title": "Portál Svoboda učení",
+      "url": "https://www.svobodauceni.cz/",
+      "description": "Projekt SvobodaUčení.cz podporuje děti ve svobodném a respektujícím prostředí, kde mohou naplno rozvíjet svůj potenciál."
     },
     {
-      "title": "Asociace svobodných demokratických školy",
-      "description": "Asociace svobodných demokratických školy test",
-      "file": "/assets/images/cms/test-file-copy.pdf"
+      "title": "Podcast Jany Nováčkové o svobodě vzdělávání",
+      "url": "https://open.spotify.com/episode/2vjGfaHCgOSt9CphQ8xPWA?si=e075c25db76d4a27",
+      "description": "Rozhovory a inspirace o svobodném vzdělávání s Janou Nováčkovou."
+    },
+    {
+      "title": "Akademie Summerhill",
+      "url": "https://cs.wikipedia.org/wiki/Summerhill",
+      "description": "Summerhillská škola: svoboda, demokracie a individuální přístup k učení."
     }
   ]
 }
