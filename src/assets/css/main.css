@@ -2876,28 +2876,12 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:fill-blue {
-  fill: #118EFF;
-}
-
 .group:hover .group-hover\:fill-green {
   fill: #0DA84A;
 }
 
 .group:hover .group-hover\:fill-primary {
   fill: #218380;
-}
-
-.group:hover .group-hover\:fill-purple {
-  fill: #B52BFF;
-}
-
-.group:hover .group-hover\:fill-secondary {
-  fill: #FFC30C;
-}
-
-.group:hover .group-hover\:fill-tertiary {
-  fill: #2159AA;
 }
 
 .group:hover .group-hover\:fill-white {
@@ -2921,11 +2905,6 @@ body {
   color: rgb(33 131 128 / var(--tw-text-opacity, 1));
 }
 
-.group:hover .group-hover\:text-blue {
-  --tw-text-opacity: 1;
-  color: rgb(17 142 255 / var(--tw-text-opacity, 1));
-}
-
 .group:hover .group-hover\:text-green {
   --tw-text-opacity: 1;
   color: rgb(13 168 74 / var(--tw-text-opacity, 1));
@@ -2934,21 +2913,6 @@ body {
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
   color: rgb(33 131 128 / var(--tw-text-opacity, 1));
-}
-
-.group:hover .group-hover\:text-purple {
-  --tw-text-opacity: 1;
-  color: rgb(181 43 255 / var(--tw-text-opacity, 1));
-}
-
-.group:hover .group-hover\:text-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(255 195 12 / var(--tw-text-opacity, 1));
-}
-
-.group:hover .group-hover\:text-tertiary {
-  --tw-text-opacity: 1;
-  color: rgb(33 89 170 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:text-white {
