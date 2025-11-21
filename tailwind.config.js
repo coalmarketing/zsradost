@@ -8,6 +8,11 @@ module.exports = {
     files: ["./src/**/*.{html,njk,js}"],
     extract,
   },
+  safelist: [
+    { pattern: /^text-(primary|secondary|tertiary|purple|blue|green)$/, variants: ['group-hover'] },
+    { pattern: /^fill-(primary|secondary|tertiary|purple|blue|green)$/, variants: ['group-hover'] },
+    { pattern: /^bg-(primary|secondary|tertiary|purple|blue|green)$/ },
+  ],
   theme: {
     fontSize: fontSize,
     screens: screens,
