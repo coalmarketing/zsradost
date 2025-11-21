@@ -1,6 +1,6 @@
 {
-  "name": "Španělské Slunce",
-  "short_name": "Španělské Slunce",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
