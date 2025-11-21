@@ -1,30 +1,15 @@
 ---
-title: "Trénink: 80 vět na minulé časy ve španělštině 💪"
-url: trenink na minule casy ve spanelstine
-description: "Praktický ebook, ve kterém stručně oprášíme 3 nejdlůležitější
-  minulé časy (perfektum, imperfektum, indefinido) a v 80 větách procvičíme jak
-  jednotlivé časy, tak správný výběr. "
-category: Učíme se!
 author: Mgr. Ludmila Vyčítalová
-date: 2025-08-22T11:24:00.000+02:00
+title: Ředitelské volno
+url: reditelske-volno-2025-1
+description: "Dovolujeme si vás informovat, že dne 14. 11. 2025 bude vyhlášeno
+  ŘEDITELSKÉ VOLNO z provozních a organizačních důvodů. Děkujeme za pochopení. "
+date: 2025-11-03T09:05:00.000+01:00
+imageAlt: "Oznámení o ředitelském volnu: Informace, že dne 14. 11. 2025 bude z
+  provozních a organizačních důvodů vyhlášeno ředitelské volno."
 tags:
   - post
-image: /assets/images/cms/trénink-celkem-80-vět-k-doplnění-správná-k-řešení.png
-imageAlt: "Španělština má mnoho podob - a studium také. Pojďte v rámci čekání na
-  další běh podzimních kurzů trošku potrénovat minulé časy! "
+image: /assets/images/cms/img_20251103_141251.webp
+category: Učíme se!
 ---
-V tomto praktickém ebooku naleznete **stručné zopakování tvoření, použití a rozdílů v použití třech nejdůležitějších minulých časů** ve španělštině. Jedná se o pracovní sešit na procvičení konkrétní výseče gramatiky. 
-
-Stručný výklad je úvodem do **80 vět na doplnění správného tvaru slovesa** - dle typu slovesa i směs na skutečné procvičení schopnosti výběru správného minulého času. 
-
-Pojďte pomalu zahřívat motory přes naskočením do podzimních online kurzů Španělského Slunce! 
-
-Že nevíte,  o čem je řeč? Jděte bez váhání do sekce **Služby -> Online kurzy na tomto webu!** ☝️😁
-
-Ale **než si online kurz pořídíte, dočtěte až do konce tento praktický pracovní sešit** - vyplatí se to! 🎁Jen nesmíte otálet.
-
-Po zakoupení naleznete **cestu ke své cvičebnici ve Slunečné  klubovně** ☀️
-
-☀️¡Feliz día! 💃🪭
-
-<script type="text/javascript" src="https://form.fapi.cz/script.php?id=31b1e37d-23ce-4d5f-a790-a429f2472c61"></script>
+Dovolujeme si vás informovat, že dne **14. 11. 2025** bude vyhlášeno **ŘEDITELSKÉ VOLNO** z provozních a organizačních důvodů. Děkujeme za pochopení.
