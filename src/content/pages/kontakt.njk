@@ -138,7 +138,7 @@ eleventyNavigation:
         </div>
       </div>
       
-      <div class="flex flex-col gap-3">
+      <form class="flex flex-col gap-3" method="POST" name="Kontaktní formulář" action="/kontakt/success" netlify>
         <div class="flex flex-col gap-1">
           <label for="name" class="font-bold text-lg">Jméno</label>
           <input  
@@ -154,7 +154,7 @@ eleventyNavigation:
           <label for="email" class="font-bold text-lg">Email</label>
           <input  
             id="email"
-            type="text"
+            type="email"
             name="email"
             autocomplete="email"
             placeholder="petr.novak@seznam.cz"
@@ -169,23 +169,22 @@ eleventyNavigation:
             name="subject"
             autocomplete="subject"
             placeholder="Předmět zprávy"
-            required class="min-h-12 rounded-full border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green">
+            class="min-h-12 rounded-full border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green">
         </div>
 
         <div class="flex flex-col gap-1">
           <label for="message" class="font-bold text-lg">Zpráva</label>
           <textarea  
             id="message"
-            type="text"
-            name="text"
-            autocomplete="text"
+            name="message"
+            autocomplete="off"
             placeholder="Napište svou zprávu"
             required 
             class="min-h-40 rounded-3xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
           ></textarea>
         </div>
 
-        <a href="/blog" class="mt-2 group relative w-fit inline-flex items-center px-8 py-2 rounded-full font-bold text-white bg-green overflow-hidden transition-colors duration-300">
+        <button class="mt-2 group relative w-fit inline-flex items-center px-8 py-2 rounded-full font-bold text-white bg-green overflow-hidden transition-colors duration-300" type="submit">
           <span class="pointer-events-none absolute -left-10 inset-0 -skew-x-[10deg] scale-x-0 origin-left bg-white transition-transform duration-500 ease-out group-hover:scale-x-[1.2]"></span>
 
           <div class="relative z-10 flex items-center">
@@ -193,8 +192,8 @@ eleventyNavigation:
               Poslat zprávu 
             </span>
           </div>
-        </a>
-      </div>
+        </button>
+      </form>
     </div>
   </section>
 

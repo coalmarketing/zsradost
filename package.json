@@ -13,6 +13,10 @@
 		"start": "run-p watch:*",
 		"build": "run-s build:*"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Roman-Artemiev/zsradost"
+	},
 	"keywords": [],
 	"author": "Senoweb",
 	"license": "ISC",
