@@ -3630,24 +3630,26 @@ body {
   }
 }
 
-.dark\:bg-zinc-900:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
-}
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-zinc-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
+  }
 
-.dark\:text-secondary:where(.dark, .dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(255 195 12 / var(--tw-text-opacity, 1));
-}
+  .dark\:text-secondary {
+    --tw-text-opacity: 1;
+    color: rgb(255 195 12 / var(--tw-text-opacity, 1));
+  }
 
-.dark\:text-white:where(.dark, .dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
 
-.dark\:text-zinc-200:where(.dark, .dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+  .dark\:text-zinc-200 {
+    --tw-text-opacity: 1;
+    color: rgb(228 228 231 / var(--tw-text-opacity, 1));
+  }
 }
 
 .\[\&\.active\]\:rotate-90.active {

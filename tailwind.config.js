@@ -3,7 +3,6 @@ import fluid, { extract, fontSize, screens } from 'fluid-tailwind'
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  darkMode: "selector",
   content: {
     files: ["./src/**/*.{html,njk,js}"],
     extract,
