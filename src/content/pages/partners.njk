@@ -51,6 +51,11 @@ eleventyNavigation:
       <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Spolupracujeme!</div>
       <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">Další partneři</h2>
 
+      <div class="flex flex-col mb-8 gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
+        <p>Vážení sponzoři, rádi bychom vám jménem spolku poděkovali za vaši podporu, která je pro nás neocenitelná a dává nám sílu vytvářet inspirativní prostředí pro děti. Děkujeme, že jste součástí našeho "RADOSTného" příběhu a že nám pomáháte v budování lepší budoucnosti pro naše žáky.</p>
+        <p>DĚKUJEME! rodině Skalických za finanční dar.</p>
+      </div>
+
       <div class="flex flex-wrap gap-4 sm:gap-6 justify-center">
         {% if collections.partners and collections.partners | length > 0 %}
           {% for partner in collections.partners | sort(attribute='data.order') %}

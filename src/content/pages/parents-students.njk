@@ -140,7 +140,7 @@ eleventyNavigation:
   {% call feature({ id: 'druzina', color: 'primary', containerBg: 'bg-primary/15', topper: 'Odpolední péče', title: 'Školní družina', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/assets/images/cms/zsradost-prihlaska-do-druziny.pdf', target: '_blank', rel: 'noopener noreferrer', buttonText: 'Přihláška do družiny', reverse: false }) %}
     <p>Záměrem školy je být pro rodiče partnerem nejen ve vzdělávání dětí, ale i pro běžný život.</p>
     <p>Zajišťujeme školní družinu, kde se o děti postaráme i mimo vyučování, abyste se v klidu mohli věnovat své práci. Děti se tak mohou déle stmelovat v kolektivu a rozvíjet své praktické dovednosti.</p>
-    <p>Poplatek za školní družinu pro rok 2024/2025 činí 500 Kč za měsíc.</p>
+    <p>Poplatek za školní družinu pro rok {{ client.schoolYear }} činí {{ client.druzinaPrice }} Kč za měsíc.</p>
   {% endcall %}
 
 
@@ -155,14 +155,16 @@ eleventyNavigation:
         <p><b>Přihlašování a odhlašování obědů:</b> WhatsApp skupina</p>
         <p>
           <b>Platby:</b> <br>
-          Číslo účtu: 6616395319/0800 <br>
-          Variabilní symbol: pod variabilní symbol uveďte datum narození dítěte ve formátu RRRRMMDD (např. 20180209) <br>
+          Číslo účtu: 2003312455/2010 <br>
+          Variabilní symbol: pod variabilní symbol uveďte číslo vygenerované aplikací „Škrabka“. <br>
           Zpráva pro příjemce: celé jméno žáka, obědy a měsíc (např. Anna Malíčková, obědy únor)</p>
         <p>
           <b>Informace o stravování:</b> <br>
-          Cena stravného pro školní rok 2024/2025 činí 70 Kč. <br>
-          Škola automaticky objednává stravu pro všechny přihlášené žáky. V době nepřítomnosti žáka je nutné oběd ODHLÁSIT. Pokud stravu včas neodhlásíte, oběd propadá a účtuje se jako odebraný v celé jeho výši. <br>
-          Oběd je možné odhlásit nejpozději <b>den předem do 20:00 hod.</b>
+          Cena stravného pro školní rok {{ client.schoolYear }} činí {{ client.schoolMealsPrice }} Kč. <br>
+          Škola automaticky objednává stravu pro všechny přihlášené žáky. V době nepřítomnosti žáka je nutné oběd ODHLÁSIT. Pokud stravu včas neodhlásíte, oběd propadá a účtuje se jako odebraný v celé jeho výši.
+        </p>
+        <p>
+          Je možné se bezpečně odhlásit v aplikaci Škrabka <b>den předem do 9:00 hod.</b> (případně den předem prostřednictvím soukromé zprávy Petře Vackové do 20:00).
         </p>
       </div>
 
@@ -185,8 +187,8 @@ eleventyNavigation:
   </section>
 
   <!-- Školné -->
-  {% call feature({ id: 'skolne', color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné 2024/25', title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf', target: '_blank', rel: 'noopener noreferrer', buttonText: 'Přihláška ZŠ Radost', reverse: false }) %}
-    <p>Poplatek za školní rok 2024/2025 činí 5 000 Kč za měsíc.</p>
+  {% call feature({ id: 'skolne', color: 'primary', containerBg: 'bg-primary/15', topper: 'Školné ' ~ client.schoolYear, title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf', target: '_blank', rel: 'noopener noreferrer', buttonText: 'Přihláška ZŠ Radost', reverse: false }) %}
+    <p>Poplatek za školní rok {{ client.schoolYear }} činí {{ client.tuitionPrice }} Kč za měsíc.</p>
     <p>(Sourozenecká sleva možná.)</p>
   {% endcall %}
 

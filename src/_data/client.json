@@ -1,14 +1,10 @@
 {
-  "name": "Základní škola Radost",
-  "email": "rartemev695@gmail.com",
   "phoneForTel": "+420720839198",
-  "phoneFormatted": "+420 720 839 198",
-  "address": {
-    "lineOne": "",
-    "city": "",
-    "zip": "",
-    "mapLink": ""
-  },
+  "druzinaPrice": "500",
+  "domain": "https://www.spanelskeslunce.cz",
+  "name": "Základní škola Radost",
+  "schoolMealsPrice": "75",
+  "tuitionPrice": "5000",
   "social": {
     "facebook": "",
     "instagram": "",
@@ -16,5 +12,13 @@
     "tiktok": "",
     "whatsapp": ""
   },
-  "domain": "https://www.spanelskeslunce.cz"
+  "phoneFormatted": "+420 720 839 198",
+  "schoolYear": "2025/2026",
+  "address": {
+    "lineOne": "",
+    "city": "",
+    "zip": "",
+    "mapLink": ""
+  },
+  "email": "rartemev695@gmail.com"
 }

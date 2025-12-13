@@ -21,6 +21,13 @@ eleventyNavigation:
       <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Jsme na mapě!</div>
       <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">ZÁKLADNÍ ŠKOLA RADOST</h2>
 
+      <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
+        <p>Činností spolku je pořádání volnočasových aktivit pro děti předškolního věku v souladu s koncepcí Základní školy Radost. Jedná se například o sportovní, kreativní nebo vzdělávací činnosti, které slouží k rozvoji, zábavě či relaxaci.</p>
+        <p>Neméně důležitou součástí spolku je zřízení Základní školy Radost.</p>
+        <p>Ve škole se namísto tradičního přístupu žáci stávají tvůrci svého vzdělávacího procesu. Mají větší kontrolu nad tím, co, jak a kdy se učí, a to vše v rámci stanovených cílů uvedených v RVP.</p>
+        <p>Cílem je obohatit život našich dětí a podporovat vzájemné společenské vazby.</p>
+      </div>
+
       <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="space-y-3 text-base sm:text-lg lg:text-xl">
           <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Kontakty</div>
@@ -67,10 +74,10 @@ eleventyNavigation:
         <div class="space-y-3 text-base sm:text-lg lg:text-xl">
           <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Fakturační údaje</div>
           
-          <p>Základní škola Radost, z.s.</p>
+          <p>Základní škola Radost, š.p.o.</p>
           <p>Šedivská 838, Letohrad 561 51</p>
-          <p>IČO: 21658978</p>
-          <p>Datová schránka: na3at5v</p>
+          <p>IČO: 05537134</p>
+          <p>Datová schránka: efzts2z</p>
         </div>
       </div>
 
@@ -116,26 +123,7 @@ eleventyNavigation:
       <div>
         <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Máte otázky?</div>
         <h2 class="mb-6 text-green ~text-4xl/6xl font-bold">Kontaktujte nás</h2>
-        <p class="mb-6 text-base sm:text-lg">V případě jakýchkoliv dotazů či požadavků nás můžete kontaktovat prostřednictvím tohoto formuláře. Rádi vám poskytneme veškeré potřebné informace a odpovíme v co nejkratším možném termínu.</p>
-
-        <div class="flex items-center gap-2">
-          <picture>
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | webp({ quality: 70 }) %}" type="image/webp">
-            <img
-              class="w-16 h-16 rounded-full object-cover bg-center"
-              src="{% getUrl "/assets/images/team/lucie-pospisilova.webp" | resize({ width: 373, height: 497 }) | jpeg({ quality: 70 }) %}"
-              alt="Mgr. Lucie Pospíšilová - Ředitelka ZŠ Radost"
-              decoding="async"
-              loading="lazy"
-              draggable="false"
-            />
-          </picture>
-          <div>
-            <p class="text-base sm:text-lg font-bold">Mgr. Lucie Pospíšilová</p>
-            <p class="text-base">Ředitelka ZŠ Radost</p>
-          </div>
-        </div>
+        <p class="mb-6 text-base sm:text-lg">Váš tým ZŠ Radost</p>
       </div>
       
       <form class="flex flex-col gap-3" method="POST" name="Kontaktní formulář" action="/kontakt/success/" netlify>

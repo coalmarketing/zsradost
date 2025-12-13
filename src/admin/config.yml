@@ -32,6 +32,10 @@ collections:
           - { label: "E-mail", name: "email", widget: "string", hint: "Hlavní e-mail, kam vás mohou zákazníci kontaktovat" }
           - { label: "Telefon (bez mezer)", name: "phoneForTel", widget: "string", hint: "Použito pro klikatelné odkazy pro volání. Formát: +420xxxxxxxxx" }
           - { label: "Telefon (formátovaný)", name: "phoneFormatted", widget: "string", hint: "Viditelný text na stránkách. Příklad: +420 123 456 789" }
+          - { label: "Školní rok", name: "schoolYear", widget: "string", hint: "Např. 2025/2026" }
+          - { label: "Cena družiny", name: "druzinaPrice", widget: "string", required: false, hint: "Uveďte cenu v Kč (textem, např. '1 200')" }
+          - { label: "Cena školního stravování", name: "schoolMealsPrice", widget: "string", required: false, hint: "Uveďte cenu v Kč (textem, např. '1 200')" }
+          - { label: "Školné", name: "tuitionPrice", widget: "string", required: false, hint: "Uveďte cenu v Kč (textem, např. '5 200')" }
 
 
   # BLOG CONFIG
