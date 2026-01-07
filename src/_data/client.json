@@ -1,10 +1,10 @@
 {
   "phoneForTel": "+420720839198",
-  "druzinaPrice": "500",
+  "druzinaPrice": "550",
   "domain": "https://www.spanelskeslunce.cz",
   "name": "Základní škola Radost",
-  "schoolMealsPrice": "75",
-  "tuitionPrice": "5000",
+  "schoolMealsPrice": "75 / 111",
+  "tuitionPrice": "5200",
   "social": {
     "facebook": "",
     "instagram": "",
