@@ -7,6 +7,7 @@ imageAlt: Portrét Petry, spoluzakladatelky ZŠ Radost, usměvavé a přátelsk�
 bio: Petra je spoluzakladatelka ZŠ Radost, která věří v respektující a
   partnerský přístup k dětem.
 url: petra-vackova-dis
+order: 2
 published: true
 layout: layouts/team.njk
 ---
