@@ -7,6 +7,7 @@ imageAlt: Portrét Markéty, Montessori průvodkyně a učitelky, usměvavé že
 bio: Markéta je průvodkyně a spolutvůrkyně školy, vystudovaná učitelka prvního
   stupně a Montessori pedagog pro děti 6–12 let.
 url: mgr-marketa-cejchanova
+order: 3
 published: true
 layout: layouts/team.njk
 ---
