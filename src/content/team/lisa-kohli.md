@@ -8,6 +8,7 @@ bio: I’m Canadian Lisa, and although I originally studied Philosophy and
   Politics, I've been teaching ESL for almost 25 years—17 of them in the Czech
   Republic.
 url: lisa-kohli
+order: 6
 published: true
 layout: layouts/team.njk
 ---
