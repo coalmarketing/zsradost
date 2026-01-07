@@ -7,7 +7,7 @@ imageAlt: Portrét učitelky inspirované svobodným vzděláváním, která vě
 bio: Jsem učitelka s dlouholetou praxí na 1. stupni ZŠ. Ráda hledám nové cesty a
   ve svobodné škole mě inspiruje propojení svobody, spolupráce a důvěry.
 url: lenka-faltusova
-order: ""
+order: 5
 published: true
 layout: layouts/team.njk
 ---
