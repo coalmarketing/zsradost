@@ -86,11 +86,6 @@ eleventyNavigation:
   {% endcall %}
 
 
-  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-landing.webp', imageAlt: 'TODO', href: '/o-nas/#vize', buttonText: 'Zjisti více', reverse: true }) %}
-    <p>Svobodná demokratická škola je postavena na principu sebeřízeného vzdělávání, které podporuje vnitřní motivaci dětí k učení, na rozdíl od tradičního vzdělávání. Děti jsou přirozeně zvídavé a učí se na základě vlastní potřeby, což umožňuje individuální přístup a zodpovědnost za jejich vlastní vzdělávání. Pedagogové v tomto procesu fungují jako průvodci a kouči, podporující dobrovolné učení ve věkově smíšených kolektivech. </p>
-  {% endcall %}
-
-
   {% if collections.post | length > 0 %}
     <!-- BLOG -->
     <section class="pb-16 ~px-4/8">
@@ -205,6 +200,11 @@ transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
       </div>
     </section>
   {% endif %}
+
+
+  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Naše vize', image: '/assets/images/about-us/vision-photo-landing.webp', imageAlt: 'TODO', href: '/o-nas/#vize', buttonText: 'Zjisti více', reverse: true }) %}
+    <p>Svobodná demokratická škola je postavena na principu sebeřízeného vzdělávání, které podporuje vnitřní motivaci dětí k učení, na rozdíl od tradičního vzdělávání. Děti jsou přirozeně zvídavé a učí se na základě vlastní potřeby, což umožňuje individuální přístup a zodpovědnost za jejich vlastní vzdělávání. Pedagogové v tomto procesu fungují jako průvodci a kouči, podporující dobrovolné učení ve věkově smíšených kolektivech. </p>
+  {% endcall %}
 
 
   {% call feature({ color: 'green', containerBg: 'bg-green/15', topper: 'Kdo tvoří tým?', title: 'RADOSTný tým', image: '/assets/images/about-us/team-photo.webp', imageAlt: 'TODO', href: '/team', buttonText: 'Poznej náš tým', reverse: true }) %}
