@@ -12,4 +12,4 @@ tags:
 image: /assets/images/cms/img_20251103_141251.webp
 category: Učíme se!
 ---
-Dovolujeme si vás informovat, že dne **14. 11. 2025** bude vyhlášeno **ŘEDITELSKÉ VOLNO** z provozních a organizačních důvodů. Děkujeme za pochopení.
+Dovolujeme si vás informovat, že dne **14. 11. 2025** bude vyhlášeno **ŘEDITELSKÉ VOLNO** z provozních a organizačních důvodů. Děkujeme za pochopení..
