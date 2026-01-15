@@ -142,6 +142,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("team", function (collectionApi) {
         return collectionApi
             .getFilteredByGlob("src/content/team/*.{md,njk}")
+            .filter(item => item.data.published !== false)
             .sort((a, b) => {
                 const orderA = a.data.order ?? Number.POSITIVE_INFINITY;
                 const orderB = b.data.order ?? Number.POSITIVE_INFINITY;

@@ -29,20 +29,22 @@ eleventyNavigation:
       </div>
 
       <!-- IMAGE -->
-      <picture class="md:mx-auto w-fit self-center">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
-        <img
-          class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
-          src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
-          alt="Fotka lektorky Ludmily Vyčítalové"
-          decoding="async"
-          loading="lazy"
-          width="404"
-          height="82"
-          draggable="false"
-        />
-      </picture>
+      <a href="https://www.testa.cz/" target="_blank" class="md:mx-auto w-fit self-center hover:opacity-80 transition-opacity duration-300">
+        <picture>
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <img
+            class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
+            src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka lektorky Ludmily Vyčítalové"
+            decoding="async"
+            loading="lazy"
+            width="404"
+            height="82"
+            draggable="false"
+          />
+        </picture>
+      </a>
     </div>
   </section>
 
@@ -87,6 +89,18 @@ eleventyNavigation:
             </div>
           </div>
         {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Děkujeme</div>
+      <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">Dále přispěli</h2>
+
+      <div class="flex flex-col mb-8 gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
+        <p>David Čejchan, kterému děkujeme nejen za ranní vzpruhu, díky neodolatelné kávě - hned je den plný "radosti na druhou" ☕😁</p>
+        <p>Sponzorem našeho Radostného posezení 🪑 je babi Ivuš, děkujeme Ivě Štěpanovské!</p>
       </div>
     </div>
   </section>

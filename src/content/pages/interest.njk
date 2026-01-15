@@ -90,7 +90,7 @@ eleventyNavigation:
 
 
   <!-- TUITION -->
-  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Školné ' ~ client.schoolYear, title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf', target: '_blank', rel: 'noopener noreferrer', buttonText: 'Přihláška ZŠ Radost', reverse: true }) %}
+  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Školné ' ~ client.schoolYear, title: 'Školné', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotka školy Radost', href: '/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf', target: '_blank', rel: 'noopener noreferrer', buttonText: 'Informace o zápisu', reverse: true }) %}
     <p>Poplatek za školní rok {{ client.schoolYear }} činí {{ client.tuitionPrice }} Kč za měsíc.</p>
     <p>(Sourozenecká sleva možná.)</p>
   {% endcall %}
