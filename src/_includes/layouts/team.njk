@@ -46,7 +46,7 @@
         <div class="w-full swiper documents-swiper green-swiper">
           <div class="swiper-wrapper w-full h-full">
             {% from "components/team-card.njk" import teamCard %}
-            {% for member in collections.team | reverse %}
+            {% for member in collections.team %}
               {% if member.data.published is not defined or member.data.published %}
                 <div class="swiper-slide !h-auto {% if name == member.data.name %}!hidden{% endif %}">
                   {{ teamCard(member, { color: 'green', btnText: 'Více o mně' }) }}

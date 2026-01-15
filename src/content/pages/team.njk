@@ -19,7 +19,7 @@ eleventyNavigation:
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {% from "components/team-card.njk" import teamCard %}
-        {% for member in collections.team | reverse %}
+        {% for member in collections.team %}
           {% if member.data.published is not defined or member.data.published %}
             {{ teamCard(member, { color: 'green' }) }}
           {% endif %}

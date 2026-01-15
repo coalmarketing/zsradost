@@ -1687,10 +1687,6 @@ select {
   width: 2.5rem;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -1718,10 +1714,6 @@ select {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-10\/12 {
-  width: 83.333333%;
 }
 
 .\!min-w-10 {
@@ -1916,10 +1908,6 @@ select {
   gap: 2rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2088,14 +2076,6 @@ select {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
-}
-
-.bg-purple\/20 {
-  background-color: rgb(181 43 255 / 0.2);
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .fill-black {
@@ -3123,14 +3103,14 @@ body {
   color: rgb(33 131 128 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-purple:hover {
   --tw-text-opacity: 1;
   color: rgb(181 43 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
@@ -3328,10 +3308,6 @@ body {
     height: 18rem;
   }
 
-  .sm\:h-64 {
-    height: 16rem;
-  }
-
   .sm\:\!w-10 {
     width: 2.5rem !important;
   }
@@ -3346,10 +3322,6 @@ body {
 
   .sm\:w-\[calc\(100\%-94px\)\] {
     width: calc(100% - 94px);
-  }
-
-  .sm\:w-64 {
-    width: 16rem;
   }
 
   .sm\:min-w-10 {
