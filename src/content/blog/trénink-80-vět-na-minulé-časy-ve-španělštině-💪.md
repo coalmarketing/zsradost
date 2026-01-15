@@ -1,7 +1,7 @@
 ---
 author: Mgr. Ludmila Vyčítalová
 title: Ředitelské volno
-url: reditelske-volno-2025
+url: reditelske-volno-2025-14-11
 description: "Dovolujeme si vás informovat, že dne 14. 11. 2025 bude vyhlášeno
   ŘEDITELSKÉ VOLNO z provozních a organizačních důvodů. Děkujeme za pochopení. "
 date: 2025-11-03T09:05:00.000+01:00
