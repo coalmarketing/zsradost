@@ -1,29 +1,39 @@
 {
   "items": [
     {
+      "title": " Žádost o přijetí do ZŠ Radost",
+      "file": "/assets/images/cms/žádost-o-přijetí.pdf",
+      "description": "Podání žádosti a informace o přijímacím procesu do ZŠ Radost."
+    },
+    {
+      "title": " Žádost o odklad",
+      "file": "/assets/images/cms/žádost-o-odklad.pdf",
+      "description": "Podání žádosti o odklad školní docházky do ZŠ Radost."
+    },
+    {
       "title": "Školní vzdělávací program",
       "file": "/assets/images/cms/skolni-vzdelavaci-program.pdf",
       "description": "Popis vzdělávacího programu školy a jeho cíle pro rozvoj žáků."
     },
     {
+      "title": "Přihláška do družiny",
+      "file": "/assets/images/cms/zsradost-prihlaska-do-druziny.pdf",
+      "description": "Formulář a informace pro přihlášení dítěte do školní družiny ZŠ Radost."
+    },
+    {
+      "title": "Přihláška ke stravování",
+      "file": "/assets/images/cms/zsradost-prihlaska-ke-stravovani.pdf",
+      "description": "Formulář a informace pro přihlášení dítěte ke školnímu stravování ve ZŠ Radost."
+    },
+    {
+      "title": "Informace k zápisu do ZŠ Radost.",
+      "file": "/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf",
+      "description": "Všeobecné informace k zápisu do ZŠ Radost."
+    },
+    {
       "title": "ŠVP školní družiny",
       "file": "/assets/images/cms/skolni-vzdelavaci-program-druzina.pdf",
       "description": "Program školní družiny podporující rozvoj a zábavu dětí po vyučování."
-    },
-    {
-      "title": "Zápis do ZŠ Radost",
-      "file": "/assets/images/cms/zapis-do-zakladni-skoly-radost.pdf",
-      "description": "Přihlášky a informace k zápisu do ZŠ Radost."
-    },
-    {
-      "title": " Žádost o přijetí do ZŠ Radost",
-      "file": "/assets/images/cms/zs-radost-zadost-o-prijeti-2025.pdf",
-      "description": "Podání žádosti a informace o přijímacím procesu do ZŠ Radost."
-    },
-    {
-      "title": " Žádost o odklad",
-      "file": "/assets/images/cms/zs-radost-zadost-o-odklad-25-26.pdf",
-      "description": "Podání žádosti o odklad školní docházky do ZŠ Radost."
     },
     {
       "title": "Inspekční zpráva",
@@ -39,16 +49,6 @@
       "title": " Výroční zprávu školy za šk. rok 2024/2025",
       "file": "/assets/images/cms/zs-radost-vyrocni-zprava-2024-2025.pdf",
       "description": "Výroční zpráva školy 2024/2025 – přehled činností, výsledků a projektů."
-    },
-    {
-      "title": "Přihláška do družiny",
-      "file": "/assets/images/cms/zsradost-prihlaska-do-druziny.pdf",
-      "description": "Formulář a informace pro přihlášení dítěte do školní družiny ZŠ Radost."
-    },
-    {
-      "title": "Přihláška ke stravování",
-      "file": "/assets/images/cms/zsradost-prihlaska-ke-stravovani.pdf",
-      "description": "Formulář a informace pro přihlášení dítěte ke školnímu stravování ve ZŠ Radost."
     }
   ]
 }
