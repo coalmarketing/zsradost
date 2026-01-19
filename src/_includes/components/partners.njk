@@ -10,19 +10,21 @@
     </div>
 
     <!-- IMAGE -->
-    <picture class="md:mx-auto w-fit">
-      <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
-      <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
-      <img
-        class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
-        src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
-        alt="Fotka lektorky Ludmily Vyčítalové"
-        decoding="async"
-        loading="lazy"
-        width="404"
-        height="82"
-        draggable="false"
-      />
-    </picture>
+      <a href="https://www.testa.cz/" target="_blank" class="md:mx-auto w-fit self-center hover:opacity-80 transition-opacity duration-300">
+        <picture>
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
+          <img
+            class="max-w-[80%] sm:max-w-3xl rounded-xl object-contain"
+            src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
+            alt="Fotka lektorky Ludmily Vyčítalové"
+            decoding="async"
+            loading="lazy"
+            width="404"
+            height="82"
+            draggable="false"
+          />
+        </picture>
+      </a>
   </div>
 </section>
