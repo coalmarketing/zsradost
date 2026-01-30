@@ -31,7 +31,7 @@ site_url: https://zsradost.netlify.app
 local_backend: true
 
 # Change url to a link to the image you want to use, no file paths, must be a URL
-logo_url:
+logo:
   src: "https://coalmarketing.cz/wp-content/uploads/2024/08/coalmarketing_logo_long_color-black-1024x239.png"
   show_in_header: false
 
