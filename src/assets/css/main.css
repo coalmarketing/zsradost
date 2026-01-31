@@ -1663,6 +1663,10 @@ select {
   height: 100vh;
 }
 
+.h-36 {
+  height: 9rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -2076,6 +2080,11 @@ select {
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
 }
 
 .fill-black {
@@ -3356,6 +3365,10 @@ body {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-center {
+    align-items: center;
   }
 
   .sm\:gap-10 {
