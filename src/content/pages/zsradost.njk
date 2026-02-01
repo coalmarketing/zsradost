@@ -1,0 +1,90 @@
+---
+title: 'ZŠ Radost, z.s.'
+description: "Informace o spolku ZŠ Radost, z.s. - naše poslání, činnost a cíle."
+permalink: 'zsradost/'
+eleventyNavigation:
+  key: ZŠ Radost, z.s.
+  order: 700
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+  {% from "components/feature.njk" import feature %}
+
+
+  <section class="pt-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl items-center">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Spolek</div>
+      <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">ZŠ Radost, z.s.</h2>
+
+      <div class="mb-8 flex flex-col gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
+        <p>Činností spolku je pořádání volnočasových aktivit pro děti předškolního věku v souladu s koncepcí Základní školy Radost. Jedná se například o sportovní, kreativní nebo vzdělávací činnosti, které slouží k rozvoji, zábavě či relaxaci.</p>
+        <p>Neméně důležitou součástí spolku je zřízení Základní školy Radost.</p>
+        <p>Ve škole se namísto tradičního přístupu žáci stávají tvůrci svého vzdělávacího procesu. Mají větší kontrolu nad tím, co, jak a kdy se učí, a to vše v rámci stanovených cílů uvedených v RVP.</p>
+        <p>Cílem je obohatit život našich dětí a podporovat vzájemné společenské vazby.</p>
+      </div>
+      
+      <div class="space-y-3 text-base sm:text-lg lg:text-xl">
+        <div class="px-6 py-1 bg-primary mb-2 rounded-full w-fit text-white font-bold">Fakturační údaje</div>
+        <p>Základní škola Radost, š.p.o.</p>
+        <p>Sídlo spolku: Šedivská 838, Letohrad 561 51</p>
+        <p>IČO: 05537134</p>
+        <p>Datová schránka: efzts2z</p>
+        <p>Číslo účtu: 6615779329/0800</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-16 ~px-4/8">
+    <div class="container bg-green/15 m-auto ~p-4/10 rounded-3xl items-center">
+      <div class="px-6 py-1 bg-green mb-2 rounded-full w-fit text-white font-bold">Děkujeme</div>
+      <h2 class="mb-8 text-green ~text-4xl/6xl font-bold">Sponzoři</h2>
+
+      <p class="mb-8 flex flex-col gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">Vážení sponzoři, rádi bychom vám jménem spolku poděkovali za vaši podporu, která je pro nás neocenitelná a dává nám sílu vytvářet inspirativní prostředí pro děti. Děkujeme, že jste součástí našeho "RADOSTného" příběhu a že nám pomáháte v budování lepší budoucnosti pro naše žáky.</p>
+
+      <div class="mb-8 flex flex-col items-stretch gap-6 sm:flex-row sm:justify-start sm:gap-8">
+        <a href="https://www.testa.cz/" target="_blank" class="bg-white h-full w-full sm:w-1/2 flex items-center justify-center self-center rounded-xl p-4 sm:p-6 min-h-[140px] sm:min-h-[200px] hover:opacity-80 transition-opacity duration-300">
+          <picture>
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 280, height: 57 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <img
+              class="w-full max-w-[320px] rounded-xl object-contain"
+              src="{% getUrl "/assets/images/partners/partner-1.svg" | resize({ width: 404, height: 82 }) | jpeg({ quality: 70 }) %}"
+              alt="Logo partnera Testa"
+              decoding="async"
+              loading="lazy"
+              width="404"
+              height="82"
+              draggable="false"
+            />
+          </picture>
+        </a>
+
+        <a href="https://coalfamily.cz/" target="_blank" class="bg-white w-full sm:w-1/2 flex items-center justify-center self-center rounded-xl p-4 sm:p-6 min-h-[140px] sm:min-h-[200px] hover:opacity-80 transition-opacity duration-300">
+          <picture>
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/partners/coalfamily-logo.jpg" | resize({ width: 220, height: 220 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/partners/coalfamily-logo.jpg" | resize({ width: 240, height: 240 }) | webp({ quality: 70 }) %}" type="image/webp">
+            <img
+              class="w-full max-w-[140px] rounded-xl object-contain"
+              src="{% getUrl "/assets/images/partners/coalfamily-logo.jpg" | resize({ width: 240, height: 240 }) | jpeg({ quality: 70 }) %}"
+              alt="Fotka lektorky Ludmily Vyčítalové"
+              decoding="async"
+              loading="lazy"
+              width="240"
+              height="240"
+              draggable="false"
+            />
+          </picture>
+        </a>
+      </div>
+
+      <p class="mb-8 flex flex-col gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">DĚKUJEME! rodině Skalických za finanční dar.</p>
+    </div>
+  </section>
+
+  {% include "components/cta.njk" %}
+
+{% endblock %}
