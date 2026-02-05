@@ -1,35 +1,62 @@
 <!-- FOOTER -->
 <footer>
   <div class="relative bg-white">
-    <div class="z-[2] py-12 ~px-4/8 relative container m-auto flex flex-col">
+    <div class="z-[2] py-12 ~px-4/8 relative container m-auto flex gap-10 flex-col">
       <!-- LOGO + NAVIGATION + CONTACT -->
-      <div class="flex max-xl:flex-col justify-between md:items-center gap-10 xl:gap-16">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+
+      <div class="flex max-md:flex-col flex-row md:items-center md:justify-center gap-2 md:gap-6">
+        <img
+          class="h-32 lg:h-40 object-contain object-left md:object-cover"
+          decoding="async"
+          loading="lazy"
+          src="/assets/images/Skola_Radost_logo.webp"
+          alt="Škola Radost - logo"
+          width="160"
+          height="80"
+        />
+
+        <a href="https://opzp.cz/" target="_blank" class="transition-opacity hover:opacity-80">
           <img
-            class="h-44 w-auto"
+            class="h-32 lg:h-40 w-auto object-contain"
             decoding="async"
             loading="lazy"
-            src="/assets/images/Skola_Radost_logo.webp"
-            alt="Škola Radost - logo"
+            src="/assets/images/opzp.png"
+            alt="Spolufinancováno Evropskou unií"
             width="256"
             height="80"
           />
+        </a>
 
-          <a href="https://msmt.gov.cz/" target="_blank">
-            <img
-              class="h-44 w-auto rounded-full"
-              decoding="async"
-              loading="lazy"
-              src="/assets/images/msmt.png"
-              alt="spolufinancováno Evropskou unii | Pardubický kraj"
-              width="256"
-              height="80"
-            />
-          </a>
-        </div>
+        <a href="https://www.pardubickykraj.cz/" target="_blank" class="transition-opacity hover:opacity-80">
+          <img
+            class="h-32 lg:h-40 w-auto object-contain"
+            decoding="async"
+            loading="lazy"
+            src="/assets/images/pc-kraj.png"
+            alt="Pardubický kraj"
+            width="256"
+            height="80"
+          />
+        </a>
 
+
+        <a href="https://msmt.gov.cz/" target="_blank" class="transition-opacity hover:opacity-80">
+          <img
+            class="h-40 lg:h-56 w-auto object-contain"
+            decoding="async"
+            loading="lazy"
+            src="/assets/images/msmt.png"
+            alt="Ministerstvo školství, mládeže a tělovýchovy"
+            width="256"
+            height="80"
+          />
+        </a>
+      </div>
+
+
+      <div class="flex max-xl:flex-col justify-center md:items-center gap-10 xl:gap-16">
         <!-- NAVIGATION + CONTACT -->
-        <div class="flex max-md:flex-col-reverse gap-16 md:gap-20">
+        <div class="flex max-md:flex-col gap-16 md:gap-20">
           <div class="flex gap-20">
             <!-- LINKS -->
             {% set aboutLinks = [

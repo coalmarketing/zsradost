@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import fluid, { extract, fontSize, screens } from 'fluid-tailwind'
+const { extract, fontSize, screens } = require('fluid-tailwind')
+const fluid = require('fluid-tailwind').default
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -14,8 +15,6 @@ module.exports = {
   ],
   theme: {
     fontSize: fontSize,
-    screens: screens,
-    },
     screens: screens,
     extend: {
       fontFamily: {
