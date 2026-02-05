@@ -15,6 +15,8 @@ module.exports = {
   theme: {
     fontSize: fontSize,
     screens: screens,
+    },
+    screens: screens,
     extend: {
       fontFamily: {
         "sans": ["Arsenal", "Space Grotesk", ...defaultTheme.fontFamily.sans],

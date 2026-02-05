@@ -35,12 +35,16 @@
           name="Newsletter"
           method="POST"
           action="/newsletter/success/"
-          netlify
-          netlify-honeypot="bot-field"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
           class="w-full flex flex-col sm:flex-row gap-4 items-center"
         >
           <input type="hidden" name="form-name" value="Newsletter" />
-          <input type="hidden" name="bot-field" />
+          <p class="hidden">
+            <label>Don't fill this out if you're human:
+              <input name="bot-field" />
+            </label>
+          </p>
 
           <input
             name="email"
