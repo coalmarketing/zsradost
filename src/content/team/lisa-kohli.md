@@ -1,7 +1,7 @@
 ---
 name: Lisa Kohli
 role: Pedagog
-image: /assets/images/cms/lisa-kohli.webp
+image: /assets/images/cms/lisa-kohli.png
 imageAlt: Portrait of an experienced Canadian ESL teacher who believes in
   inspiring curiosity and making learning fun for students of all ages.
 bio: I’m Canadian Lisa, and although I originally studied Philosophy and
