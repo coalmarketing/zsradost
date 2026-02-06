@@ -139,6 +139,7 @@ collections:
           name: "image",
           widget: "image",
           choose_url: false,
+          required: false,
         }
       - { label: "Popis obrázku", name: "imageAlt", widget: "string" }
       - name: "images"
