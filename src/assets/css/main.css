@@ -1494,6 +1494,10 @@ select {
   margin-bottom: 2rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -1528,14 +1532,6 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-20 {
-  margin-left: 5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .line-clamp-2 {
