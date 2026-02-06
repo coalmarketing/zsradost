@@ -1,7 +1,7 @@
 ---
 name: Petra Vacková, DiS.
 role: Spoluzakladatelka ZŠ Radost
-image: /assets/images/cms/petra-vackova-dis.webp
+image: /assets/images/cms/petra-vacková-dis..png
 imageAlt: Portrét Petry, spoluzakladatelky ZŠ Radost, usměvavé a přátelské ženy
   z Letohradu.
 bio: Petra je spoluzakladatelka ZŠ Radost, která věří v respektující a
