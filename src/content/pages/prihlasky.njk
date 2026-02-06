@@ -1,0 +1,121 @@
+---
+title: 'Přihlášky'
+description: "Přihlášky ke školní družině a stravování v ZŠ Radost. Základní informace a potřebné formuláře ke stažení."
+permalink: 'prihlasky/'
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+  {% include "components/landing.njk" %}
+  {% from "components/feature.njk" import feature %}
+
+  <!-- Swiper CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <section class="my-16 ~px-4/8" id="svobodna-skola">
+    <div class="container bg-blue/15 m-auto ~p-4/10 rounded-3xl items-center gap-10 xl:gap-16">
+      <div class="flex flex-col justify-center">
+        <div class="mb-4 px-6 py-1 bg-blue rounded-full w-fit text-white font-bold">Pojďme na to!</div>
+
+        <div class=" mb-4 flex flex-col gap-3 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
+          <p>Naše škola je místem, kde mají děti prostor být samy sebou, objevovat své zájmy a rozvíjet se v bezpečném a podnětném prostředí. Pokud hledáte školu, která staví na respektu, spolupráci a radosti z učení, jste na správném místě.</p>
+        </div>
+
+        <p class="text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">Co s sebou k zápisu?</p>
+        <ol class="ml-4 text-zinc-900 text-base sm:text-lg lg:text-xl md:text-xl">
+          <li class="font-semibold">1. Žádost o přijetí dítěte k základnímu vzdělávání</li>
+          <li class="font-semibold">2. Rodný list dítěte</li>
+          <li class="font-semibold">3. Průkaz totožnosti zákonného zástupce</li>
+          <li>4. Případně žádost o odklad, doporučení z PPP/SPC</li>
+          <li>5. Případně rozhodnutí o odkladu z minulého školního roku</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWIPER - DOCUMENTS FOR DOWNLOAD -->
+  {% set applicationItems = [
+      {
+      title: 'Žádost o přijetí',
+      description: 'Žádost o přijetí dítěte k základnímu vzdělávání.',
+      file: '/assets/images/cms/žádost-o-přijetí.pdf',
+      buttonText: 'Zobrazit'
+    },
+    {
+      title: 'Žádost o odklad (2025/2026)',
+      description: 'Formulář pro žádost o odklad povinné školní docházky.',
+      file: '/assets/images/cms/zs-radost-zadost-o-odklad-25-26.pdf',
+      buttonText: 'Zobrazit'
+    },
+    {
+      title: 'Registrační list žáka',
+      description: 'Registrační list s údaji o žákovi.',
+      file: '/assets/images/cms/registrační-list-žáka.pdf',
+      buttonText: 'Zobrazit'
+    }
+  ] %}
+
+  <section class="mb-16 ~px-4/8">
+    <div class="container bg-blue/15 m-auto ~p-4/10 rounded-3xl items-center gap-10 xl:gap-16">
+      <div class="px-6 py-1 bg-blue mb-2 rounded-full w-fit text-white font-bold">Soubory</div>
+      <h2 class="mb-8 text-blue ~text-4xl/6xl font-bold">Dokumenty ke stažení</h2>
+
+      <!-- Swiper container -->
+      <div class="documents-swiper-container relative mx-auto sm:w-[calc(100%-94px)]">
+        <div class="w-full swiper documents-swiper">
+          <div class="swiper-wrapper w-full h-full">
+            {% for item in applicationItems %}
+              <div class="swiper-slide !h-auto">
+                <article class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform p-6 flex flex-col h-full">
+                  <h3 class="text-xl font-bold text-blue mb-2">{{ item.title }}</h3>
+                  <p class="text-zinc-800 grow">{{ item.description }}</p>
+                  <div class="mt-4">
+                    <a href="{{ item.file }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue hover:bg-blue/80 text-white font-bold transition-all duration-200 transform group-hover:scale-105">
+                      {{ item.buttonText }}
+                    </a>
+                  </div>
+                </article>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination !relative mt-4"></div>
+        </div>
+
+        <div class="swiper-button-prev absolute !min-w-10 !w-10 sm:!w-10 sm:min-w-10 flex sm:block items-center justify-center !min-h-10 sm:!min-h-auto !h-10 sm:!h-auto after:!text-[24px] sm:after:!text-[40px] bg-white sm:bg-transparent rounded-full !top-[calc(100%+16px)] sm:!top-1/2 -translate-y-1/2 z-10 sm:!-left-[51px]"></div>
+        <div class="swiper-button-next absolute !min-w-10 !w-10 sm:!w-10 sm:min-w-10 flex sm:block items-center justify-center !min-h-10 sm:!min-h-auto !h-10 sm:!h-auto after:!text-[24px] sm:after:!text-[40px] bg-white sm:bg-transparent rounded-full !top-[calc(100%+16px)] sm:!top-1/2 -translate-y-1/2 z-10 sm:!-right-[51px]"></div>
+      </div>
+    </div>
+  </section>
+
+  {% include "components/cta.njk" %}
+  {% include "components/partners.njk" %}
+
+  <!-- Swiper JS (CDN) + init script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    (function(){
+      if(typeof Swiper === 'undefined') return;
+
+      new Swiper('.documents-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          640: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    })();
+  </script>
+{% endblock body %}
