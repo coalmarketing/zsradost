@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": " Žádost o přijetí do ZŠ Radost",
-      "file": "/assets/images/cms/žádost-o-přijetí.pdf",
-      "description": "Podání žádosti a informace o přijímacím procesu do ZŠ Radost."
-    },
-    {
-      "title": " Žádost o odklad",
-      "file": "/assets/images/cms/žádost-o-odklad.pdf",
-      "description": "Podání žádosti o odklad školní docházky do ZŠ Radost."
-    },
-    {
       "title": "Školní vzdělávací program",
       "file": "/assets/images/cms/skolni-vzdelavaci-program.pdf",
       "description": "Popis vzdělávacího programu školy a jeho cíle pro rozvoj žáků."
