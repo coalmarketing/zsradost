@@ -1,7 +1,7 @@
 ---
 name: Bc. Michaela Krejsová
 role: Pedagog
-image: /assets/images/cms/image-24.webp
+image: /assets/images/cms/bc.-michaela-krejsová.png
 imageAlt: Portrét Míši Krejsové, kreativní a aktivní průvodkyně dětí, která
   propojuje pohyb, tvoření a osobní rozvoj.
 bio: Jsem Míša, miluji pohyb, tvoření a osobní rozvoj. To vše propojuji při
