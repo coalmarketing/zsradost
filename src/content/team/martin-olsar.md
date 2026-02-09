@@ -1,9 +1,9 @@
 ---
 name: Martin Olšar
-role: učitel
+role: Lektor dřevovýroby
 image: /assets/images/cms/martin-olšar.png
 url: martin-olsar
-order: 13
+order: 14
 published: true
 layout: layouts/team.njk
 ---
