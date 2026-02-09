@@ -1,6 +1,6 @@
 ---
 name: Lisa Kohli
-role: Pedagog
+role: Průvodce v anglickém jazyce
 image: /assets/images/cms/lisa-kohli.png
 imageAlt: Portrait of an experienced Canadian ESL teacher who believes in
   inspiring curiosity and making learning fun for students of all ages.
@@ -8,7 +8,7 @@ bio: I’m Canadian Lisa, and although I originally studied Philosophy and
   Politics, I've been teaching ESL for almost 25 years—17 of them in the Czech
   Republic.
 url: lisa-kohli
-order: 6
+order: 8
 published: true
 layout: layouts/team.njk
 ---
