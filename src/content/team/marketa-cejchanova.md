@@ -1,13 +1,13 @@
 ---
 name: Mgr. Markéta Čejchanová
-role: Pedagog
+role: Pedagog pro I. stupeň ZŠ
 image: /assets/images/cms/mgr.-markéta-čejchanová.png
 imageAlt: Portrét Markéty, Montessori průvodkyně a učitelky, usměvavé ženy
   milující přírodu, děti a svobodné vzdělávání.
 bio: Markéta je průvodkyně a spolutvůrkyně školy, vystudovaná učitelka prvního
   stupně a Montessori pedagog pro děti 6–12 let.
 url: mgr-marketa-cejchanova
-order: 3
+order: 4
 published: true
 layout: layouts/team.njk
 ---
