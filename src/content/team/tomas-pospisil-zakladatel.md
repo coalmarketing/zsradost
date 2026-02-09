@@ -1,6 +1,6 @@
 ---
 name: Tomáš Pospíšil
-role: zřizovatel, zakladatel
+role: Zřizovatel, zakladatel
 image: /assets/images/cms/tomáš-pospíšil_opraveno.png
 url: tomas-pospisil-zakladatel
 order: 1
