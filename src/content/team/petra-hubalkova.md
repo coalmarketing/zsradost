@@ -1,9 +1,9 @@
 ---
 name: Petra Hubálková
-role: učitelka
+role: Průvodce, lektorka jógy
 image: /assets/images/cms/petra-hubálková_opraveno.png
 url: petra-hubalkova
-order: 14
+order: 12
 published: true
 layout: layouts/team.njk
 ---
