@@ -1,6 +1,6 @@
 ---
 name: Veronika Budišová
-role: učitelka
+role: asistent pedagoga
 image: /assets/images/cms/veronika-budišová.png
 url: veronika-budisova
 order: 16
