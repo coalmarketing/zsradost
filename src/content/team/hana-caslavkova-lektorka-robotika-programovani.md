@@ -1,9 +1,9 @@
 ---
 name: Hana Čáslavková
-role: lekorka robotiky a programování
+role: Lekorka robotiky a programování
 image: /assets/images/cms/hana-čáslavková.png
 url: hana-caslavkova-lektorka-robotika-programovani
-order: 11
+order: 16
 published: true
 layout: layouts/team.njk
 ---
