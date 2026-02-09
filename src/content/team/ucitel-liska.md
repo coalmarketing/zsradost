@@ -1,6 +1,6 @@
 ---
 name: Ing. Petr Liška
-role: "Lektor "
+role: "Lektor technického vyrábění "
 image: /assets/images/cms/děda-liška.png
 url: ucitel-liska
 order: 13
