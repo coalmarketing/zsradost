@@ -1,9 +1,9 @@
 ---
 name: Anna Janouchová
-role: průvodce
+role: Průvodce
 image: /assets/images/cms/anna-janouchová.png
 url: anna-janouchova
-order: 9
+order: 11
 published: true
 layout: layouts/team.njk
 ---
