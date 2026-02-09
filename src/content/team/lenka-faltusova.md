@@ -1,6 +1,6 @@
 ---
 name: Mgr. Lenka Faltusová
-role: Pedagog
+role: Pedagog pro I. stupeň ZŠ
 image: /assets/images/cms/mgr.-lenka-faltusová.png
 imageAlt: Portrét učitelky inspirované svobodným vzděláváním, která věří v
   spolupráci, respekt a přirozený rozvoj dětí.
