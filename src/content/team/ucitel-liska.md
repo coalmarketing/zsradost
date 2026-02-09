@@ -1,9 +1,9 @@
 ---
-name: Děda Liška
-role: učitel
+name: Ing. Petr Liška
+role: "Lektor "
 image: /assets/images/cms/děda-liška.png
 url: ucitel-liska
-order: 10
+order: 13
 published: true
 layout: layouts/team.njk
 ---
