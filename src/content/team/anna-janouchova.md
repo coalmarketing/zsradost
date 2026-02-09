@@ -1,6 +1,6 @@
 ---
 name: Anna Janouchová
-role: učitelka
+role: průvodce
 image: /assets/images/cms/anna-janouchová.png
 url: anna-janouchova
 order: 9
