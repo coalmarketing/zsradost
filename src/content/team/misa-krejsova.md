@@ -7,7 +7,7 @@ imageAlt: Portrét Míši Krejsové, kreativní a aktivní průvodkyně dětí, 
 bio: Jsem Míša, miluji pohyb, tvoření a osobní rozvoj. To vše propojuji při
   práci s dětmi, které jsou mojí každodenní inspirací.
 url: misa-krejsova
-order: 4
+order: 6
 published: true
 layout: layouts/team.njk
 ---
