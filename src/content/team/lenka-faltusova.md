@@ -4,8 +4,8 @@ role: Pedagog pro I. stupeň ZŠ
 image: /assets/images/cms/mgr.-lenka-faltusová.png
 imageAlt: Portrét učitelky inspirované svobodným vzděláváním, která věří v
   spolupráci, respekt a přirozený rozvoj dětí.
-bio: Jsem učitelka s dlouholetou praxí na 1. stupni ZŠ. Ráda hledám nové cesty a
-  ve svobodné škole mě inspiruje propojení svobody, spolupráce a důvěry.
+bio: Lenka je učitelka s dlouholetou praxí na 1. stupni ZŠ. Ráda hledá nové
+  cesty a ve svobodné škole ji inspiruje propojení svobody, spolupráce a důvěry.
 url: lenka-faltusova
 order: 5
 published: true
