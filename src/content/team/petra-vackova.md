@@ -4,7 +4,7 @@ role: Provozní, zakladatelka
 image: /assets/images/cms/petra-vacková-dis..png
 imageAlt: Portrét Petry, spoluzakladatelky ZŠ Radost, usměvavé a přátelské ženy
   z Letohradu.
-bio: Petra je spoluzakladatelka ZŠ Radost, která věří v respektující a
+bio: Petina je spoluzakladatelka ZŠ Radost, která věří v respektující a
   partnerský přístup k dětem.
 url: petra-vackova-dis
 order: 3
