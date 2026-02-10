@@ -1,5 +1,5 @@
 ---
-name: Mgr. Lucie Faltusova
+name: "Mgr. Lucie Faltusová "
 role: Pedagog pro I. stupeň ZŠ
 image: /assets/images/cms/lucie-faltusová.png
 url: lucie-faltusova
