@@ -4,7 +4,7 @@ role: Pedagog pro I. stupeň ZŠ
 image: /assets/images/cms/mgr.-markéta-čejchanová.png
 imageAlt: Portrét Markéty, Montessori průvodkyně a učitelky, usměvavé ženy
   milující přírodu, děti a svobodné vzdělávání.
-bio: Markéta je vystudovaný nejen pedagog I. stupně pro ZŠ, ale i Montessori
+bio: Markéta je nejen vystudovaný pedagog I. stupně pro ZŠ, ale i Montessori
   pedagog pro děti 6 – 12 let.
 url: mgr-marketa-cejchanova
 order: 4
