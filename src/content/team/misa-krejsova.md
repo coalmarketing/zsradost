@@ -4,8 +4,8 @@ role: Pedagog
 image: /assets/images/cms/bc.-michaela-krejsová.png
 imageAlt: Portrét Míši Krejsové, kreativní a aktivní průvodkyně dětí, která
   propojuje pohyb, tvoření a osobní rozvoj.
-bio: Jsem Míša, miluji pohyb, tvoření a osobní rozvoj. To vše propojuji při
-  práci s dětmi, které jsou mojí každodenní inspirací.
+bio: Míša miluje pohyb, tvoření a osobní rozvoj. To vše propojuje při práci s
+  dětmi, které jsou její každodenní inspirací.
 url: misa-krejsova
 order: 6
 published: true
