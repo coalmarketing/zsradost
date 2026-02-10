@@ -3,7 +3,7 @@ name: Mgr. Lucie Pospíšilová
 role: Ředitelka, zakladatelka
 image: /assets/images/cms/mgr.-lucie-pospíšilová.png
 imageAlt: Mgr. Lucie Pospíšilová - Ředitelka ZŠ Radost
-bio: Lucie je zakladatelkou a ředitelkou školy, která se zaměřuje na podporu
+bio: Lucie je zakladatelkou a ředitelkou ZŠ Radost, která se zaměřuje na podporu
   dětí, moderní výuku a přátelské prostředí.
 url: lucie pospisilova
 order: 2
