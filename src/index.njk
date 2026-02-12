@@ -68,7 +68,7 @@ eleventyNavigation:
       <img
           class="absolute inset-0 h-full w-full object-cover z-0"
           src="{% getUrl "/assets/images/hero/hero_background_image.jpg" | resize({ width: 1920, height: 800 }) | jpeg({ quality: 70 }) %}"
-          alt="Tmavé pozadí"
+          alt="Děti ZŠ Radost se učí a hrají v moderní třídě"
           decoding="async"
           loading="eager"
           width="1920"
@@ -80,7 +80,7 @@ eleventyNavigation:
   </section>
 
   
-  {% call feature({ color: 'primary', containerBg: 'bg-primary/20', topper: 'Kdo jsme?', title: 'Naše škola', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'TODO', href: '/o-nas#co-delame', buttonText: 'Zjisti více', reverse: false }) %}
+  {% call feature({ color: 'primary', containerBg: 'bg-primary/20', topper: 'Kdo jsme?', title: 'Naše škola', image: '/assets/images/about-us/school-photo-landing.webp', imageAlt: 'Fotografie školy ZŠ Radost', href: '/o-nas#co-delame', buttonText: 'Zjisti více', reverse: false }) %}
     <p>Řadíme se mezi malé plnohodnotné soukromé základní školy postavené na principu sebeřízeného vzdělávání. </p>
     <p>Jsme na cestě k vytvoření svobodné školy - chceme, aby děti vzdělávané v naší škole byly motivované touhou po vědění, namísto odměny za splnění přidělaného zadání. Chcete toto pro své dítě také? Pak jste tady správně.</p>
   {% endcall %}
@@ -137,7 +137,7 @@ transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                     <img
                     class="h-64 w-full md:h-full md:w-80 xl:h-64 xl:w-full rounded-xl object-cover"
                     src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
-                    alt="Fotka lektorky Ludmily Vyčítalové"
+                    alt="{{ post.data.imageAlt or post.data.title }}"
                     decoding="async"
                     loading="lazy"
                     width="392"
@@ -202,13 +202,13 @@ transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
   {% endif %}
 
 
-  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Nová budova školy', image: '/assets/images/new-building/photo-3.webp', imageAlt: 'TODO', href: '/nova-budova', buttonText: 'Zjisti více', reverse: true }) %}
+  {% call feature({ color: 'blue', containerBg: 'bg-blue/15', topper: 'Proč jinak?', title: 'Nová budova školy', image: '/assets/images/new-building/photo-3.webp', imageAlt: 'Nová budova ZŠ Radost', href: '/nova-budova', buttonText: 'Zjisti více', reverse: true }) %}
     <p>Dlouho jsme o tom snili a nyní se sen stává skutečností. Naše škola se brzy bude těšit z nového, moderního bydliště. Nová budova není jen stavba. Je to příslib. Příslib moderního vzdělávání, dostatku prostoru pro hru i soustředění a zázemí, kde se každý žák i učitel bude cítit jako doma. </p>
     <p>Velké vize potřebují silné partnery, kteří mají odvahu je realizovat. <br> <b>Jsme nesmírně vděční, že za realizací našeho nového domova stojí společnost <a href="https://www.testa.cz/" target="_blank" class="underline hover:text-blue transition-colors">Testa s.r.o.</a></b> </p>
   {% endcall %}
 
 
-  {% call feature({ color: 'green', containerBg: 'bg-green/15', topper: 'Kdo tvoří tým?', title: 'RADOSTný tým', image: '/assets/images/about-us/team-photo.webp', imageAlt: 'TODO', href: '/team', buttonText: 'Poznej náš tým', reverse: false }) %}
+  {% call feature({ color: 'green', containerBg: 'bg-green/15', topper: 'Kdo tvoří tým?', title: 'RADOSTný tým', image: '/assets/images/about-us/team-photo.webp', imageAlt: 'Fotografie týmu ZŠ Radost', href: '/team', buttonText: 'Poznej náš tým', reverse: false }) %}
     <p>Náš tým tvoří zkušené a nadšené profesionálky a profesionálové. Společně vytváříme inspirativní a bezpečné prostředí, kde se každý žák může cítit podporován a motivován k objevování nových znalostí a dovedností.</p>
     <p>Každý člen našeho týmu přináší unikátní odborné znalosti a osobní přístup, díky kterému dokážeme efektivně reagovat na potřeby žáků i rodičů. </p>
   {% endcall %}

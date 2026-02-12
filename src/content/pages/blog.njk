@@ -39,7 +39,7 @@ transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                     <img
                     class="h-64 w-full md:h-full md:w-80 xl:h-64 xl:w-full rounded-xl object-cover"
                     src="{% getUrl post.data.image | resize({ width: 784, height: 512 }) | jpeg({ quality: 70 }) %}"
-                    alt="Fotka lektorky Ludmily Vyčítalové"
+                    alt="{{ post.data.imageAlt or post.data.title }}"
                     decoding="async"
                     loading="lazy"
                     width="392"
